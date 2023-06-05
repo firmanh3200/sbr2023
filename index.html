@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  
+<style>
+/* Style the header */
+.header {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  background-color: #145369;
+}
+
+/* Style the header image */
+.header img {
+  height: 50px;
+  margin-right: 10px;
+}
+</style>
+</head>
+
+<body class=" ">
+<div class="header">
+  <center><img src="https://bandungkota.bps.go.id/backend/images/Header-Frontend-Besar-ind.png" /></center>
+</div>
+<br><br>
+<div class="content">
+	<center><img src="https://cdn.pixabay.com/animation/2023/01/24/10/52/10-52-12-184_256.gif" width="100%" height="250px" /></center>
+</div>
+
+<div class="content">
+	<center><h4>Satu Pintu menuju aplikasi yang diperlukan <br>Pegawai dan Mitra BPS Kota Bandung</h4></center>
+</div>
+
+<input type="text" id="myInput" placeholder="Cari Aplikasi...">
+<div id="myDropdown" class="dropdown-content">
+  <!-- Dropdown items will be dynamically added here -->
+</div>
+
+<div class="footer">
+	<center><h6>---  BPS3273  ---</h6></center>
+</div>
+
+<style>
+
+body {
+  font-family: 'CustomFont', sans-serif;
+  /* Add more styling as needed */
+}
+/* Style the input field */
+#myInput {
+  width: 85%;
+  padding: 12px 20px;
+  border: 5px solid #ddd;
+  margin-top: 8px;
+}
+
+/* Style the dropdown container */
+.dropdown-content {
+  display: none;
+  position: relative;
+  background-color: #f6f6f6;
+  width: 100%;
+  border: 1px solid #ddd;
+  z-index: 1;
+  align-items: center;
+}
+
+/* Style the dropdown items (optional) */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown items on hover (optional) */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+</style>
+<script>
+// Get the input field and dropdown container
+var input = document.getElementById("myInput");
+var dropdown = document.getElementById("myDropdown");
+
+// Add an event listener to detect user input
+input.addEventListener("input", function() {
+  // Clear previous dropdown items
+  dropdown.innerHTML = "";
+
+  // Get the user input
+  var inputValue = input.value.toLowerCase();
+
+  // Define the dropdown items and their corresponding URLs
+  var items = [
+    { name: 'Agenda Kegiatan BPS Kota Bandung', url: 'https://bps3273.top/agenda' },
+    { name: 'Backoffice BPS', url: 'https://backoffice.bps.go.id/' },
+    { name: 'Bandung Open Data', url: 'http://data.bandung.go.id/' },
+    { name: 'Batagor', url: 'https://bps3273.top/batagor' },
+    { name: 'BerIMan', url: 'https://t.me/+vR7zDu_5IG1kZjBl' },
+    { name: 'Bersahaja', url: 'https://bps3273.top/bersahaja' },
+    { name: 'BPS Jabar', url: 'https://jabar.bps.go.id' },
+    { name: 'BPS Kota Bandung', url: 'https://bandungkota.bps.go.id' },
+    { name: 'BPS Pusat', url: 'www.bps.go.id' },
+    { name: 'Community BPS', url: 'https://community.bps.go.id/' },
+    { name: 'Data Spasial BPS', url: 'https://dataspasial.bps.go.id/' },
+    { name: 'Dashboard Diary', url: 'https://bps3273.top/diary/dashboard' },
+    { name: 'Diary', url: 'https://bps3273.top/diary' },
+    { name: 'Digital Library', url: 'https://perpustakaan.bps.go.id/' },
+    { name: 'DoKtor', url: 'https://bps3273.top/doktor' },
+    { name: 'Drive BPS', url: 'https://drive.bps.go.id/' },
+    { name: 'Email BPS', url: 'https://mail.bps.go.id/' },
+    { name: 'Entri Online BPS', url: 'https://pengolahan.bps.go.id/' },
+    { name: 'Entri SBH 2022', url: 'https://webapps.bps.go.id/olah/sbh2022/login' },
+    { name: 'FASIH Management', url: 'https://fasih-sm.bps.go.id' },
+    { name: 'FKP Regsosek Kota Bandung', url: 'https://bps3273.top/fkp' },
+    { name: 'Galeri Infografis', url: 'https://bandungkota.bps.go.id/galery.html' },
+    { name: 'Inflasi', url: 'https://bps3273.top/inflasi' },
+    { name: 'Istilah Statistik', url: 'https://bandungkota.bps.go.id/istilah.html' },
+    { name: 'Kamus Fungsional', url: 'https://bps3273.top/kamfus32' },
+    { name: 'Katalog Datamikro', url: 'https://repository.bps.go.id/mikrodata/index.php/home' },
+    { name: 'KBLI/ KBJI/ KBKI', url: 'https://www.bps.go.id/klasifikasi' },
+    { name: 'Kegiatan Sensus', url: 'https://sensus.bps.go.id/' },
+    { name: 'Kelurahan Cantik - Buku Saku', url: 'https://bps3273.top/cantik' },
+    { name: 'Kelurahan Cantik - Derwati', url: 'https://www.derwatirumasa.com/' },
+    { name: 'KipApp', url: 'https://webapps.bps.go.id/kipapp/' },
+    { name: 'Laci BPS', url: 'https://laci.bps.go.id/' },
+    { name: 'Link Link', url: 'https://bps3273.top/linklink' },
+    { name: 'Metadata Statistik', url: 'https://sirusa.bps.go.id/' },
+    { name: 'Monitoring Pengolahan BPS', url: 'https://webmonitoring.bps.go.id/' },
+    { name: 'P P K', url: 'https://bps3273.top/ppk3200' },
+    { name: 'P S T', url: 'https://pst.bps.go.id/' },
+    { name: 'Peta SLS Kota Bandung', url: 'https://bps3273.top/sls3273' },
+    { name: 'Portal Publikasi BPS', url: 'https://portalpublikasi.bps.go.id/' },
+    { name: 'PPID BPS', url: 'https://ppid.bps.go.id/' },
+    { name: 'Reformasi Birokrasi BPS', url: 'http://rb.bps.go.id/' },
+    { name: 'Reformasi Birokrasi BPS Kota Bandung', url: 'https://bps3273.top/erbe' },
+    { name: 'Regsosek BPS Kota Bandung', url: 'https://bps3273.top/regsosek' },
+    { name: 'Romantik', url: 'https://romantik.bps.go.id/' },
+    { name: 'SAKIP', url: 'https://bps3273.top/sakip' },
+    { name: 'Shortlink BPS', url: 'https://s.bps.go.id/' },
+    { name: 'SiJaFung BPS', url: 'https://jafung.bps.go.id/' },
+    { name: 'SiLastik', url: 'https://silastik.bps.go.id/v3/index.php/site/login/' },
+    { name: 'SIMDASI', url: 'https://simdasi.bps.go.id/' },
+    { name: 'Simpeg BPS', url: 'https://simpeg.bps.go.id/' },
+    { name: 'ST2023 Kota Bandung', url: 'https://bps3273.top/st2023' },
+    { name: 'Tabel Dinamis', url: 'https://bandungkota.bps.go.id/site/pilihdata.html' },
+    { name: 'SKD 2023', url: 'https://skd.bps.go.id/SKD2023/' },
+    { name: 'SKD 2022', url: 'https://skd.bps.go.id/SKD2022/' },
+    { name: 'SKD 2021', url: 'https://skd.bps.go.id/SKD2021/' },
+    { name: 'SKD 2020', url: 'https://skd.bps.go.id/skd2020/web/' },
+    { name: 'Web Dashboard', url: 'https://webdash.bps.go.id' },
+    { name: 'Admin Romantik', url: 'https://romantik.bps.go.id/webadmin' },
+    { name: 'Statistik Website', url: 'https://noc.bps.go.id/stat-website/kab/' },
+    { name: 'Warkop BPS', url: 'https://pusdiklat.bps.go.id/warkop/' },
+    { name: 'E-Learning BPS', url: 'https://elearning.bps.go.id/login/login_new.php' },
+    { name: 'Capaian Output 2023', url: 'http://s.bps.go.id/caput3273_2023' },
+    { name: 'Jadwal Perjadin', url: 'https://s.bps.go.id/perjadin3273' },
+    { name: 'Youtube BPS Kota Bandung', url: 'https://www.youtube.com/channel/UCBoDwvcSaHKWWuvnBUywIsg' },
+    { name: 'Facebook BPS Kota Bandung', url: 'https://www.facebook.com/bpskotabandung/?locale=id_ID' },
+    { name: 'Instagram BPS Kota Bandung', url: 'https://www.instagram.com/p/CgjQxluh2hv/' },
+    { name: 'Telegram BPS Kota Bandung', url: 'https://t.me/+z1dSi1DQKmA0ODdl' },
+    { name: 'Chat GPT', url: 'https://chat.openai.com/' },
+    { name: 'SKD 2019', url: 'https://skd.bps.go.id/skd2019/web/' }
+    ];
+
+  // Filter the dropdown items based on the input
+  for (var i = 0; i < items.length; i++) {
+    var item = items[i].name.toLowerCase();
+    if (item.startsWith(inputValue)) {
+      // Create a new dropdown item as a link
+      var option = document.createElement("a");
+      option.href = items[i].url;
+      option.textContent = items[i].name;
+
+      // Add a click event listener to open the URL in a new tab
+      option.addEventListener("click", function(event) {
+        event.preventDefault();
+        window.open(this.href, "_blank");
+      });
+	  
+	  
+	  // Add the item to the dropdown
+      dropdown.appendChild(option);
+    }
+  }
+
+  // Display the dropdown
+  dropdown.style.display = "block";
+});
+
+// Close the dropdown when the user clicks outside of it
+document.addEventListener("click", function(event) {
+  if (!event.target.matches("#myInput")) {
+    dropdown.style.display = "none";
+  }
+});
+</script>
+
+</body>
+</html>
