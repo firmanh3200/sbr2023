@@ -6,6 +6,7 @@
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   
 <style>
+	
 /* Style the header */
 .header {
   display: flex;
@@ -13,7 +14,12 @@
   padding: 5px;
   background-color: #145369;
 }
-
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust the height as needed */
+}
 /* Style the header image */
 .header img {
   height: 50px;
@@ -34,8 +40,9 @@
 <div class="content">
 	<center><h4>Silakan ketik alamat web yang Anda perlukan</h4></center>
 </div>
-
-<input type="text" id="myInput" placeholder="Cari Aplikasi...">
+<div class="container">
+	<input type="text" id="myInput" placeholder="Cari Aplikasi...">
+</div>	
 <div id="myDropdown" class="dropdown-content">
   <!-- Dropdown items will be dynamically added here -->
 </div>
