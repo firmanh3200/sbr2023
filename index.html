@@ -97,13 +97,14 @@ body {
 
 /* Style the dropdown container */
 .dropdown-content {
-  display: none;
-  position: absolute;
-  min-width: 75%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: #33F6FF;
-  border: 1px solid #ddd;
+  min-width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-  align-items: center;
 }
 
 /* Style the dropdown items (optional) */
