@@ -119,17 +119,20 @@ body {
   padding: 12px 20px;
   border: 7px solid #063970;
   margin-top: 8px;
+  position: relative;
+  display: inline-block;
 }
 
 /* Style the dropdown container */
+
 .dropdown-content {
   display: none; 
-  position: fixed;
-  top: 50%;
+  position: relative;
+  top: 150px;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #33F6FF;
-  min-width: 50%;
+  width: 50%;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -140,6 +143,7 @@ body {
   padding: 12px 20px;
   text-decoration: none;
   display: block;
+  border: 1;
 }
 
 /* Change color of dropdown items on hover (optional) */
@@ -156,7 +160,7 @@ body {
 <br><br>
 <div class="content">
 	<center>
-		<marquee behavior="scroll" width="25%" direction="left" scrollamount="15" height="50px">
+		<marquee behavior="scroll" width="75%" direction="left" scrollamount="15" height="50px">
 			<p>
 				<img src="https://www.bps.go.id/images/berakhlak.png" width="15%" height="15%" />
 			
@@ -1258,9 +1262,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 });
-</script>
 
-<script>
 // Get the input field and dropdown container
 var input = document.getElementById("myInput");
 var dropdown = document.getElementById("myDropdown");
@@ -1275,6 +1277,9 @@ input.addEventListener("input", function() {
 
   // Define the dropdown items and their corresponding URLs
   var items = [
+    { name: 'Kemenkeu Learning Center', url: 'https://klc2.kemenkeu.go.id/' },
+    { name: 'OM-SPAN', url: 'https://spanint.kemenkeu.go.id/spanint/latest/app/' },
+    { name: 'Smart', url: 'https://anggaran.kemenkeu.go.id/in/post/aplikasi-smart' },
     { name: 'Admin PPID (VPN)', url: 'https://ppid.bps.go.id/dashboard' },
     { name: 'Admin Romantik (VPN)', url: 'https://romantik.bps.go.id/webadmin' },
     { name: 'ARC BRS', url: 'https://jabar.bps.go.id/publication/arc#arcTab2.html' },
@@ -1283,11 +1288,10 @@ input.addEventListener("input", function() {
     { name: 'Backoffice BPS (VPN)', url: 'https://backoffice.bps.go.id/' },
     { name: 'Bandung Barat Open Data', url: 'https://opendata.bandungbaratkab.go.id/' },
     { name: 'Bandung Kota Open Data', url: 'http://data.bandung.go.id/' },
-    { name: 'Bandung Kabupaten Open Data', url: 'https://satudata.bandungkab.go.id/' },
-    { name: 'Bekasi', url: 'https://bekasikab.bps.go.id' },
+    { name: 'Bandung Kab Open Data', url: 'https://satudata.bandungkab.go.id/' },
+    { name: 'Bekasi Kab Open Data', url: 'https://opendata.bekasikab.go.id/' },
     { name: 'Berita Resmi Statistik', url: 'https://jabar.bps.go.id/pressrelease.html' },
-    { name: 'Bogor Open Data', url: 'https://opendata.bogorkab.go.id/datasets' },
-    { name: 'BPS Jabar', url: 'https://jabar.bps.go.id' },
+    { name: 'Bogor Kab Open Data', url: 'https://opendata.bogorkab.go.id/datasets' },
     { name: 'BPS Pusat', url: 'www.bps.go.id' },
     { name: 'Ciamis Open Data', url: 'https://data.ciamiskab.go.id/' },
     { name: 'Cianjur Open Data', url: 'https://opendata.cianjurkab.go.id/' },
