@@ -2,1918 +2,1449 @@
 <html lang="en">
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
-<title>BerKiBaR</title>
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">  
-<style>
-	
-/* Style the header */
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  padding: 5px;
-  background-color: #063970;
-  text-decoration: none;
-}
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-}
-.content {
-	margin-top: 20px;
-	margin-left: 15px;
-	margin-right: 15px;
-	text-decoration: none;
-}
-/* Style the header image */
-.header img {
-  height: 50px;
-  margin-right: 10px;
-}
-
-.accordion-item {
-  border: 1px solid #ddd;
-  margin-bottom: 10px;
-  text-decoration: none;
-}
-
-.accordion-header {
-  background-color: #92C7F7;
-  padding: 10px;
-  cursor: pointer;
-  align-items: center;
-  padding: 5px 12px;
-  display: flex;
-  justify-content: center;
-  text-decoration: none;
-  
-}
-
-.accordion-header-b {
-  background-color: #85FC05;
-  padding: 10px;
-  cursor: pointer;
-  align-items: center;
-  padding: 5px 12px;
-  display: flex;
-  justify-content: center;
-  text-decoration: none;
-  
-}
-
-.accordion-header-c {
-  background-color: #FEE650;
-  padding: 10px;
-  cursor: pointer;
-  align-items: center;
-  padding: 5px 12px;
-  display: flex;
-  justify-content: center;
-  text-decoration: none;
-  
-}
-
-.accordion-content {
-  display: none;
-  padding: 10px;
-  font-size: 12px;
-  text-decoration: none;
-}
-
-.accordion-content h5 {
-  text-decoration: none;
-}
-
-.accordion-content a {
-  text-decoration: none;
-}
-
-.accordion-content ul li a {
-  text-decoration: none;
-}
-.sub-accordion-item {
-  margin-bottom: 5px;
-  text-decoration: none;
-}
-
-.sub-accordion-header {
-  background-color: #8FFFF0;
-  padding: 5px;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.sub-accordion-content {
-  display: none;
-  padding: 5px;
-  font-size: 11px;
-  text-decoration: none;
-}
-
-.sub-accordion-content a {
-  text-decoration: none;
-}
-.sub-accordion-content ul li a {
-  text-decoration: none;
-}
-
-.nav-tabs {
-  margin-top: 10px;
-  text-decoration: none;
-}
-
-.tab-content {
-  padding-top: 10px;
-  text-decoration: none;
-}
-
-td {
-	vertical-align: top;
-	border: 1px;
-	text-decoration: none;
-}
-
-body {
-  font-family: 'CustomFont', sans-serif;
-  /* Add more styling as needed */
-}
-/* Style the input field */
-#myInput {
-  width: 75%;
-  padding: 12px 20px;
-  border: 7px solid #063970;
-  margin-top: 8px;
-  text-align: center;
-}
-
-/* Style the dropdown container */
-
-.dropdown-content {
-  display: none; 
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #33F6FF;
-  width: 50%;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  font-size: 12px;
-}
-
-/* Style the dropdown items (optional) */
-.dropdown-content a {
-  color: black;
-  padding: 12px 20px;
-  text-decoration: none;
-  display: block;
-  border: 1;
-}
-
-/* Change color of dropdown items on hover (optional) */
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-</style>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+	<title>BerKiBaR</title>
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="gaya.css">
 </head>
 
 <body class=" ">
-<div class="header">
-  <center><img src="https://jabar.bps.go.id/backend/images/Header-Frontend-Besar-ind.png" /></center>
-</div>
-<br><br>
-<div class="content">
-	<center>
-		<marquee behavior="scroll" width="75%" direction="left" scrollamount="15" height="50px">
-			<p>
-				Bersama Kita Bisa <i>Reform</i> | Berpikir Kreatif | Berkarya Inovatif | Bekerja Kolaboratif
-			</p>
-		</marquee>
-	</center>
-</div>
-
-<div class="container">
-	<input type="text" id="myInput" placeholder="ketikkan yang dicari dan Enter">
-</div>	
-<div id="myDropdown" class="dropdown-content">
-  <!-- Dropdown items will be dynamically added here -->
-</div>
-<br>
-<div class="content">
-	<div class="accordion">
-		<!-- YOUTUBE BPS -->
-		<div class="row">
-			<div class="col-md-12">
-			  <div class="accordion-item">
-				<div class="accordion-header-b"><strong>Media Resmi (Youtube, Facebook dan Instagram) BPS Se-Jabar</strong></div>
-				<div class="accordion-content">
-				<div class="row">
-				  <div class="col-md-8">
-					<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-						<h5 align="center">Berita Resmi Statistik</h5>
-						<iframe width="100%" height="360" src="https://www.youtube.com/embed/YPGDsZqEFzY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-					</div>
-				  </div>
-				  <div class="col-md-1">
-					<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-					<h5 align="center">Youtube</h5>
-					</div>
-					<div><center>
-					<a href="https://www.youtube.com/@bpsjabar32" target="_blank">BPS3200</a><br>
-					<a href="https://www.youtube.com/@bpskabupatenbogor4243" target="_blank">BPS3201</a><br>
-					<a href="https://www.youtube.com/@bpskab.sukabumi3698" target="_blank">BPS3202</a><br>
-					<a href="https://www.youtube.com/@bpskabupatencianjur8601" target="_blank">BPS3203</a><br>
-					<a href="https://www.youtube.com/@BPSKabupatenbandung3204" target="_blank">BPS3204</a><br>
-					<a href="https://www.youtube.com/@bpsgarut6951" target="_blank">BPS3205</a><br>
-					<a href="https://www.youtube.com/@bpskabtasikmalaya8455" target="_blank">BPS3206</a><br>
-					<a href="https://www.youtube.com/@bpskabciamis4808" target="_blank">BPS3207</a><br>
-					<a href="https://www.youtube.com/@bpskuningan" target="_blank">BPS3208</a><br>
-					<a href="https://www.youtube.com/@bpskabupatencirebon5278" target="_blank">BPS3209</a><br>
-					<a href="https://www.youtube.com/@bpskabupatenmajalengka6492" target="_blank">BPS3210</a><br>
-					<a href="https://www.youtube.com/@bpskabsumedang279" target="_blank">BPS3211</a><br>
-					<a href="https://www.youtube.com/@bpskabupatenindramayu3212" target="_blank">BPS3212</a><br>
-					<a href="https://www.youtube.com/@bpskabupatensubang4000" target="_blank">BPS3213</a><br>
-					<a href="https://www.youtube.com/@bpspurwakarta6191" target="_blank">BPS3214</a><br>
-					<a href="https://www.youtube.com/@bpskabupatenkarawang8135" target="_blank">BPS3215</a><br>
-					<a href="https://www.youtube.com/@bpskabupatenbekasi4506" target="_blank">BPS3216</a><br>
-					<a href="https://www.youtube.com/@bpskabupatenbandungbarat6827" target="_blank">BPS3217</a><br>
-					<a href="https://www.youtube.com/@bpskotabogor3271" target="_blank">BPS3271</a><br>
-					<a href="https://www.youtube.com/@bps3272" target="_blank">BPS3272</a><br>
-					<a href="https://www.youtube.com/@BPSKotaBandungg" target="_blank">BPS3273</a><br>
-					<a href="https://www.youtube.com/@bpskotacirebon6909" target="_blank">BPS3274</a><br>
-					<a href="https://www.youtube.com/@bpskotabekasi530" target="_blank">BPS3275</a><br>
-					<a href="https://www.youtube.com/@bpskotadepok7072" target="_blank">BPS3276</a><br>
-					<a href="https://www.youtube.com/@bpscimahi1136" target="_blank">BPS3277</a><br>
-					<a href="https://www.youtube.com/@bpskotatasikmalaya227" target="_blank">BPS3278</a><br>
-					<a href="https://www.youtube.com/@bpskotabanjar1515" target="_blank">BPS3279</a>
-					</center></div>
-				  </div>
-				  <div class="col-md-1">
-					<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-					<h5 align="center">Facebook</h5>
-					</div>
-					<div><center>
-					<a href="https://www.facebook.com/bpsprovjabar/?locale=id_ID" target="_blank">BPS3200</a><br>
-					<a href="https://www.facebook.com/bpskabbogor/" target="_blank">BPS3201</a><br>
-					<a href="https://www.facebook.com/bps3202/" target="_blank">BPS3202</a><br>
-					<a href="https://www.facebook.com/bps3203/" target="_blank">BPS3203</a><br>
-					<a href="https://www.facebook.com/bpskabupatenbandung/" target="_blank">BPS3204</a><br>
-					<a href="https://www.facebook.com/bps3205/?locale=id_ID" target="_blank">BPS3205</a><br>
-					<a href="https://www.facebook.com/infoBPSkab.tasik/?locale=id_ID" target="_blank">BPS3206</a><br>
-					<a href="https://www.facebook.com/p/BPS-Kabupaten-Ciamis-100064855714348/" target="_blank">BPS3207</a><br>
-					<a href="https://www.facebook.com/bps.kabupatenkuningan/" target="_blank">BPS3208</a><br>
-					<a href="https://www.facebook.com/bpskabcirebon/?locale=id_ID" target="_blank">BPS3209</a><br>
-					<a href="https://www.facebook.com/bps.majalengka/" target="_blank">BPS3210</a><br>
-					<a href="https://www.facebook.com/people/Badan-Pusat-Statistik-Kabupaten-Sumedang/100066441437727/" target="_blank">BPS3211</a><br>
-					<a href="https://www.facebook.com/bpskabupatenindramayu/" target="_blank">BPS3212</a><br>
-					<a href="https://www.facebook.com/bpssubang/" target="_blank">BPS3213</a><br>
-					<a href="https://www.facebook.com/bps.purwakarta.1/" target="_blank">BPS3214</a><br>
-					<a href="https://www.facebook.com/bps3215/?locale=id_ID" target="_blank">BPS3215</a><br>
-					<a href="https://www.facebook.com/p/Badan-Pusat-Statistik-Kabupaten-Bekasi-100068308332439/" target="_blank">BPS3216</a><br>
-					<a href="https://www.facebook.com/bpsbandungbarat/" target="_blank">BPS3217</a><br>
-					<a href="https://www.facebook.com/bps3271/" target="_blank">BPS3271</a><br>
-					<a href="https://id-id.facebook.com/bps3272/" target="_blank">BPS3272</a><br>
-					<a href="https://www.facebook.com/bpskotabandung/?locale=id_ID" target="_blank">BPS3273</a><br>
-					<a href="" target="_blank">BPS3274</a><br>
-					<a href="https://www.facebook.com/bpsbekasikota/?locale=id_ID" target="_blank">BPS3275</a><br>
-					<a href="https://www.facebook.com/people/BPS-Kota-Depok/100066657806015/" target="_blank">BPS3276</a><br>
-					<a href="https://www.facebook.com/pages/category/product-service/BPS-KOTA-CIMAHI-142906589928025/" target="_blank">BPS3277</a><br>
-					<a href="https://www.facebook.com/tasikmalayakota.bps/" target="_blank">BPS3278</a><br>
-					<a href="https://banjarkota.bps.go.id/" target="_blank">BPS3279</a>
-					</center></div>
-				  </div>
-				  <div class="col-md-1">
-					<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-					<h5 align="center">Instagram</h5>
-					</div>
-					<div><center>
-					<a href="https://www.instagram.com/bpsjabar/?hl=en" target="_blank">BPS3200</a><br>
-					<a href="https://www.instagram.com/p/Cnq5zekv3QA/" target="_blank">BPS3201</a><br>
-					<a href="https://www.instagram.com/explore/locations/852002908300164/bps-kabupaten-sukabumi/" target="_blank">BPS3202</a><br>
-					<a href="https://www.instagram.com/bpscianjur/?hl=en" target="_blank">BPS3203</a><br>
-					<a href="https://www.instagram.com/p/CWFZOGNheSc/" target="_blank">BPS3204</a><br>
-					<a href="https://www.instagram.com/bps_garut/reels/" target="_blank">BPS3205</a><br>
-					<a href="https://www.instagram.com/p/B-viytqAETu/" target="_blank">BPS3206</a><br>
-					<a href="https://www.instagram.com/bps_ciamis/?hl=en" target="_blank">BPS3207</a><br>
-					<a href="https://www.instagram.com/p/Ch_cbZZOJna/" target="_blank">BPS3208</a><br>
-					<a href="https://www.instagram.com/p/CqN3ea4vdYj/" target="_blank">BPS3209</a><br>
-					<a href="https://www.instagram.com/bps.majalengka/?hl=en" target="_blank">BPS3210</a><br>
-					<a href="https://www.instagram.com/bps.kab.sumedang/?hl=en" target="_blank">BPS3211</a><br>
-					<a href="https://www.instagram.com/p/Civ0BEcBWA9/" target="_blank">BPS3212</a><br>
-					<a href="https://www.instagram.com/bps_subang/?hl=en#:~:text=Bps%20Kabupaten%20Subang%20(%40bps_subang)%20on%20Instagram" target="_blank">BPS3213</a><br>
-					<a href="https://www.instagram.com/explore/locations/909460775/bps-purwakarta/" target="_blank">BPS3214</a><br>
-					<a href="https://www.instagram.com/explore/locations/909514857/bps-kabupaten-karawang/" target="_blank">BPS3215</a><br>
-					<a href="https://www.instagram.com/bpskabupatenbekasi/" target="_blank">BPS3216</a><br>
-					<a href="https://www.instagram.com/bps_bandungbarat/?hl=en" target="_blank">BPS3217</a><br>
-					<a href="https://www.instagram.com/bps3271/?hl=en" target="_blank">BPS3271</a><br>
-					<a href="" target="_blank">BPS3272</a><br>
-					<a href="https://www.instagram.com/p/CXwlpn4haaL/" target="_blank">BPS3273</a><br>
-					<a href="https://www.instagram.com/bps_kotacirebon/?hl=en" target="_blank">BPS3274</a><br>
-					<a href="https://www.instagram.com/p/CWHxUqAh0Iv/" target="_blank">BPS3275</a><br>
-					<a href="https://www.instagram.com/bpskotadepok/?hl=en" target="_blank">BPS3276</a><br>
-					<a href="https://www.instagram.com/bps.kota.cimahi/?hl=en" target="_blank">BPS3277</a><br>
-					<a href="https://www.instagram.com/tasikmalayakota_bps/?hl=en" target="_blank">BPS3278</a><br>
-					<a href="" target="_blank">BPS3279</a>
-					</center></div>
-				  </div>
-				  <div class="col-md-1">
-					<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-					<h5 align="center">Website</h5>
-					</div>
-					<div><center>
-					<a href="https://jabar.bps.go.id" target="_blank">BPS3200</a><br>
-					<a href="https://bogorkab.bps.go.id" target="_blank">BPS3201</a><br>
-					<a href="https://sukabumikab.bps.go.id" target="_blank">BPS3202</a><br>
-					<a href="https://cianjurkab.bps.go.id" target="_blank">BPS3203</a><br>
-					<a href="https://bandungkab.bps.go.id" target="_blank">BPS3204</a><br>
-					<a href="https://garutkab.bps.go.id" target="_blank">BPS3205</a><br>
-					<a href="https://tasikmalayakab.bps.go.id" target="_blank">BPS3206</a><br>
-					<a href="https://ciamiskab.bps.go.id" target="_blank">BPS3207</a><br>
-					<a href="https://kuningankab.bps.go.id" target="_blank">BPS3208</a><br>
-					<a href="https://cirebonkab.bps.go.id" target="_blank">BPS3209</a><br>
-					<a href="https://majalengkakab.bps.go.id" target="_blank">BPS3210</a><br>
-					<a href="https://sumedangkab.bps.go.id" target="_blank">BPS3211</a><br>
-					<a href="https://indramayukab.bps.go.id" target="_blank">BPS3212</a><br>
-					<a href="https://subangkab.bps.go.id" target="_blank">BPS3213</a><br>
-					<a href="https://purwakartakab.bps.go.id" target="_blank">BPS3214</a><br>
-					<a href="https://karawangkab.bps.go.id" target="_blank">BPS3215</a><br>
-					<a href="https://bekasikab.bps.go.id" target="_blank">BPS3216</a><br>
-					<a href="https://bandungbaratkab.bps.go.id" target="_blank">BPS3217</a><br>
-					<a href="https://bogorkota.bps.go.id" target="_blank">BPS3271</a><br>
-					<a href="https://sukabumikota.bps.go.id" target="_blank">BPS3272</a><br>
-					<a href="https://bandungkota.bps.go.id" target="_blank">BPS3273</a><br>
-					<a href="https://cirebonkota.bps.go.id" target="_blank">BPS3274</a><br>
-					<a href="https://bekasikota.bps.go.id" target="_blank">BPS3275</a><br>
-					<a href="https://depokkota.bps.go.id" target="_blank">BPS3276</a><br>
-					<a href="https://cimahikota.bps.go.id" target="_blank">BPS3277</a><br>
-					<a href="https://tasikmalayakota.bps.go.id" target="_blank">BPS3278</a><br>
-					<a href="https://banjarkota.bps.go.id" target="_blank">BPS3279</a>
-					</center></div>
-				  </div>
-				</div>
-			  </div>
-			</div>  
-			</div>
-		</div>
-		<hr>
-		<!-- WEBSITE BPS -->
-		<div class="row">
-			<div class="col-md-12">
-			<div class="accordion-item">
-					<div class="accordion-header-c">Website BPS Se-Jabar</div>
+	<div class="header">
+	  <center><img src="https://jabar.bps.go.id/backend/images/Header-Frontend-Besar-ind.png" /></center>
+	</div>
+	<br><br>
+	<div class="content">
+		<center>
+			<marquee behavior="scroll" width="75%" direction="left" scrollamount="15" height="50px">
+				<p>
+					Bersama Kita Bisa <i>Reform</i> | Berpikir Kreatif | Berkarya Inovatif | Bekerja Kolaboratif
+				</p>
+			</marquee>
+		</center>
+	</div>
+	
+	<div class="container">
+		<input type="text" id="myInput" placeholder="ketikkan yang dicari dan Enter">
+	</div>	
+	<div id="myDropdown" class="dropdown-content">
+	  <!-- Dropdown items will be dynamically added here -->
+	</div>
+	<br>
+	<div class="content">
+		<div class="accordion">
+			<!-- YOUTUBE BPS -->
+			<div class="row">
+				<div class="col-md-12">
+				  <div class="accordion-item">
+					<div class="accordion-header-b"><strong>Media Resmi (Youtube, Facebook dan Instagram) BPS Se-Jabar</strong></div>
 					<div class="accordion-content">
 					<div class="row">
-					  <div class="col-md-3">
+					  <div class="col-md-8">
 						<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-						<h5 align="center"><a href="https://jabar.bps.go.id" target="_blank">BPS3200</a></h5>
-						  <iframe src="https://jabar.bps.go.id" width="100%" height="360" border="1"></iframe>
+							<h5 align="center">Berita Resmi Statistik</h5>
+							<iframe width="100%" height="360" src="https://www.youtube.com/embed/YPGDsZqEFzY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 						</div>
 					  </div>
-					  <div class="col-md-3">
+					  <div class="col-md-1">
 						<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-						<h5 align="center"><a href="https://jabar.bps.go.id/subject/12/kependudukan.html#subjekViewTab3" target="_blank">Kependudukan</a></h5>
-						  <iframe src="https://jabar.bps.go.id/subject/12/kependudukan.html#subjekViewTab3" width="100%" height="360"></iframe>
+						<h5 align="center">Youtube</h5>
 						</div>
+						<div><center>
+						<a href="https://www.youtube.com/@bpsjabar32" target="_blank">BPS3200</a><br>
+						<a href="https://www.youtube.com/@bpskabupatenbogor4243" target="_blank">BPS3201</a><br>
+						<a href="https://www.youtube.com/@bpskab.sukabumi3698" target="_blank">BPS3202</a><br>
+						<a href="https://www.youtube.com/@bpskabupatencianjur8601" target="_blank">BPS3203</a><br>
+						<a href="https://www.youtube.com/@BPSKabupatenbandung3204" target="_blank">BPS3204</a><br>
+						<a href="https://www.youtube.com/@bpsgarut6951" target="_blank">BPS3205</a><br>
+						<a href="https://www.youtube.com/@bpskabtasikmalaya8455" target="_blank">BPS3206</a><br>
+						<a href="https://www.youtube.com/@bpskabciamis4808" target="_blank">BPS3207</a><br>
+						<a href="https://www.youtube.com/@bpskuningan" target="_blank">BPS3208</a><br>
+						<a href="https://www.youtube.com/@bpskabupatencirebon5278" target="_blank">BPS3209</a><br>
+						<a href="https://www.youtube.com/@bpskabupatenmajalengka6492" target="_blank">BPS3210</a><br>
+						<a href="https://www.youtube.com/@bpskabsumedang279" target="_blank">BPS3211</a><br>
+						<a href="https://www.youtube.com/@bpskabupatenindramayu3212" target="_blank">BPS3212</a><br>
+						<a href="https://www.youtube.com/@bpskabupatensubang4000" target="_blank">BPS3213</a><br>
+						<a href="https://www.youtube.com/@bpspurwakarta6191" target="_blank">BPS3214</a><br>
+						<a href="https://www.youtube.com/@bpskabupatenkarawang8135" target="_blank">BPS3215</a><br>
+						<a href="https://www.youtube.com/@bpskabupatenbekasi4506" target="_blank">BPS3216</a><br>
+						<a href="https://www.youtube.com/@bpskabupatenbandungbarat6827" target="_blank">BPS3217</a><br>
+						<a href="https://www.youtube.com/@bpskotabogor3271" target="_blank">BPS3271</a><br>
+						<a href="https://www.youtube.com/@bps3272" target="_blank">BPS3272</a><br>
+						<a href="https://www.youtube.com/@BPSKotaBandungg" target="_blank">BPS3273</a><br>
+						<a href="https://www.youtube.com/@bpskotacirebon6909" target="_blank">BPS3274</a><br>
+						<a href="https://www.youtube.com/@bpskotabekasi530" target="_blank">BPS3275</a><br>
+						<a href="https://www.youtube.com/@bpskotadepok7072" target="_blank">BPS3276</a><br>
+						<a href="https://www.youtube.com/@bpscimahi1136" target="_blank">BPS3277</a><br>
+						<a href="https://www.youtube.com/@bpskotatasikmalaya227" target="_blank">BPS3278</a><br>
+						<a href="https://www.youtube.com/@bpskotabanjar1515" target="_blank">BPS3279</a>
+						</center></div>
 					  </div>
-					  <div class="col-md-3">
+					  <div class="col-md-1">
 						<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-						<h5 align="center"><a href="https://jabar.bps.go.id/subject/23/kemiskinan.html#subjekViewTab3" target="_blank">Kemiskinan</a></h5>
-						  <iframe src="https://jabar.bps.go.id/subject/23/kemiskinan.html#subjekViewTab3" width="100%" height="360"></iframe>
+						<h5 align="center">Facebook</h5>
 						</div>
+						<div><center>
+						<a href="https://www.facebook.com/bpsprovjabar/?locale=id_ID" target="_blank">BPS3200</a><br>
+						<a href="https://www.facebook.com/bpskabbogor/" target="_blank">BPS3201</a><br>
+						<a href="https://www.facebook.com/bps3202/" target="_blank">BPS3202</a><br>
+						<a href="https://www.facebook.com/bps3203/" target="_blank">BPS3203</a><br>
+						<a href="https://www.facebook.com/bpskabupatenbandung/" target="_blank">BPS3204</a><br>
+						<a href="https://www.facebook.com/bps3205/?locale=id_ID" target="_blank">BPS3205</a><br>
+						<a href="https://www.facebook.com/infoBPSkab.tasik/?locale=id_ID" target="_blank">BPS3206</a><br>
+						<a href="https://www.facebook.com/p/BPS-Kabupaten-Ciamis-100064855714348/" target="_blank">BPS3207</a><br>
+						<a href="https://www.facebook.com/bps.kabupatenkuningan/" target="_blank">BPS3208</a><br>
+						<a href="https://www.facebook.com/bpskabcirebon/?locale=id_ID" target="_blank">BPS3209</a><br>
+						<a href="https://www.facebook.com/bps.majalengka/" target="_blank">BPS3210</a><br>
+						<a href="https://www.facebook.com/people/Badan-Pusat-Statistik-Kabupaten-Sumedang/100066441437727/" target="_blank">BPS3211</a><br>
+						<a href="https://www.facebook.com/bpskabupatenindramayu/" target="_blank">BPS3212</a><br>
+						<a href="https://www.facebook.com/bpssubang/" target="_blank">BPS3213</a><br>
+						<a href="https://www.facebook.com/bps.purwakarta.1/" target="_blank">BPS3214</a><br>
+						<a href="https://www.facebook.com/bps3215/?locale=id_ID" target="_blank">BPS3215</a><br>
+						<a href="https://www.facebook.com/p/Badan-Pusat-Statistik-Kabupaten-Bekasi-100068308332439/" target="_blank">BPS3216</a><br>
+						<a href="https://www.facebook.com/bpsbandungbarat/" target="_blank">BPS3217</a><br>
+						<a href="https://www.facebook.com/bps3271/" target="_blank">BPS3271</a><br>
+						<a href="https://id-id.facebook.com/bps3272/" target="_blank">BPS3272</a><br>
+						<a href="https://www.facebook.com/bpskotabandung/?locale=id_ID" target="_blank">BPS3273</a><br>
+						<a href="" target="_blank">BPS3274</a><br>
+						<a href="https://www.facebook.com/bpsbekasikota/?locale=id_ID" target="_blank">BPS3275</a><br>
+						<a href="https://www.facebook.com/people/BPS-Kota-Depok/100066657806015/" target="_blank">BPS3276</a><br>
+						<a href="https://www.facebook.com/pages/category/product-service/BPS-KOTA-CIMAHI-142906589928025/" target="_blank">BPS3277</a><br>
+						<a href="https://www.facebook.com/tasikmalayakota.bps/" target="_blank">BPS3278</a><br>
+						<a href="https://banjarkota.bps.go.id/" target="_blank">BPS3279</a>
+						</center></div>
 					  </div>
-					  <div class="col-md-3">
+					  <div class="col-md-1">
 						<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-						<h5 align="center"><a href="https://jabar.bps.go.id/subject/155/pdrb-menurut-kabupaten-kota.html#subjekViewTab3" target="_blank">P D R B</a></h5>
-						  <iframe src="https://jabar.bps.go.id/subject/155/pdrb-menurut-kabupaten-kota.html#subjekViewTab3" width="100%" height="360"></iframe>
+						<h5 align="center">Instagram</h5>
 						</div>
+						<div><center>
+						<a href="https://www.instagram.com/bpsjabar/?hl=en" target="_blank">BPS3200</a><br>
+						<a href="https://www.instagram.com/p/Cnq5zekv3QA/" target="_blank">BPS3201</a><br>
+						<a href="https://www.instagram.com/explore/locations/852002908300164/bps-kabupaten-sukabumi/" target="_blank">BPS3202</a><br>
+						<a href="https://www.instagram.com/bpscianjur/?hl=en" target="_blank">BPS3203</a><br>
+						<a href="https://www.instagram.com/p/CWFZOGNheSc/" target="_blank">BPS3204</a><br>
+						<a href="https://www.instagram.com/bps_garut/reels/" target="_blank">BPS3205</a><br>
+						<a href="https://www.instagram.com/p/B-viytqAETu/" target="_blank">BPS3206</a><br>
+						<a href="https://www.instagram.com/bps_ciamis/?hl=en" target="_blank">BPS3207</a><br>
+						<a href="https://www.instagram.com/p/Ch_cbZZOJna/" target="_blank">BPS3208</a><br>
+						<a href="https://www.instagram.com/p/CqN3ea4vdYj/" target="_blank">BPS3209</a><br>
+						<a href="https://www.instagram.com/bps.majalengka/?hl=en" target="_blank">BPS3210</a><br>
+						<a href="https://www.instagram.com/bps.kab.sumedang/?hl=en" target="_blank">BPS3211</a><br>
+						<a href="https://www.instagram.com/p/Civ0BEcBWA9/" target="_blank">BPS3212</a><br>
+						<a href="https://www.instagram.com/bps_subang/?hl=en#:~:text=Bps%20Kabupaten%20Subang%20(%40bps_subang)%20on%20Instagram" target="_blank">BPS3213</a><br>
+						<a href="https://www.instagram.com/explore/locations/909460775/bps-purwakarta/" target="_blank">BPS3214</a><br>
+						<a href="https://www.instagram.com/explore/locations/909514857/bps-kabupaten-karawang/" target="_blank">BPS3215</a><br>
+						<a href="https://www.instagram.com/bpskabupatenbekasi/" target="_blank">BPS3216</a><br>
+						<a href="https://www.instagram.com/bps_bandungbarat/?hl=en" target="_blank">BPS3217</a><br>
+						<a href="https://www.instagram.com/bps3271/?hl=en" target="_blank">BPS3271</a><br>
+						<a href="" target="_blank">BPS3272</a><br>
+						<a href="https://www.instagram.com/p/CXwlpn4haaL/" target="_blank">BPS3273</a><br>
+						<a href="https://www.instagram.com/bps_kotacirebon/?hl=en" target="_blank">BPS3274</a><br>
+						<a href="https://www.instagram.com/p/CWHxUqAh0Iv/" target="_blank">BPS3275</a><br>
+						<a href="https://www.instagram.com/bpskotadepok/?hl=en" target="_blank">BPS3276</a><br>
+						<a href="https://www.instagram.com/bps.kota.cimahi/?hl=en" target="_blank">BPS3277</a><br>
+						<a href="https://www.instagram.com/tasikmalayakota_bps/?hl=en" target="_blank">BPS3278</a><br>
+						<a href="" target="_blank">BPS3279</a>
+						</center></div>
 					  </div>
-					</div>
-					<hr>
-					<div class="row">
-					  <div class="col-md-3">
+					  <div class="col-md-1">
 						<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-						<h5 align="center"><a href="https://jabar.bps.go.id/subject/3/inflasi.html#subjekViewTab3" target="_blank">Inflasi</a></h5>
-						  <iframe src="https://jabar.bps.go.id/subject/3/inflasi.html#subjekViewTab3" width="100%" height="360" border="1"></iframe>
+						<h5 align="center">Website</h5>
 						</div>
-					  </div>
-					  <div class="col-md-3">
-						<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-						<h5 align="center"><a href="https://jabar.bps.go.id/subject/16/pariwisata.html#subjekViewTab3" target="_blank">Pariwisata</a></h5>
-						  <iframe src="https://jabar.bps.go.id/subject/16/pariwisata.html#subjekViewTab3" width="100%" height="360"></iframe>
-						</div>
-					  </div>
-					  <div class="col-md-3">
-						<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-						<h5 align="center"><a href="https://jabar.bps.go.id/subject/8/ekspor-impor.html#subjekViewTab3" target="_blank">Ekspor-Impor</a></h5>
-						  <iframe src="https://jabar.bps.go.id/subject/8/ekspor-impor.html#subjekViewTab3" width="100%" height="360"></iframe>
-						</div>
-					  </div>
-					  <div class="col-md-3">
-						<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-						<h5 align="center"><a href="https://jabar.bps.go.id/subject/6/tenaga-kerja.html#subjekViewTab3" target="_blank">Pengangguran</a></h5>
-						  <iframe src="https://jabar.bps.go.id/subject/6/tenaga-kerja.html#subjekViewTab3" width="100%" height="360"></iframe>
-						</div>
-					  </div>
-					</div>
-					<hr>
-					<div class="row">
-					  <div class="col-md-3">
-						<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-						<h5 align="center"><a href="https://jabar.bps.go.id/subject/3/inflasi.html#subjekViewTab3" target="_blank">I P M</a></h5>
-						  <iframe src="https://jabar.bps.go.id/subject/3/inflasi.html#subjekViewTab3" width="100%" height="360" border="1"></iframe>
-						</div>
-					  </div>
-					  <div class="col-md-3">
-						<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-						<h5 align="center"><a href="https://bogorkab.bps.go.id" target="_blank">BPS3201</a></h5>
-						  <iframe src="https://bogorkab.bps.go.id" width="100%" height="360"></iframe>
-						</div>
-					  </div>
-					  <div class="col-md-3">
-						<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-						<h5 align="center"><a href="https://sukabumikab.bps.go.id" target="_blank">BPS3202</a></h5>
-						  <iframe src="https://sukabumikab.bps.go.id" width="100%" height="360"></iframe>
-						</div>
-					  </div>
-					  <div class="col-md-3">
-						<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-						<h5 align="center"><a href="https://cianjurkab.bps.go.id" target="_blank">BPS3203</a></h5>
-						  <iframe src="https://cianjurkab.bps.go.id" width="100%" height="360"></iframe>
-						</div>
-					  </div>
-					</div>
-					<hr>
-					<div class="row">
-					  <div class="col-md-3">
-						<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-						<h5 align="center"><a href="https://bandungkab.bps.go.id" target="_blank">BPS3204</a></h5>
-						  <iframe src="https://bandungkab.bps.go.id" width="100%" height="360"></iframe>
-						</div>
-					  </div>
-					  <div class="col-md-3">
-						<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-						<h5 align="center"><a href="https://garutkab.bps.go.id" target="_blank">BPS3205</a></h5>
-						  <iframe src="https://garutkab.bps.go.id" width="100%" height="360"></iframe>
-						</div>
-					  </div>
-					  <div class="col-md-3">
-						<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-						<h5 align="center"><a href="https://tasikmalayakab.bps.go.id" target="_blank">BPS3206</a></h5>
-						  <iframe src="https://tasikmalayakab.bps.go.id" width="100%" height="360"></iframe>
-						</div>
-					  </div>
-					  <div class="col-md-3">
-						<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-						<h5 align="center"><a href="https://ciamiskab.bps.go.id" target="_blank">BPS3207</a></h5>
-						  <iframe src="https://ciamiskab.bps.go.id" width="100%" height="360"></iframe>
-						</div>
-					  </div>
-					</div>
-					<hr>
-					<div class="row">
-					  <div class="col-md-3">
-						<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-						<h5 align="center"><a href="https://kuningankab.bps.go.id" target="_blank">BPS3208</a></h5>
-						  <iframe src="https://kuningankab.bps.go.id" width="100%" height="360"></iframe>
-						</div>
-					  </div>
-					  <div class="col-md-3">
-						<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-						<h5 align="center"><a href="https://cirebonkab.bps.go.id" target="_blank">BPS3209</a></h5>
-						  <iframe src="https://cirebonkab.bps.go.id" width="100%" height="360"></iframe>
-						</div>
-					  </div>
-					  <div class="col-md-3">
-						<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-						<h5 align="center"><a href="https://majalengkakab.bps.go.id" target="_blank">BPS3210</a></h5>
-						  <iframe src="https://majalengkakab.bps.go.id" width="100%" height="360"></iframe>
-						</div>
-					  </div>
-					  <div class="col-md-3">
-						<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-						<h5 align="center"><a href="https://sumedangkab.bps.go.id" target="_blank">BPS3211</a></h5>
-						  <iframe src="https://sumedangkab.bps.go.id" width="100%" height="360"></iframe>
-						</div>
-					  </div>
-					</div>
-					<hr>
-					<div class="row">
-					  <div class="col-md-3">
-						<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-						<h5 align="center"><a href="https://indramayukab.bps.go.id" target="_blank">BPS3212</a></h5>
-						  <iframe src="https://indramayukab.bps.go.id" width="100%" height="360"></iframe>
-						</div>
-					  </div>
-					  <div class="col-md-3">
-						<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-						<h5 align="center"><a href="https://subangkab.bps.go.id" target="_blank">BPS3213</a></h5>
-						  <iframe src="https://subangkab.bps.go.id" width="100%" height="360"></iframe>
-						</div>
-					  </div>
-					  <div class="col-md-3">
-						<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-						<h5 align="center"><a href="https://purwakartakab.bps.go.id" target="_blank">BPS3214</a></h5>
-						  <iframe src="https://purwakartakab.bps.go.id" width="100%" height="360"></iframe>
-						</div>
-					  </div>
-					  <div class="col-md-3">
-						<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-						<h5 align="center"><a href="https://karawangkab.bps.go.id" target="_blank">BPS3215</a></h5>
-						  <iframe src="https://karawangkab.bps.go.id" width="100%" height="360"></iframe>
-						</div>
+						<div><center>
+						<a href="https://jabar.bps.go.id" target="_blank">BPS3200</a><br>
+						<a href="https://bogorkab.bps.go.id" target="_blank">BPS3201</a><br>
+						<a href="https://sukabumikab.bps.go.id" target="_blank">BPS3202</a><br>
+						<a href="https://cianjurkab.bps.go.id" target="_blank">BPS3203</a><br>
+						<a href="https://bandungkab.bps.go.id" target="_blank">BPS3204</a><br>
+						<a href="https://garutkab.bps.go.id" target="_blank">BPS3205</a><br>
+						<a href="https://tasikmalayakab.bps.go.id" target="_blank">BPS3206</a><br>
+						<a href="https://ciamiskab.bps.go.id" target="_blank">BPS3207</a><br>
+						<a href="https://kuningankab.bps.go.id" target="_blank">BPS3208</a><br>
+						<a href="https://cirebonkab.bps.go.id" target="_blank">BPS3209</a><br>
+						<a href="https://majalengkakab.bps.go.id" target="_blank">BPS3210</a><br>
+						<a href="https://sumedangkab.bps.go.id" target="_blank">BPS3211</a><br>
+						<a href="https://indramayukab.bps.go.id" target="_blank">BPS3212</a><br>
+						<a href="https://subangkab.bps.go.id" target="_blank">BPS3213</a><br>
+						<a href="https://purwakartakab.bps.go.id" target="_blank">BPS3214</a><br>
+						<a href="https://karawangkab.bps.go.id" target="_blank">BPS3215</a><br>
+						<a href="https://bekasikab.bps.go.id" target="_blank">BPS3216</a><br>
+						<a href="https://bandungbaratkab.bps.go.id" target="_blank">BPS3217</a><br>
+						<a href="https://bogorkota.bps.go.id" target="_blank">BPS3271</a><br>
+						<a href="https://sukabumikota.bps.go.id" target="_blank">BPS3272</a><br>
+						<a href="https://bandungkota.bps.go.id" target="_blank">BPS3273</a><br>
+						<a href="https://cirebonkota.bps.go.id" target="_blank">BPS3274</a><br>
+						<a href="https://bekasikota.bps.go.id" target="_blank">BPS3275</a><br>
+						<a href="https://depokkota.bps.go.id" target="_blank">BPS3276</a><br>
+						<a href="https://cimahikota.bps.go.id" target="_blank">BPS3277</a><br>
+						<a href="https://tasikmalayakota.bps.go.id" target="_blank">BPS3278</a><br>
+						<a href="https://banjarkota.bps.go.id" target="_blank">BPS3279</a>
+						</center></div>
 					  </div>
 					</div>
-					<hr>
-					<div class="row">
-					  <div class="col-md-3">
-						<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-						<h5 align="center"><a href="https://bekasikab.bps.go.id" target="_blank">BPS3216</a></h5>
-						  <iframe src="https://bekasikab.bps.go.id" width="100%" height="360"></iframe>
-						</div>
-					  </div>
-					  <div class="col-md-3">
-						<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-						<h5 align="center"><a href="https://bandungbaratkab.bps.go.id" target="_blank">BPS3217</a></h5>
-						  <iframe src="https://bandungbaratkab.bps.go.id" width="100%" height="360"></iframe>
-						</div>
-					  </div>
-					  <div class="col-md-3">
-						<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-						<h5 align="center"><a href="https://pangandarankab.bps.go.id" target="_blank">3218</a></h5>
-						  <iframe src="https://pangandarankab.bps.go.id" width="100%" height="360"></iframe>
-						</div>
-					  </div>
-					  <div class="col-md-3">
-						<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-						<h5 align="center"><a href="https://bogorkota.bps.go.id" target="_blank">BPS3271</a></h5>
-						  <iframe src="https://bogorkota.bps.go.id" width="100%" height="360"></iframe>
-						</div>
-					  </div>
-					</div>
-					<hr>
-					<div class="row">
-					  <div class="col-md-3">
-						<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-						<h5 align="center"><a href="https://sukabumikota.bps.go.id" target="_blank">BPS3272</a></h5>
-						  <iframe src="https://sukabumikota.bps.go.id" width="100%" height="360"></iframe>
-						</div>
-					  </div>
-					  <div class="col-md-3">
-						<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-						<h5 align="center"><a href="https://bandungkota.bps.go.id" target="_blank">BPS3273</a></h5>
-						  <iframe src="https://bandungkota.bps.go.id" width="100%" height="360"></iframe>
-						</div>
-					  </div>
-					  <div class="col-md-3">
-						<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-						<h5 align="center"><a href="https://cirebonkota.bps.go.id" target="_blank">BPS3274</a></h5>
-						  <iframe src="https://cirebonkota.bps.go.id" width="100%" height="360"></iframe>
-						</div>
-					  </div>
-					  <div class="col-md-3">
-						<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-						<h5 align="center"><a href="https://bekasikota.bps.go.id" target="_blank">BPS3275</a></h5>
-						  <iframe src="https://bekasikota.bps.go.id" width="100%" height="360"></iframe>
-						</div>
-					  </div>
-					</div>
-					<hr>
-					<div class="row">
-					  <div class="col-md-3">
-						<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-						<h5 align="center"><a href="https://depokkota.bps.go.id" target="_blank">BPS3276</a></h5>
-						  <iframe src="https://depokkota.bps.go.id" width="100%" height="360"></iframe>
-						</div>
-					  </div>
-					  <div class="col-md-3">
-						<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-						<h5 align="center"><a href="https://cimahikota.bps.go.id" target="_blank">BPS3277</a></h5>
-						  <iframe src="https://cimahikota.bps.go.id" width="100%" height="360"></iframe>
-						</div>
-					  </div>
-					  <div class="col-md-3">
-						<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-						<h5 align="center"><a href="https://tasikmalayakota.bps.go.id" target="_blank">BPS3278</a></h5>
-						  <iframe src="https://tasikmalayakota.bps.go.id" width="100%" height="360"></iframe>
-						</div>
-					  </div>
-					  <div class="col-md-3">
-						<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-						<h5 align="center"><a href="https://banjarkota.bps.go.id" target="_blank">BPS3279</a></h5>
-						  <iframe src="https://banjarkota.bps.go.id" width="100%" height="360"></iframe>
-						</div>
-					  </div>
-					</div>
-					</div>
-				  </div>  
-			</div>	  
+				  </div>
+				</div>  
+				</div>
 			</div>
 			<hr>
-				<!-- KINERJA ASN -->
-		<div class="row">
-			<div class="col-md-3">
+			<!-- WEBSITE BPS -->
+			<div class="row">
+				<div class="col-md-12">
 				<div class="accordion-item">
-		    			<div class="accordion-header"><center>Pengelolaan Kinerja</center></div>
-			    <div class="accordion-content">
-					<div class="sub-accordion">
-						<div class="sub-accordion-item">
-							<div class="sub-accordion-header">Pengantar</div>
-								<div class="sub-accordion-content">
-									<p class="content">
-									  Pengelolaan kinerja Pegawai terdiri atas:
-									  <ol type="a">
-										<li>perencanaan kinerja, penetapan dan klarifikasi Ekspektasi kinerja Pegawai;</li>
-										<li>pelaksanaan, pemantauan, dan pembinaan kinerja Pegawai pendokumentasian kinerja, 
-									  pemberian umpan balik berkelanjutan, dan pengembangan kinerja Pegawai;</li>
-										<li>penilaian kinerja Pegawai, evaluasi kinerja Pegawai; dan</li>
-										<li>tindak lanjut hasil evaluasi kinerja Pegawai, pemberian penghargaan dan sanksi.</li>
-									  </ol>
-									  <br>
-									  Sasaran Kinerja Pegawai yang selanjutnya disingkat SKP 
-									  adalah ekspektasi kinerja yang akan dicapai oleh Pegawai setiap tahun.
-									<br><br> 
-									  Ekspektasi Kinerja yang selanjutnya disebut Ekspektasi adalah harapan 
-									  atas hasil kerja dan perilaku kerja Pegawai.<br><br>
-									  Pengelolaan kinerja Pegawai dilaksanakan untuk pencapaian tujuan dan sasaran 
-									  organisasi melalui:<br> 
-									  <ol type="a">
-										  <li>peningkatan kualitas dan kapasitas Pegawai;</li>
-										  <li>penguatan peran Pimpinan; dan</li>
-										  <li>penguatan kolaborasi antara Pimpinan dengan 
-									  Pegawai, antar-Pegawai, dan antara Pegawai dengan pemangku kepentingan lainnya.</li>
-									  </ol>
-									   <br>
-									  yang berorientasi pada:<br>
-									  <ol type="a">
-										  <li>pengembangan kinerja Pegawai;</li>
-										  <li>pemenuhan Ekspektasi Pimpinan;</li>
-										  <li>dialog kinerja yang intens antara Pimpinan dan Pegawai;</li>
-										  <li>pencapaian kinerja organisasi; dan</li>
-										  <li>hasil kerja dan perilaku kerja Pegawai.</li>
-									  </ol>
-									  <br><br>
-
-									  Pengelolaan kinerja Pegawai dilaksanakan melalui aplikasi kinerja Pegawai yang 
-									  disiapkan oleh Badan Kepegawaian Negara dengan persetujuan Menteri dan 
-									  terintegrasi dengan platform tunggal pengelolaan Pegawai.
-									  </p>
-								</div>
+						<div class="accordion-header-c">Website BPS Se-Jabar</div>
+						<div class="accordion-content">
+						<div class="row">
+						  <div class="col-md-3">
+							<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
+							<h5 align="center"><a href="https://jabar.bps.go.id" target="_blank">BPS3200</a></h5>
+							  <iframe src="https://jabar.bps.go.id" width="100%" height="360" border="1"></iframe>
 							</div>
+						  </div>
+						  <div class="col-md-3">
+							<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
+							<h5 align="center"><a href="https://jabar.bps.go.id/subject/12/kependudukan.html#subjekViewTab3" target="_blank">Kependudukan</a></h5>
+							  <iframe src="https://jabar.bps.go.id/subject/12/kependudukan.html#subjekViewTab3" width="100%" height="360"></iframe>
+							</div>
+						  </div>
+						  <div class="col-md-3">
+							<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
+							<h5 align="center"><a href="https://jabar.bps.go.id/subject/23/kemiskinan.html#subjekViewTab3" target="_blank">Kemiskinan</a></h5>
+							  <iframe src="https://jabar.bps.go.id/subject/23/kemiskinan.html#subjekViewTab3" width="100%" height="360"></iframe>
+							</div>
+						  </div>
+						  <div class="col-md-3">
+							<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
+							<h5 align="center"><a href="https://jabar.bps.go.id/subject/155/pdrb-menurut-kabupaten-kota.html#subjekViewTab3" target="_blank">P D R B</a></h5>
+							  <iframe src="https://jabar.bps.go.id/subject/155/pdrb-menurut-kabupaten-kota.html#subjekViewTab3" width="100%" height="360"></iframe>
+							</div>
+						  </div>
+						</div>
+						<hr>
+						<div class="row">
+						  <div class="col-md-3">
+							<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
+							<h5 align="center"><a href="https://jabar.bps.go.id/subject/3/inflasi.html#subjekViewTab3" target="_blank">Inflasi</a></h5>
+							  <iframe src="https://jabar.bps.go.id/subject/3/inflasi.html#subjekViewTab3" width="100%" height="360" border="1"></iframe>
+							</div>
+						  </div>
+						  <div class="col-md-3">
+							<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
+							<h5 align="center"><a href="https://jabar.bps.go.id/subject/16/pariwisata.html#subjekViewTab3" target="_blank">Pariwisata</a></h5>
+							  <iframe src="https://jabar.bps.go.id/subject/16/pariwisata.html#subjekViewTab3" width="100%" height="360"></iframe>
+							</div>
+						  </div>
+						  <div class="col-md-3">
+							<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
+							<h5 align="center"><a href="https://jabar.bps.go.id/subject/8/ekspor-impor.html#subjekViewTab3" target="_blank">Ekspor-Impor</a></h5>
+							  <iframe src="https://jabar.bps.go.id/subject/8/ekspor-impor.html#subjekViewTab3" width="100%" height="360"></iframe>
+							</div>
+						  </div>
+						  <div class="col-md-3">
+							<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
+							<h5 align="center"><a href="https://jabar.bps.go.id/subject/6/tenaga-kerja.html#subjekViewTab3" target="_blank">Pengangguran</a></h5>
+							  <iframe src="https://jabar.bps.go.id/subject/6/tenaga-kerja.html#subjekViewTab3" width="100%" height="360"></iframe>
+							</div>
+						  </div>
+						</div>
+						<hr>
+						<div class="row">
+						  <div class="col-md-3">
+							<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
+							<h5 align="center"><a href="https://jabar.bps.go.id/subject/3/inflasi.html#subjekViewTab3" target="_blank">I P M</a></h5>
+							  <iframe src="https://jabar.bps.go.id/subject/3/inflasi.html#subjekViewTab3" width="100%" height="360" border="1"></iframe>
+							</div>
+						  </div>
+						  <div class="col-md-3">
+							<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
+							<h5 align="center"><a href="https://bogorkab.bps.go.id" target="_blank">BPS3201</a></h5>
+							  <iframe src="https://bogorkab.bps.go.id" width="100%" height="360"></iframe>
+							</div>
+						  </div>
+						  <div class="col-md-3">
+							<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
+							<h5 align="center"><a href="https://sukabumikab.bps.go.id" target="_blank">BPS3202</a></h5>
+							  <iframe src="https://sukabumikab.bps.go.id" width="100%" height="360"></iframe>
+							</div>
+						  </div>
+						  <div class="col-md-3">
+							<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
+							<h5 align="center"><a href="https://cianjurkab.bps.go.id" target="_blank">BPS3203</a></h5>
+							  <iframe src="https://cianjurkab.bps.go.id" width="100%" height="360"></iframe>
+							</div>
+						  </div>
+						</div>
+						<hr>
+						<div class="row">
+						  <div class="col-md-3">
+							<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
+							<h5 align="center"><a href="https://bandungkab.bps.go.id" target="_blank">BPS3204</a></h5>
+							  <iframe src="https://bandungkab.bps.go.id" width="100%" height="360"></iframe>
+							</div>
+						  </div>
+						  <div class="col-md-3">
+							<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
+							<h5 align="center"><a href="https://garutkab.bps.go.id" target="_blank">BPS3205</a></h5>
+							  <iframe src="https://garutkab.bps.go.id" width="100%" height="360"></iframe>
+							</div>
+						  </div>
+						  <div class="col-md-3">
+							<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
+							<h5 align="center"><a href="https://tasikmalayakab.bps.go.id" target="_blank">BPS3206</a></h5>
+							  <iframe src="https://tasikmalayakab.bps.go.id" width="100%" height="360"></iframe>
+							</div>
+						  </div>
+						  <div class="col-md-3">
+							<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
+							<h5 align="center"><a href="https://ciamiskab.bps.go.id" target="_blank">BPS3207</a></h5>
+							  <iframe src="https://ciamiskab.bps.go.id" width="100%" height="360"></iframe>
+							</div>
+						  </div>
+						</div>
+						<hr>
+						<div class="row">
+						  <div class="col-md-3">
+							<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
+							<h5 align="center"><a href="https://kuningankab.bps.go.id" target="_blank">BPS3208</a></h5>
+							  <iframe src="https://kuningankab.bps.go.id" width="100%" height="360"></iframe>
+							</div>
+						  </div>
+						  <div class="col-md-3">
+							<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
+							<h5 align="center"><a href="https://cirebonkab.bps.go.id" target="_blank">BPS3209</a></h5>
+							  <iframe src="https://cirebonkab.bps.go.id" width="100%" height="360"></iframe>
+							</div>
+						  </div>
+						  <div class="col-md-3">
+							<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
+							<h5 align="center"><a href="https://majalengkakab.bps.go.id" target="_blank">BPS3210</a></h5>
+							  <iframe src="https://majalengkakab.bps.go.id" width="100%" height="360"></iframe>
+							</div>
+						  </div>
+						  <div class="col-md-3">
+							<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
+							<h5 align="center"><a href="https://sumedangkab.bps.go.id" target="_blank">BPS3211</a></h5>
+							  <iframe src="https://sumedangkab.bps.go.id" width="100%" height="360"></iframe>
+							</div>
+						  </div>
+						</div>
+						<hr>
+						<div class="row">
+						  <div class="col-md-3">
+							<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
+							<h5 align="center"><a href="https://indramayukab.bps.go.id" target="_blank">BPS3212</a></h5>
+							  <iframe src="https://indramayukab.bps.go.id" width="100%" height="360"></iframe>
+							</div>
+						  </div>
+						  <div class="col-md-3">
+							<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
+							<h5 align="center"><a href="https://subangkab.bps.go.id" target="_blank">BPS3213</a></h5>
+							  <iframe src="https://subangkab.bps.go.id" width="100%" height="360"></iframe>
+							</div>
+						  </div>
+						  <div class="col-md-3">
+							<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
+							<h5 align="center"><a href="https://purwakartakab.bps.go.id" target="_blank">BPS3214</a></h5>
+							  <iframe src="https://purwakartakab.bps.go.id" width="100%" height="360"></iframe>
+							</div>
+						  </div>
+						  <div class="col-md-3">
+							<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
+							<h5 align="center"><a href="https://karawangkab.bps.go.id" target="_blank">BPS3215</a></h5>
+							  <iframe src="https://karawangkab.bps.go.id" width="100%" height="360"></iframe>
+							</div>
+						  </div>
+						</div>
+						<hr>
+						<div class="row">
+						  <div class="col-md-3">
+							<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
+							<h5 align="center"><a href="https://bekasikab.bps.go.id" target="_blank">BPS3216</a></h5>
+							  <iframe src="https://bekasikab.bps.go.id" width="100%" height="360"></iframe>
+							</div>
+						  </div>
+						  <div class="col-md-3">
+							<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
+							<h5 align="center"><a href="https://bandungbaratkab.bps.go.id" target="_blank">BPS3217</a></h5>
+							  <iframe src="https://bandungbaratkab.bps.go.id" width="100%" height="360"></iframe>
+							</div>
+						  </div>
+						  <div class="col-md-3">
+							<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
+							<h5 align="center"><a href="https://pangandarankab.bps.go.id" target="_blank">3218</a></h5>
+							  <iframe src="https://pangandarankab.bps.go.id" width="100%" height="360"></iframe>
+							</div>
+						  </div>
+						  <div class="col-md-3">
+							<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
+							<h5 align="center"><a href="https://bogorkota.bps.go.id" target="_blank">BPS3271</a></h5>
+							  <iframe src="https://bogorkota.bps.go.id" width="100%" height="360"></iframe>
+							</div>
+						  </div>
+						</div>
+						<hr>
+						<div class="row">
+						  <div class="col-md-3">
+							<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
+							<h5 align="center"><a href="https://sukabumikota.bps.go.id" target="_blank">BPS3272</a></h5>
+							  <iframe src="https://sukabumikota.bps.go.id" width="100%" height="360"></iframe>
+							</div>
+						  </div>
+						  <div class="col-md-3">
+							<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
+							<h5 align="center"><a href="https://bandungkota.bps.go.id" target="_blank">BPS3273</a></h5>
+							  <iframe src="https://bandungkota.bps.go.id" width="100%" height="360"></iframe>
+							</div>
+						  </div>
+						  <div class="col-md-3">
+							<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
+							<h5 align="center"><a href="https://cirebonkota.bps.go.id" target="_blank">BPS3274</a></h5>
+							  <iframe src="https://cirebonkota.bps.go.id" width="100%" height="360"></iframe>
+							</div>
+						  </div>
+						  <div class="col-md-3">
+							<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
+							<h5 align="center"><a href="https://bekasikota.bps.go.id" target="_blank">BPS3275</a></h5>
+							  <iframe src="https://bekasikota.bps.go.id" width="100%" height="360"></iframe>
+							</div>
+						  </div>
+						</div>
+						<hr>
+						<div class="row">
+						  <div class="col-md-3">
+							<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
+							<h5 align="center"><a href="https://depokkota.bps.go.id" target="_blank">BPS3276</a></h5>
+							  <iframe src="https://depokkota.bps.go.id" width="100%" height="360"></iframe>
+							</div>
+						  </div>
+						  <div class="col-md-3">
+							<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
+							<h5 align="center"><a href="https://cimahikota.bps.go.id" target="_blank">BPS3277</a></h5>
+							  <iframe src="https://cimahikota.bps.go.id" width="100%" height="360"></iframe>
+							</div>
+						  </div>
+						  <div class="col-md-3">
+							<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
+							<h5 align="center"><a href="https://tasikmalayakota.bps.go.id" target="_blank">BPS3278</a></h5>
+							  <iframe src="https://tasikmalayakota.bps.go.id" width="100%" height="360"></iframe>
+							</div>
+						  </div>
+						  <div class="col-md-3">
+							<div class="block" style="background-color:Orange;color:white;text-decoration: none;">
+							<h5 align="center"><a href="https://banjarkota.bps.go.id" target="_blank">BPS3279</a></h5>
+							  <iframe src="https://banjarkota.bps.go.id" width="100%" height="360"></iframe>
+							</div>
+						  </div>
+						</div>
+						</div>
+					  </div>  
+				</div>	  
+				</div>
+				<hr>
+					<!-- KINERJA ASN -->
+			<div class="row">
+				<div class="col-md-3">
+					<div class="accordion-item">
+			    			<div class="accordion-header"><center>Pengelolaan Kinerja</center></div>
+				    <div class="accordion-content">
+						<div class="sub-accordion">
 							<div class="sub-accordion-item">
-								  <div class="sub-accordion-header">Perencanaan Kinerja</div>
-								  <div class="sub-accordion-content">
-									<p  class="body">Perencanaan kinerja terdiri atas penyusunan dan penetapan SKP.
-									Dalam proses penyusunan SKP, Pimpinan dan Pegawai melakukan 
-									dialog kinerja untuk penetapan dan klarifikasi Ekspektasi.<br><br>
-									Penetapan dan klarifikasi Ekspektasi merupakan proses untuk menentukan:<br><br>
-									a. rencana kinerja yang terdiri atas: <br>
-									<ol type="1">
-										<li>rencana hasil kerja Pegawai beserta ukuran keberhasilan/ indikator 
-									kinerja individu dan target; dan </li>
-										<li>perilaku kerja Pegawai yang diharapkan; </li>
-									</ol>
-									<br>
-									b. sumber daya yang dibutuhkan untuk pencapaian kinerja Pegawai;<br>
-									c. skema pertanggungjawaban kinerja Pegawai; dan<br>
-									d. konsekuensi atas pencapaian kinerja Pegawai.<br>
-									<br><br>
-									Penetapan dan klarifikasi Ekspektasi untuk penyusunan SKP dilakukan sejak 
-									penyusunan rancangan perjanjian kinerja unit kerja.
-									Penetapan dan klarifikasi Ekspektasi dituangkan dalam dokumen SKP.<br><br>
-									Penetapan dan klarifikasi Ekspektasi dilakukan dengan mengacu pada:<br>
-									<ol type="a">
-										<li>perencanaan strategis (Renstra);</li>
-										<li>perjanjian kinerja unit kerja (PK);</li>
-										<li>organisasi dan tata kerja (Per BPS No. 8/2020);</li>
-										<li>rencana kinerja Pimpinan;</li>
-										<li>kompetensi, keahlian, dan/atau keterampilan Pegawai; dan</li>
-										<li>prioritas dalam rangka pencapaian kinerja organisasi/ unit kerja/ Pimpinan.</li>
-									</ol>
-									</p>
-								  </div>
-							</div>
-							<div class="sub-accordion-item">
-								  <div class="sub-accordion-header">Rencana Hasil Kerja</div>
-								  <div class="sub-accordion-content">
-									<p align="justify">
-									Rencana hasil kerja Pegawai merupakan <i>outcome</i>, <i>outcome</i> antara, <i>output</i>, 
-									dan/atau layanan yang akan dihasilkan Pegawai.<br><br>
-									Ukuran keberhasilan/ indikator kinerja individu dan target atas rencana 
-									hasil kerja Pegawai meliputi aspek: <br>
-									<ol type="a">
-										<li>kuantitas;</li>
-										<li>kualitas; </li>
-										<li>waktu atau kecepatan penyelesaian hasil kerja; dan/ atau</li>
-										<li>biaya.</li>
-									</ol>
-									<br>
-									Ukuran keberhasilan/ indikator kinerja individu dan target atas rencana 
-									hasil kerja Pegawai dapat dinyatakan dengan pendekatan kualitatif atau kuantitatif.
-
-									<br><br>
-									Pimpinan dapat menetapkan Ekspektasi khusus atas perilaku kerja Pegawai 
-									didasarkan pada nilai dasar aparatur sipil negara.
-									<br><br>
-									Sumber daya yang dibutuhkan untuk pencapaian kinerja Pegawai paling sedikit meliputi dukungan:<br>
-									<ol type="a">
-										<li>sumber daya manusia;</li>
-										<li>anggaran;</li>
-										<li>peralatan kerja;</li>
-										<li>pendampingan Pimpinan; dan/ atau</li>
-										<li>sarana dan prasarana.</li>
-									</ol>
-									  <br><br>
-									Jika tidak mencapai kesepakatan atau mencapai kesepakatan namun tidak terealisasi, 
-									Pimpinan dapat melakukan penyesuaian Ekspektasi.
-									<br><br>
-									Skema pertanggungjawaban terdiri atas: <br>
-									<ol type="a">
-										<li>jadwal pelaporan perkembangan setiap rencana kinerja Pegawai;</li>
-										<li>bukti kinerja yang diharapkan.</li>
-									</ol>
-									  <br><br>
-									Konsekuensi dalam pencapaian kinerja Pegawai dapat berupa kesepakatan mengenai: <br>
-									<ol type="a">
-										<li>konsekuensi positif dalam hal capaian kinerja Pegawai memenuhi Ekspektasi Pimpinan; dan</li>
-										<li>konsekuensi negatif dalam hal capaian kinerja Pegawai tidak memenuhi Ekspektasi Pimpinan.</li>
-									</ol>
-								  </p>
-								  </div>
-							</div>
-							<div class="sub-accordion-item">
-								  <div class="sub-accordion-header">Perilaku Kerja</div>
-								  <div class="sub-accordion-content">
-									<p align="justify">
-										Perilaku kerja Pegawai meliputi aspek:<br>
-										<ol type="a">
-											<li>orientasi pelayanan;</li>
-											<li>komitmen;</li>
-											<li>inisiatif kerja;</li>
-											<li>kerja sama; dan</li>
-											<li>kepemimpinan.</li>
-										</ol>
-									  <br><br>
-										Perilaku kerja Pegawai diwujudkan dalam nilai dasar aparatur sipil negara 
-										yang menjadi standar perilaku kerja Pegawai.
-										<br><br>
-										Standar perilaku kerja Pegawai terdiri atas: <br>
-										<b>a. berorientasi pelayanan: </b><br>
-										<ol type="1">
-											<li>memahami dan memenuhi kebutuhan masyarakat;</li>
-											<li>ramah, cekatan, solutif, dan dapat diandalkan; dan</li>
-											<li>melakukan perbaikan tiada henti;</li>
-										</ol>
-									  <br><br>
-										<b>b. akuntabel:</b> <br>
-										<ol type="1">
-											<li>melaksanakan tugas dengan jujur, bertanggung jawab cermat, disiplin, 
-										dan berintegritas tinggi;</li>
-											<li>menggunakan kekayaan dan barang milik negara secara bertanggung jawab, 
-										efektif, dan efisien; dan</li>
-											<li>tidak menyalahgunakan kewenangan jabatan;</li>
-										</ol>
-									   <br><br>
-										<b>c. kompeten:</b> <br>
-										<ol type="1">
-											<li>meningkatkan kompetensi diri untuk menjawab tantangan yang selalu berubah;</li>
-											<li>membantu orang lain belajar; dan</li>
-											<li>melaksanakan tugas dengan kualitas terbaik;</li>
-										</ol>
-									  <br><br>
-										<b>d. harmonis:</b> <br>
-										<ol type="1">
-											<li>menghargai setiap orang apapun latar belakangnya;</li>
-											<li>suka menolong orang lain; dan</li>
-											<li>membangun lingkungan kerja yang kondusif;</li>
-										</ol>
-									  <br><br>
-										<b>e. loyal:</b> <br>
-										<ol type="1">
-											<li>memegang teguh ideologi Pancasila, Undang-Undang Dasar Negara Republik Indonesia 
-										Tahun 1945, setia kepada Negara Kesatuan Republik Indonesia serta pemerintahan yang sah;</li>
-											<li>menjaga nama baik sesama aparatur sipil negara, Pimpinan, instansi, dan negara; dan</li>
-											<li>menjaga rahasia jabatan dan negara;</li>
-										</ol>
-									  <br><br>
-										<b>f. adaptif:</b> <br>
-										<ol type="1">
-											<li>cepat menyesuaikan diri menghadapi perubahan;</li>
-											<li>terus berinovasi dan mengembangkan kreativitas; dan </li>
-											<li>bertindak proaktif; dan</li>
-										</ol>
-									  <br><br>
-										<b>g. kolaboratif:</b> <br>
-										<ol type="1">
-											<li>memberi kesempatan kepada berbagai pihak untuk berkontribusi;</li>
-											<li>terbuka dalam bekerja sama untuk menghasilkan nilai tambah; dan</li>
-											<li>menggerakkan pemanfaatan berbagai sumberdaya untuk tujuan bersama.</li>
-										</ol>
-									  </p>
-								  </div>
-							</div>
-							<div class="sub-accordion-item">
-								  <div class="sub-accordion-header">Evaluasi Kinerja</div>
-								  <div class="sub-accordion-content">
-									<p align="justify">
-									Evaluasi Kinerja Tahunan Pegawai dilakukan melalui tahapan sebagai berikut: <br>
-									<ol type="a">
-										<li>menetapkan capaian kinerja tahunan organisasi.</li>
-										<li>menetapkan pola distribusi predikat kinerja tahunan Pegawai berdasarkan capaian 
-									kinerja organisasi tahunan; dan</li>
-										<li>menetapkan predikat kinerja tahunan Pegawai 
-									dengan mempertimbangkan kontribusi kinerja Pegawai terhadap kinerja organisasi.</li>
-									</ol> 
-									  <br><br>
-									Penetapan capaian kinerja organisasi tahunan dilaksanakan sesuai dengan ketentuan 
-									perundang-undangan yang mengatur tentang kinerja organisasi.
-									<br><br>
-									Hasil Evaluasi Kinerja Tahunan Pegawai dituangkan dalam dokumen 
-									Evaluasi Kinerja Tahunan Pegawai.<br><br>
-									Evaluasi Kinerja Periodik Pegawai adalah proses dimana Pejabat Penilai Kinerja 
-									  mereviu keseluruhan hasil kerja dan perilaku kerja Pegawai selama bulanan atau 
-									  triwulanan dan menetapkan predikat kinerja periodik Pegawai berdasarkan kuadran 
-									  kinerja Pegawai.<br><br>
-									  Evaluasi Kinerja Tahunan Pegawai adalah proses dimana Pejabat Penilai Kinerja 
-									  mereviu keseluruhan hasil kerja dan perilaku kerja Pegawai selama satu tahun 
-									  kinerja dan menetapkan predikat kinerja tahunan Pegawai berdasarkan kuadran 
-									  kinerja Pegawai.<br><br>
-
-								  </p>
-								  </div>
-							</div>
-							<div class="sub-accordion-item">
-								  <div class="sub-accordion-header">Prinsip Umum</div>
-								  <div class="sub-accordion-content">
-									<p class="content" align="justify">
-										<ol type="1">
-											<li>PENGELOLAAN KINERJA PEGAWAI TIDAK HANYA SEKEDAR MENILAI KINERJA PEGAWAI 
-												<i>(PERFORMANCE APPRAISAL)</i> TETAPI SEBAGAI INSTRUMEN UNTUK MENGEMBANGKAN KINERJA 
-												PEGAWAI <i>(PERFORMANCE DEVELOPMENT)</i>;</li>
-											<li>PENGELOLAAN KINERJA PEGAWAI TIDAK HANYA SEKEDAR MERENCANAKAN DI AWAL DAN 
-									MENGEVALUASI DI AKHIR TETAPI FOKUS PADA BAGAIMANA MEMENUHI EKSPEKTASI PIMPINAN 
-												<i>(HOW TO MEET EXPECTATIONS)</i>;</li>
-											<li>PENTINGNYA INTENSITAS DIALOG KINERJA PIMPINAN DAN PEGAWAI DALAM PENGELOLAAN KINERJA PEGAWAI;</li>
-											<li>KINERJA INDIVIDU HARUS MENDUKUNG KEBERHASILAN KINERJA ORGANISASI;</li>
-											<li>KINERJA PEGAWAI MENCERMINKAN HASIL KERJA BUKAN SEKEDAR URAIAN TUGAS SERTA PERILAKU YANG 
-									DITUNJUKKAN DALAM BEKERJA DAN BERINTERAKSI DENGAN ORANG LAIN.</li>
-										</ol>
-									  </p>
-								  </div>
-							</div>
-							<div class="sub-accordion-item">
-								  <div class="sub-accordion-header">Referensi</div>
-								  <div class="sub-accordion-content">
-									<ul>
-										<li><a href="https://www.bkn.go.id/unggahan/2022/09/MODUL-EVALUASI-KINERJA-PEGAWAI-SESUAI-PERMENPAN-RB-NOMOR-6-TAHUN-2022.pdf" target="_blank">Modul Evaluasi Kinerja</a>
-										</li><br>
-										<li><a href="https://peraturan.bpk.go.id/Home/Download/196198/Permen%20PANRB%20No.%206%20Tahun%202022.pdf" target="_blank">Pengelolaan Kinerja Pegawai ASN</a>
-										</li><br>
-										<li><a href="https://peraturan.bpk.go.id/Home/Download/196199/Permen%20PANRB%20No.%207%20Tahun%202022.pdf" target="_blank">Sistem Kerja pada Instansi Pemerintah untuk Penyederhanaan Birokrasi</a>
-										</li><br>
-										<li><a href="https://peraturan.bpk.go.id/Home/Download/295958/Permen%20PANRB%20Nomor%201%20Tahun%202023.pdf" target="_blank">Jabatan Fungsional</a>
-										</li><br>
-										<li><a href="https://ppid.bps.go.id/upload/doc/Peraturan_Badan_Pusat_Statistik_Nomor_8_Tahun_2020_1679371551.pdf" target="_blank">Organisasi dan Tata Kerja BPS Provinsi dan BPS Kabupaten/Kota</a>
-								  		</li>
-									</ul>
-								  </div>
-							</div>
-							<div class="sub-accordion-item">
-								  <div class="sub-accordion-header">Laporan Kinerja</div>
-								  <div class="sub-accordion-content">
-									<ul>
-										<li><a href="https://smartkit.32net.id" target="_blank">SmartKit</a>
-										</li><br>
-										<li><a href="https://webapps.bps.go.id/kipapp" target="_blank">KipApp</a>
-										</li><br>
-										<li><a href="https://public.flourish.studio/visualisation/14034204/" target="_blank">Tugas Jabatan</a>
-										</li>
-									</ul>
-								  </div>
-							</div>
-
-			    	</div>
-			  </div>
-		</div> 
-	</div>
-
-			<div class="col-md-3">		
-			<div class="accordion-item">
-				<div class="accordion-header">Predikat Kinerja</div>
-				<div class="accordion-content">
-				  <p>
-					<b>Predikat Kinerja</b> adalah predikat yang ditetapkan oleh
-					Pejabat Penilai Kinerja atas hasil evaluasi kinerja Pegawai
-					ASN baik secara periodik maupun tahunan.<br><br>
-					<b>Pejabat Penilai Kinerja</b> adalah atasan langsung Pejabat
-					Fungsional dengan ketentuan paling rendah pejabat
-					pengawas atau pejabat lain yang diberi pendelegasian
-					kewenangan.<br><br>
-					<b>Angka Kredit</b> adalah nilai kuantitatif dari hasil kerja
-					Pejabat Fungsional.<br><br>
-					<b>Angka Kredit Kumulatif</b> adalah akumulasi nilai Angka
-					Kredit yang harus dicapai oleh Pejabat Fungsional sebagai
-					salah satu syarat kenaikan pangkat dan jabatan.<br><br>
-					<b>Tim Penilai Kinerja PNS</b> adalah tim yang dibentuk oleh
-					pejabat yang berwenang untuk memberikan pertimbangan
-					kepada pejabat pembina kepegawaian atas usulan
-					pengangkatan, pemindahan, dan pemberhentian dalam
-					Jabatan, pengembangan kompetensi, serta pemberian
-					penghargaan bagi PNS.<br><br>
-					<b>Pejabat Fungsional</b> adalah Pegawai ASN yang menduduki
-					JF pada instansi pemerintah.<br><br>
-					<b>Tugas JF:</b>
-					<ol style="1">
-						<li>JF memiliki tugas memberikan pelayanan fungsional yang
-					berdasarkan pada keahlian dan keterampilan tertentu.</li>
-						<li>Tugas tersebut memperhatikan ruang lingkup kegiatan.</li>
-						<li>Selain ruang lingkup kegiatan, JF dapat diberikan tugas lainnya.</li>
-						<li>Tugas lainnya tersebut dilaksanakan untuk memenuhi Ekspektasi pada Instansi
-					Pemerintah guna pencapaian target organisasi.</li>
-						<li>Ekspektasi tersebut ditetapkan berdasarkan prinsip pengelolaan kinerja
-					Pegawai ASN sesuai dengan ketentuan peraturan
-					perundang-undangan.</li>
-					</ol>
-					
-				  </p>
-				  <table class="table table-bordered">
-					<thead>
-						<tr>
-							<td><b>Penilaian</b></td>
-							<td><b>Hasil kerja</b></td>
-							<td><b>Perilaku kerja</b></td>
-							<td><center><b>Nilai Konversi</b></center></td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>Sangat Baik</td>
-							<td> di atas ekspektasi</td>
-							<td> di atas ekspektasi</td>
-							<td><center><b>150% AK</b></center></td>
-						</tr>
-						<tr>
-							<td>Baik</td>
-							<td>di atas ekspektasi</td>
-							<td>sesuai ekspektasi</td>
-							<td><center><b>100% AK</b></center></td>
-						</tr>
-						<tr>
-							<td></td>
-							<td>sesuai ekspektasi</td>
-							<td>sesuai ekspektasi</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td></td>
-							<td>sesuai ekspektasi</td>
-							<td>di atas ekspektasi</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>Butuh Perbaikan</td>
-							<td>di bawah ekspektasi</td>
-							<td>di atas ekspektasi</td>
-							<td><center><b>75% AK</b></center></td>
-						</tr>
-						<tr>
-							<td></td>
-							<td>di bawah ekspektasi</td>
-							<td>sesuai ekspektasi</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>Kurang/ <i>Misconduct</i></td>
-							<td>di atas ekspektasi</td>
-							<td>di bawah ekspektasi</td>
-							<td><center><b>50% AK</b></center></td>
-						</tr>
-						<tr>
-							<td></td>
-							<td>sesuai ekspektasi</td>
-							<td>di bawah ekspektasi</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>Sangat Kurang</td>
-							<td>di bawah ekspektasi</td>
-							<td>di bawah ekspektasi</td>
-							<td><center><b>25% AK</b></center></td>
-						</tr>
-					</tbody>
-				  </table>
-				</div>
-			  </div>
-						</div>
-			
-			<div class="col-md-3">
-			  <div class="accordion-item">
-				<div class="accordion-header">Angka Kredit</div>
-				<div class="accordion-content">
-					<p>
-					Promosi untuk kenaikan jenjang jabatan harus memenuhi
-					persyaratan:
-					<ol style="a">
-						<li>memenuhi Angka Kredit Kumulatif kenaikan jenjang
-						jabatan;</li>
-						<li>mengikuti dan lulus Uji Kompetensi kenaikan jenjang
-						jabatan; dan</li>
-						<li>memiliki Predikat Kinerja paling rendah baik dalam 1
-						(satu) tahun terakhir.</li>
-						<li>JF tertentu yang telah ditetapkan dalam ketentuan
-						peraturan perundang-undangan harus memenuhi syarat
-						yang telah ditetapkan pada JF tersebut.</li>
-						<li>Promosi untuk kenaikan jenjang jabatan dilaksanakan
-						berdasarkan pertimbangan rekomendasi Tim Penilai
-						Kinerja.</li>
-					</ol>
-					
-					<div class="flourish-embed flourish-table" data-src="visualisation/14170559"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
-					<br><br>
-					<div class="flourish-embed flourish-table" data-src="visualisation/14170569"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
-				</div>
-			  </div>
-			</div>
-			
-			<div class="col-md-3">
-			  <div class="accordion-item">
-				<div class="accordion-header">Hasil Kerja</div>
-				<div class="accordion-content">
-				  <div class="flourish-embed flourish-table" data-src="visualisation/14034204"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
-				</div>
-			  </div>
-			</div>
-		</div>
-		<hr>
-		<div class="row">
-			<div class="col-md-3">
-			  <div class="accordion-item">
-				<div class="accordion-header-b">Indikator Kinerja</div>
-				<div class="accordion-content">
-					<div class="sub-accordion">
-						<div class="sub-accordion-item">
-							<div class="sub-accordion-header">Indikator Kinerja Utama</div>
-								<div class="sub-accordion-content">
-									<div class="flourish-embed flourish-table" data-src="visualisation/14152017"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
-								</div>
-						</div>
-						<div class="sub-accordion-item">
-							<div class="sub-accordion-header">Indikator Kinerja Kegiatan</div>
-								<div class="sub-accordion-content">
-									<div class="flourish-embed flourish-table" data-src="visualisation/14153791"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
-								</div>
-						</div>
-					</div>
-				</div>
-			  </div>
-			</div>
-			<div class="col-md-3">
-			  <div class="accordion-item">
-				<div class="accordion-header-b">SAKIP</div>
-				<div class="accordion-content">
-					<div class="flourish-embed flourish-table" data-src="visualisation/14154543"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
-				</div>
-			  </div>
-			</div>
-			
-			<div class="col-md-3">
-			  <div class="accordion-item">
-				<div class="accordion-header-b">S D I</div>
-				<div class="accordion-content">
-					<div class="sub-accordion">
-						<div class="sub-accordion-item">
-							<div class="sub-accordion-header">Standar Data</div>
-								<div class="sub-accordion-content">
-									<a href="https://indah.bps.go.id/standar-data-statistik-nasional" target="_blank">Standar Data Statistik Nasional</a>
-									<br><br>
-									<a href="https://ppid.bps.go.id/upload/doc/Peraturan_Badan_Pusat_Statistik_Nomor_4_Tahun_2021_tentang_Standar_Data_Statistik_Nasional_1658133163.pdf" target="_blank">Peraturan BPS tentang Standar Data Statistik Nasional</a>
-									<br><br>
-									<a href="https://ppid.bps.go.id/upload/doc/Peraturan_Badan_Pusat_Statistik_Nomor_4_Tahun_2020_tentang_Petunjuk_Teknis_Standar_Data_Statistik_1658133335.pdf" target="_blank">Peraturan BPS tentang Petunjuk Teknis Standar Data Statistik</a>
-								</div>
-							</div>
-							<div class="sub-accordion-item">
-							<div class="sub-accordion-header">Metadata</div>
-								<div class="sub-accordion-content">
-									<a href="https://indah.bps.go.id/login" target="_blank">Metadata Statistik</a>
-									<br><br>
-									<a href="https://ppid.bps.go.id/upload/doc/Peraturan_Badan_Pusat_Statistik_No__5_Tahun_2020_Petunjuk_Teknis_Metadata_Statistik_1658133466.pdf" target="_blank">Peraturan BPS tentang Petunjuk Teknis Metadata Statistik</a>
-								</div>
-							</div>
-							<div class="sub-accordion-item">
-							<div class="sub-accordion-header">EPSS</div>
-								<div class="sub-accordion-content">
-									<a href="https://webapps.bps.go.id/simbatik" target="_blank">Simbatik</a>
-									<br><br>
-									<a href="https://ppid.bps.go.id/upload/doc/Peraturan_Badan_Pusat_Statistik_Nomor_3_Tahun_2022_1679381490.pdf" target="_blank">Peraturan BPS tentang EPSS</a>
-									<br><br>
-									<a href="https://ppid.bps.go.id/upload/doc/Peraturan_Badan_Pusat_Statistik_No__4_Tahun_2019_tentang_Norma__Standar__Prosedur__dan_Kriteria_penyelenggaraan_Statistik_Sektoral_oleh_Pemerintah_Daerah_1658133777.pdf" target="_blank">NSPK Penyelenggaraan Statistik Sektoral oleh Pemerintah Daerah</a>
-									<br><br>
-									<a href="http://s.bps.go.id/youtubeEPSS" target="_blank">Materi Refreshing Tim Penilai Badan</a>
-									<br><br>
-									<a href="https://public.flourish.studio/visualisation/14210359/" target="_blank">Penjelasan Indikator EPSS</a>
-									<br><br>
-									<a href="https://public.flourish.studio/visualisation/14210445/" target="_blank">Skala Kematangan EPSS</a>
-									<br><br>
-									<a href="https://drive.google.com/file/d/1PxgHvDymNrQ6wTqYOFz_JJeAfopY5gQB/view" target="_blank">Sosialisasi EPSS</a>
-								</div>
-							</div>
-							<div class="sub-accordion-item">
-							<div class="sub-accordion-header">Open Data</div>
-								<div class="sub-accordion-content">
-									<ul>
-										<li><a href="https://opendata.jabarprov.go.id/id" target="_blank">Jabar</a></li>
-										<li><a href="https://opendata.bogorkab.go.id/datasets" target="_blank">Bogor</a></li>
-										<li><a href="https://opendata.sukabumikab.go.id/dataset" target="_blank">Sukabumi</a></li>
-										<li><a href="https://opendata.cianjurkab.go.id/" target="_blank">Cianjur</a></li>
-										<li><a href="https://satudata.bandungkab.go.id/" target="_blank">Bandung</a></li>
-										<li><a href="https://satudata.garutkab.go.id/" target="_blank">Garut</a></li>
-										<li><a href="https://opendata.sumedangkab.go.id/index.php/Dashboard" target="_blank">Tasikmalaya</a></li>
-										<li><a href="https://data.ciamiskab.go.id/" target="_blank">Ciamis</a></li>
-										<li><a href="https://satudata.kuningankab.go.id/index.php/Dataseet/" target="_blank">Kuningan</a></li>
-										<li><a href="https://cirebonkab.go.id/datasets" target="_blank">Cirebon</a></li>
-										<li><a href="https://opendata.majalengkakab.go.id/dataset" target="_blank">Majalengka</a></li>
-										<li><a href="https://opendata.sumedangkab.go.id/index.php/Dashboard/dataseet" target="_blank">Sumedang</a></li>
-										<li><a href="https://opendata.indramayukab.go.id/dataset" target="_blank">Indramayu</a></li>
-										<li><a href="https://opendata.subang.go.id/dataset/" target="_blank">Subang</a></li>
-										<li><a href="https://data.purwakartakab.go.id/dataset" target="_blank">Purwakarta</a></li>
-										<li><a href="https://opendata.karawangkab.go.id/dataset" target="_blank">Karawang</a></li>
-										<li><a href="https://opendata.bekasikab.go.id/" target="_blank">Bekasi</a></li>
-										<li><a href="https://opendata.bandungbaratkab.go.id/" target="_blank">Bandung Barat</a></li>
-										<li><a href="http://jigd.pangandarankab.go.id/" target="_blank">Pangandaran</a></li>
-										<li><a href="https://data.kotabogor.go.id/dataset/" target="_blank">Kota Bogor</a></li>
-										<li><a href="https://opendata.sukabumikota.go.id/dataset" target="_blank">Kota Sukabumi</a></li>
-										<li><a href="http://data.bandung.go.id/" target="_blank">Kota Bandung</a></li>
-										<li><a href="https://data.cirebonkota.go.id/dataset" target="_blank">Kota Cirebon</a></li>
-										<li><a href="https://danta.bekasikota.go.id/" target="_blank">Kota Bekasi</a></li>
-										<li><a href="https://satudata.depok.go.id/opendatadepok2022/" target="_blank">Kota Depok</a></li>
-										<li><a href="https://opendata.cimahikota.go.id/" target="_blank">Kota Cimahi</a></li>
-										<li><a href="https://opendata.tasikmalayakota.go.id/" target="_blank">Kota Tasikmalaya</a></li>
-										<li><a href="https://opendata.banjarkota.go.id/" target="_blank">Kota Banjar</a></li>
-									</ul>
-									
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3">
-			  <div class="accordion-item">
-				<div class="accordion-header-b">Proses Bisnis Statistik</div>
-				<div class="accordion-content">
-					<div class="sub-accordion">
-						<div class="sub-accordion-item">
-							<div class="sub-accordion-header">Dasar-dasar Statistik</div>
-								<div class="sub-accordion-content">
-									<p class="content">
-									<iframe src="https://drive.google.com/file/d/1cmB7U6qWBQYrG_5sUiuKJyz4EDb20IL5/preview" width="100%" height="480" allow="autoplay"></iframe>
-									</p>
-								</div>
-							</div>
-						<div class="sub-accordion-item">
-							<div class="sub-accordion-header">Metadata Statistik</div>
-								<div class="sub-accordion-content">
-									<iframe src="https://drive.google.com/file/d/1fngDi4qmpwTMlX83AkqUk9PydQguFq-W/preview" width="100%" height="480" allow="autoplay"></iframe>
-													
-								</div>
-							</div>
-						<div class="sub-accordion-item">
-							<div class="sub-accordion-header">Aplikasi Statistik</div>
-								<div class="sub-accordion-content">
-									<iframe src="https://drive.google.com/file/d/18Em1hySNdkAoEt4YJysUblFd0eQGOIwX/preview" width="100%" height="480" allow="autoplay"></iframe>
-													
-								</div>
-							</div>
-						<div class="sub-accordion-item">
-							<div class="sub-accordion-header">Perencanaan Kegiatan</div>
-								<div class="sub-accordion-content">
-									<iframe src="https://drive.google.com/file/d/1Ocu8Kwz10WeQeRaS2FaAdLlKCGrWaQKo/preview" width="100%" height="480" allow="autoplay"></iframe>
-													
-								</div>
-							</div>
-						<div class="sub-accordion-item">
-							<div class="sub-accordion-header">Perancangan Kegiatan</div>
-								<div class="sub-accordion-content">
-									<iframe src="https://drive.google.com/file/d/1XT98Jg_G1jbAT3yNeTz1gTvQkMrjUwZA/preview" width="100%" height="480" allow="autoplay"></iframe>
-													
-								</div>
-							</div>
-						<div class="sub-accordion-item">
-							<div class="sub-accordion-header">Pengumpulan Data</div>
-								<div class="sub-accordion-content">
-									<iframe src="https://drive.google.com/file/d/1EqRNPp19xhPI7Njc_yEii2QQvBV2WPb1/preview" width="100%" height="480" allow="autoplay"></iframe>
-													
-								</div>
-							</div>
-						<div class="sub-accordion-item">
-							<div class="sub-accordion-header">Pengolahan Data</div>
-								<div class="sub-accordion-content">
-									<iframe src="https://drive.google.com/file/d/18TFFNbZaDUt9JJkMalDhlynYP4--7ZlE/preview" width="100%" height="480" allow="autoplay"></iframe>
-													
-								</div>
-							</div>
-						<div class="sub-accordion-item">
-							<div class="sub-accordion-header">Analisis Statistik</div>
-								<div class="sub-accordion-content">
-									<iframe src="https://drive.google.com/file/d/1Gakcm7etk2V-YQ-PFkC51Rbf3oO1kvXN/preview" width="100%" height="480" allow="autoplay"></iframe>
-													
-								</div>
-							</div>
-						<div class="sub-accordion-item">
-							<div class="sub-accordion-header">Diseminasi dan Evaluasi</div>
-								<div class="sub-accordion-content">
-									<iframe src="https://drive.google.com/file/d/1WLuE8fo5vu3QADpTPuYKJQUTQdY6Xs6P/preview" width="100%" height="480" allow="autoplay"></iframe>
-													
-								</div>
-							</div>
-					</div>
-				</div>
-				</div>
-			  </div>
-		</div>
-		<hr>
-		</div>
-		<!-- KAMUS -->
-		<div class="row">
-			<div class="col-md-4">
-			  <div class="accordion-item">
-				<div class="accordion-header-c">Kamus Statistisi</div>
-				<div class="accordion-content">
-					<div class="sub-accordion">
-						<div class="sub-accordion-item">
-							<div class="sub-accordion-header">Berdasarkan Kegiatan (PerMenPAN 2013)</div>
-								<div class="sub-accordion-content">
-									<div class="flourish-embed flourish-table" data-src="visualisation/14000765"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
-													
-								</div>
-							</div>
-						</div>
-					<div class="sub-accordion">
-						<div class="sub-accordion-item">
-							<div class="sub-accordion-header">Keterampilan (PerMenPAN 2013)</div>
-								<div class="sub-accordion-content">
-									<div class="flourish-embed flourish-table" data-src="visualisation/13831417"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
-													
-								</div>
-							</div>
-						</div>
-					<div class="sub-accordion">
-						<div class="sub-accordion-item">
-							<div class="sub-accordion-header">Keahlian (PerMenPAN 2013)</div>
-								<div class="sub-accordion-content">
-									<div class="flourish-embed flourish-table" data-src="visualisation/13831401"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
-													
-								</div>
-							</div>
-						</div>
-					<div class="sub-accordion">
-						<div class="sub-accordion-item">
-							<div class="sub-accordion-header">Statistisi (PerMenPAN-RB 12/2022)</div>
-								<div class="sub-accordion-content">
-									<div class="flourish-embed flourish-table" data-src="visualisation/13668008"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
-													
-								</div>
-							</div>
-						</div>
-					<div class="sub-accordion">
-						<div class="sub-accordion-item">
-							<div class="sub-accordion-header">Asisten Statistisi (PerMenPAN-RB 13/2022)</div>
-								<div class="sub-accordion-content">
-									<div class="flourish-embed flourish-table" data-src="visualisation/13996100"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
-													
-								</div>
-							</div>
-						</div>
-				</div>
-			  </div>
-			</div>
-
-			<div class="col-md-4">
-			  <div class="accordion-item">
-				<div class="accordion-header">Usefull Tools</div>
-				<div class="accordion-content">
-					<ul>
-						<li><a href="https://chat.openai.com/auth/login" target="_blank">Chat GPT</a></li>
-						<li><a href="https://www.perplexity.ai/" target="_blank">Perplexity</a></li>
-						<li><a href="https://bard.google.com/" target="_blank">Google Bard</a></li>
-						<li><a href="https://www.fotor.com/ai/illustration-generator/" target="_blank">Fotor AI Illustration Generator</a></li>
-						<li><a href="https://iconscout.com/illustrations/generator" target="_blank">IconScout Generator Illustrations</a></li>
-						<li><a href="https://www.appypie.com/illustration-maker" target="_blank">Appy Pie Illustration Maker</a></li>
-						<li><a href="https://stubborn.fun/" target="_blank">Stubborn Free Illustrations Generator</a></li>
-						<li><a href="https://www.canva.com/ai-image-generator/" target="_blank">Canva AI Image Generator</a></li>
-						<li><a href="https://www.decktopus.com/" target="_blank">Decktopus AI</a></li>
-						<li><a href="https://presentations.ai/" target="_blank">Presentations.AI</a></li>
-						<li><a href="https://designs.ai/design-types/presentations" target="_blank">Designs.ai Presentation Maker</a></li>
-						<li><a href="https://www.copy.ai/summarize" target="_blank">Copy.ai Summarize</a></li>
-						<li><a href="https://algorithmia.com/algorithms/nlp/Summarizer" target="_blank">Text Summarization API</a></li>
-						<li><a href="https://www.easel.ly/" target="_blank">Easel.ly</a></li>
-						<li><a href="https://www.canva.com/create/infographics/" target="_blank">Canva</a></li>
-						<li><a href="https://piktochart.com/infographic-maker/" target="_blank">Piktochart</a></li>
-						<li><a href="https://www.visme.co/make-infographics/" target="_blank">Visme</a></li>
-						<li><a href="https://public.tableau.com/en-us/s/" target="_blank">Tableau Public</a></li>
-						<li><a href="https://flourish.studio/" target="_blank">Flourish Studio</a></li>
-						<li><a href="https://rows.com/" target="_blank">rows</a></li>
-						<li><a href="https://www.steve.ai/" target="_blank">Steve AI Video Making Tool</a></li>
-					</ul>
-				</div>
-			  </div>
-			
-		  	</div>
-			
-			<div class="col-md-4">
-			  <div class="accordion-item">
-				<div class="accordion-header-c">Pranata Komputer</div>
-				<div class="accordion-content">
-					<div class="flourish-embed flourish-table" data-src="visualisation/14137704"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
-				</div>
-			  </div>
-			
-		  </div>
-		</div>
-		<hr>
-		<!-- TIM BPS -->
-		<div class="row">
-			
-			<div class="col-md-4">
-			  <div class="accordion-item">
-				<div class="accordion-header-b">Statistik Sosial</div>
-				<div class="accordion-content">
-					<div class="sub-accordion">
-						<div class="sub-accordion-item">
-							<div class="sub-accordion-header">Rencana Kinerja</div>
-								<div class="sub-accordion-content">
-									<p>
-									<a style="background-color:yellow;">Rencana Kinerja 1</a>
-									<li>Tersedianya data statistik sosial untuk pemenuhan permintaan 
-									data dinas/instansi terkait yang akurat dan tepat waktu</li>
-									<li>Tersampaikannya materi terkait data dan indikator statistik 
-									sosial kepada dinas/ instansi/ stakeholders dan masyarakat umum 
-									yang akurat dan tepat waktu</li>
-									<br>
-									<a style="background-color:yellow;">Rencana Kinerja 2</a>
-									<li>Tersedianya Publikasi Penduduk Hasil Long Form Sensus Penduduk 2020 yang berkualitas dan tepat waktu</li>
-									<li>Tersedianya Publikasi Statistik Migrasi Hasil Long Form Sensus Penduduk 2020 yang berkualitas dan tepat waktu</li>
-									<li>Tersedianya Publikasi Keadaan Angkatan Kerja Provinsi Jawa Barat Agustus 2022 yang berkualitas dan tepat waktu</li>
-									<li>Tersedianya Publikasi Keadaan Angkatan Kerja Provinsi Jawa Barat Februari 2023 yang berkualitas dan tepat waktu</li>
-									<li>Tersedianya Publikasi Profil Mobilitas Tenaga Kerja Provinsi Jawa Barat Hasil Sakernas Agustus 2022 yang berkualitas dan tepat waktu</li>
-									<li>Tersedianya Publikasi Profil Lanjut Usia Provinsi Jawa Barat 2021 yang berkualitas dan tepat waktu</li>
-									<li>Tersedianya Publikasi Profil Pemuda Provinsi Jawa Barat 2022 yang berkualitas dan tepat waktu</li>
-									<li>Tersedianya Publikasi Pola Konsumsi Provinsi Jawa Barat 2022 yang berkualitas dan tepat waktu</li>
-									<li>Tersedianya Publikasi Statistik Perumahan Provinsi Jawa Barat 2022 yang berkualitas dan tepat waktu</li>
-									<li>Tersedianya Publikasi Statistik Kesehatan Provinsi Jawa Barat 2022 yang berkualitas dan tepat waktu</li>
-									<li>Tersedianya Publikasi Statistik Pendidikan Provinsi Jawa Barat 2022 yang berkualitas dan tepat waktu</li>
-									<li>Tersedianya Publikasi Profil Ibu dan Anak Provinsi Jawa Barat 2022 yang berkualitas dan tepat waktu</li>
-									<li>Tersedianya Publikasi Profil Migran Provinsi Jawa Barat Hasil Susenas 2022 yang berkualitas dan tepat waktu</li>
-									<li>Tersedianya Publikasi Statistik Kesejahteraan Rakyat Provinsi Jawa Barat 2023 yang berkualitas dan tepat waktu</li>
-									<li>Tersedianya Publikasi Statistik Lingkungan Hidup Tahun 2021 yang berkualitas dan tepat waktu</li>
-									<li>Tersedianya Publikasi Statistik Sumber Daya Laut dan Pesisir 2021 yang berkualitas dan tepat waktu</li>
-									<li>Tersedianya Publikasi Statistik Politik dan Keamanan 2022 yang berkualitas dan tepat waktu</li>
-									<li>Tersedianya Publikasi Potret Demokrasi Indonesia yang berkualitas dan tepat waktu</li>
-									<li>Tersedianya Publikasi Perkembangan Tingkat Kemiskinan September 2022 yang berkualitas dan tepat waktu</li>
-									<li>Tersedianya Publikasi Perkembangan Tingkat Kemiskinan Maret 2023 yang berkualitas dan tepat waktu</li>
-									<li>Tersedianya Publikasi Kemiskinan Kabupaten/Kota 2017-2022 yang berkualitas dan tepat waktu</li>
-									<br>
-									<a style="background-color:yellow;">Rencana Kinerja 5</a>
-									</p>
-								</div>
-						</div>
-						<div class="sub-accordion-item">
-							<div class="sub-accordion-header">Link Penting</div>
-								<div class="sub-accordion-content">
-								
-								</div>
-						</div>
-						</div>
-					</div>
-				</div>
-			  </div>
-			
-			<div class="col-md-4">
-			  <div class="accordion-item">
-				<div class="accordion-header-b">Statistik Produksi</div>
-				<div class="accordion-content">
-					<div class="sub-accordion">
-						<div class="sub-accordion-item">
-							<div class="sub-accordion-header">Rencana Kinerja</div>
-								<div class="sub-accordion-content">
-									<p>
-										<a style="background-color:yellow;">Rencana Kinerja 1</a>
-										
-									</p>
-									<br>
-									<p>
-										<a style="background-color:yellow;">Rencana Kinerja 2</a>
-										<li>Tersedianya Publikasi Statistik Tanaman Pangan yang 
-										berkualitas dan tepat waktu</li>
-										<li>Tersedianya Publikasi Statistik Hortikultura yang 
-										berkualitas dan tepat waktu</li>
-									</p>
-									<br>
-									<p>
-										<a style="background-color:yellow;">Rencana Kinerja 5</a>
-									</p>
-									<br>
-									
-								</div>
-						</div>
-						<div class="sub-accordion-item">
-							<div class="sub-accordion-header">Link Penting</div>
-								<div class="sub-accordion-content">
-								
-								</div>
-						</div>
-						</div>
-					</div>
-				</div>
-			  </div>
-			
-			<div class="col-md-4">
-			  <div class="accordion-item">
-				<div class="accordion-header-b">Statistik Distribusi</div>
-				<div class="accordion-content">
-					<div class="sub-accordion">
-						<div class="sub-accordion-item">
-							<div class="sub-accordion-header">Rencana Kinerja</div>
-								<div class="sub-accordion-content">
-									<p>
-										<a style="background-color:yellow;">Rencana Kinerja 1</a>
-										
-										<br>
-										<a style="background-color:yellow;">Rencana Kinerja 2</a>
-										<li>Tersedianya Data Statistik Harga Konsumen dan Harga Perdagangan Besar yang akurat dan mutakhir</li>
-										<li>Tersedianya Data Statistik Harga Produsen dan Harga Perdesaan yang akurat dan mutakhir</li>
-										<li>Tersedianya Data Statistik Perdagangan yang akurat dan mutakhir</li>
-										<li>Tersedianya Data Hasil Survei Biaya Hidup yang akurat dan mutakhir</li>
-										<li>Tersedianya Data Statistik Transportasi yang akurat dan mutakhir</li>
-										<li>Tersedianya Data Statistik Pariwisata dan Teknologi Informasi yang akurat dan mutakhir</li>
-										<li>Tersedianya Data Statistik Keuangan yang akurat dan mutakhir</li>
-										<br>
-										<a style="background-color:yellow;">Rencana Kinerja 5</a>
-									</p>
-								</div>
-						</div>
-						<div class="sub-accordion-item">
-							<div class="sub-accordion-header">Link Penting</div>
-								<div class="sub-accordion-content">
-									
-								</div>
-						</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-4">
-			  <div class="accordion-item">
-				<div class="accordion-header-b">Umum</div>
-				<div class="accordion-content">
-					<div class="sub-accordion">
-						<div class="sub-accordion-item">
-							<div class="sub-accordion-header">Rencana Kinerja</div>
-								<div class="sub-accordion-content">
-									<p>
-										<a style="background-color:yellow;"><b>Rencana Kinerja 6:</b></a>
-										<li>Melaksanakan kegiatan penataan administrasi pengelolaan dan 
-										pelayanan kepegawaian Aparatur Sipil Negara</li>
-										<li>Tercapainya penilaian implementasi SAKIP</li>
-										<li>Melakukan kegiatan pengelolaan arsip dinamis, pengelolaan arsip statis, 
-										pembinaan kearsipan dan pengolahan dan penyajian arsip menjadi informasi.</li>
-										<li>Melakukan kegiatan pengelolaan BMN</li>
-										<li>Melakukan kegiatan pengelolaan Keuangan APBN</li>
-										<li>Melakukan kegiatan di bidang penganggaran dalam pengelolaan APBN</li>
-										<br>
-										<a style="background-color:yellow;"><b>Rencana Kinerja 7:</b></a>
-										<li>Melaksanakan kegiatan pelayanan informasi dan kehumasan</li>
-										<li>Melakukan kegiatan pengadaan barang/jasa pemerintah</li>
-										<li>Melaksanakan kegiatan urusan rumah tangga dan perlengkapan</li>
-									</p>
-								</div>
-						</div>
-						<div class="sub-accordion-item">
-							<div class="sub-accordion-header">Link Penting</div>
-								<div class="sub-accordion-content">
-									<p style="text-decoration: none;">
-										<a href="https://ppid.bps.go.id/dashboard" target="_blank">Admin PPID (VPN)</a><br>
-										<a href="https://backoffice.bps.go.id/" target="_blank">Backoffice Selindo (VPN)</a><br>
-										<a href="https://community.bps.go.id/" target="_blank">Community (VPN)</a><br>
-										<a href="https://drive.bps.go.id/" target="_blank">Drive BPS</a><br>
-										<a href="https://elearning.bps.go.id/login/login_new.php" target="_blank">E-Learning BPS</a><br>
-										<a href="https://e-monev.bappenas.go.id/fe/jumper" target="_blank">E Monev Bappenas</a><br>
-										<a href="https://esr.menpan.go.id/" target="_blank">ESR MenPAN/ e-SAKIP REVIU</a><br>
-										<a href="https://jdih.bps.go.id" target="_blank">JDIH (VPN)</a><br>
-										<a href="https://webapps.bps.go.id/kipapp/" target="_blank">KipApp</a><br>
-										<a href="https://klc2.kemenkeu.go.id/" target="_blank">KeMenKeu Learning Center</a><br>
-										<a href="https://sensus.bps.go.id" target="_blank">Kegiatan Sensus</a><br>
-										<a href="https://laci.bps.go.id/" target="_blank">Laci BPS</a><br>
-										<a href="https://spanint.kemenkeu.go.id/spanint/latest/app/" target="_blank">OM-SPAN</a><br>
-										<a href="https://ppid.bps.go.id/" target="_blank">PPID BPS</a><br>
-										<a href="http://rb.bps.go.id/" target="_blank">Reformasi Birokrasi</a><br>
-										<a href="https://s.bps.go.id/" target="_blank">Shortlink BPS</a><br>
-										<a href="https://sdm.bps.go.id/siimut/web/site/login" target="_blank">SiImut BPS</a><br>
-										<a href="https://jafung.bps.go.id/" target="_blank">SiJaFung BPS</a><br>
-										<a href="https://monev.bps.go.id/monevnew/index.php?r=site/login" target="_blank">SIMonev BPS</a><br>
-										<a href="https://simpeg.bps.go.id/" target="_blank">Simpeg BPS (VPN)</a><br>
-										<a href="https://sipecut.bps.go.id/app/index.php/pegawai" target="_blank">SiPeCut BPS (VPN)</a><br>
-										<a href="https://anggaran.kemenkeu.go.id/in/post/aplikasi-smart" target="_blank">Smart</a><br>
-										<a href="https://pusdiklat.bps.go.id/warkop/" target="_blank">Warkop BPS</a><br>
-										<a href="http://s.bps.go.id/jabar-wbk-wbbm" target="_blank">ZI - WBK/WBBM</a>
-									</p>
-								</div>
-						</div>
-					</div>
-					</div>
-				</div>
-			  </div>
-			
-			<div class="col-md-4">
-			  <div class="accordion-item">
-				<div class="accordion-header-b">Nerwilis</div>
-				<div class="accordion-content">
-					<div class="sub-accordion">
-						<div class="sub-accordion-item">
-							<div class="sub-accordion-header">Rencana Kinerja</div>
-								<div class="sub-accordion-content">
-									<p>
-										<a style="background-color:yellow;">Rencana Kinerja 1</a>
-											<li>Tersedianya data Produk Domestik Regional Bruto (PDRB) triwulanan/tahunan menurut pengeluaran</li>
-											<li>Tersedianya data Produk Domestik Regional Bruto (PDRB) triwulanan/tahunan menurut lapangan usaha</li>
-											<li>Terlaksananya survei neraca produksi tepat waktu</li>
-											<li>Terlaksananya Survei Neraca Pengeluaran tepat waktu</li>
-											<li>Tersedianya data hasil studi penghitungan PDRB triwulanan Kabupaten/Kota menurut lapangan usaha</li>
-											<li>Tersedianya data hasil studi penghitungan PDRB triwulanan Kabupaten/Kota menurut pengeluaran</li>
-											<li>Terlaksananya Penjaminan Kualitas Pendataan</li>
-											<li>Tersedianya Supply and Use Table (SUT) Provinsi Jawa Barat Tahun 2020 - 2022 sebagai Kerangka Kerja</li>
-										<br>
-										<a style="background-color:yellow;">Rencana Kinerja 2</a>
-										<li>Tersedianya publikasi analisis sosial dan ekonomi</li>
-										<li>Tersedianya Publikasi Neraca Pengeluaran Tahunan yang berkualitas</li>
-										<li>Tersedianya Publikasi Neraca Produksi Tahunan yang berkualitas</li>
-										<br>
-										<a style="background-color:yellow;">Rencana Kinerja 5</a>
-									</p>
-								</div>
-						</div>
-						<div class="sub-accordion-item">
-							<div class="sub-accordion-header">Link Penting</div>
-								<div class="sub-accordion-content">
-									
-								</div>
-						</div>
-						</div>
-					</div>
-				</div>
-			  </div>
-			
-			<div class="col-md-4">
-			  <div class="accordion-item">
-				<div class="accordion-header-b">IPDS</div>
-				<div class="accordion-content">
-					<div class="sub-accordion">
-						<div class="sub-accordion-item">
-							<div class="sub-accordion-header">Rencana Kinerja</div>
-								<div class="sub-accordion-content">
-									<p>
-									<a style="background-color:yellow;">Rencana Kinerja 1</a>
-									<li>Tersedianya Laporan Hasil Survei Kebutuhan Data (SKD) Yang Akurat dan Tepat Waktu</li>
-									<li>Tersedianya Publikasi Statistik Yang Berkualitas dan Terbit Tepat Waktu</li>
-									<li>Tersedianya Master Wilayah Kerja Statistik yang Akurat dan Mutakhir</li>
-									<li>Terselenggaranya Pelaksanaan Sensus/Survei yang tepat waktu</li>
-									<br>
-									<a style="background-color:yellow;">Rencana Kinerja 3</a>
-									<li>Terselenggaranya Pengolahan Data Hasil Sensus/Survei yang tepat waktu</li>
-									<br>
-									<a style="background-color:yellow;">Rencana Kinerja 4</a>
-									<br>
-									<a style="background-color:yellow;">Rencana Kinerja 5</a>
-									<br>
-									<a style="background-color:yellow;">Rencana Kinerja 7</a>
-									<li>Meningkatkan Kepuasan Pengguna Layanan Teknologi Informasi</li>
-									</p>
-								</div>
-						</div>
-						<div class="sub-accordion-item">
-							<div class="sub-accordion-header">Link Penting</div>
-								<div class="sub-accordion-content">
-									<a href="https://s.id/olahpeta" target="_blank">Materi Pengolahan Peta ST2023</a>
-								</div>
-						</div>
-						</div>
-					</div>
-				</div>
-			  </div>
-		  
-		  </div>
-		<hr>
-	</div>
-</div>
+								<div class="sub-accordion-header">Pengantar</div>
+									<div class="sub-accordion-content">
+										<p class="content">
+										  Pengelolaan kinerja Pegawai terdiri atas:
+										  <ol type="a">
+											<li>perencanaan kinerja, penetapan dan klarifikasi Ekspektasi kinerja Pegawai;</li>
+											<li>pelaksanaan, pemantauan, dan pembinaan kinerja Pegawai pendokumentasian kinerja, 
+										  pemberian umpan balik berkelanjutan, dan pengembangan kinerja Pegawai;</li>
+											<li>penilaian kinerja Pegawai, evaluasi kinerja Pegawai; dan</li>
+											<li>tindak lanjut hasil evaluasi kinerja Pegawai, pemberian penghargaan dan sanksi.</li>
+										  </ol>
+										  <br>
+										  Sasaran Kinerja Pegawai yang selanjutnya disingkat SKP 
+										  adalah ekspektasi kinerja yang akan dicapai oleh Pegawai setiap tahun.
+										<br><br> 
+										  Ekspektasi Kinerja yang selanjutnya disebut Ekspektasi adalah harapan 
+										  atas hasil kerja dan perilaku kerja Pegawai.<br><br>
+										  Pengelolaan kinerja Pegawai dilaksanakan untuk pencapaian tujuan dan sasaran 
+										  organisasi melalui:<br> 
+										  <ol type="a">
+											  <li>peningkatan kualitas dan kapasitas Pegawai;</li>
+											  <li>penguatan peran Pimpinan; dan</li>
+											  <li>penguatan kolaborasi antara Pimpinan dengan 
+										  Pegawai, antar-Pegawai, dan antara Pegawai dengan pemangku kepentingan lainnya.</li>
+										  </ol>
+										   <br>
+										  yang berorientasi pada:<br>
+										  <ol type="a">
+											  <li>pengembangan kinerja Pegawai;</li>
+											  <li>pemenuhan Ekspektasi Pimpinan;</li>
+											  <li>dialog kinerja yang intens antara Pimpinan dan Pegawai;</li>
+											  <li>pencapaian kinerja organisasi; dan</li>
+											  <li>hasil kerja dan perilaku kerja Pegawai.</li>
+										  </ol>
+										  <br><br>
 	
-<div class="footer">
-	<center><h6>---  BPS3200  ---</h6></center>
-</div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  var accordionHeaders = document.getElementsByClassName("accordion-header");
-
-  // Add click event listener to each accordion header
-  for (var i = 0; i < accordionHeaders.length; i++) {
-    accordionHeaders[i].addEventListener("click", function() {
-      var accordionContent = this.nextElementSibling;
-      var isActive = accordionContent.style.display === "block";
-
-      // Close all accordion content
-      var allAccordionContent = document.getElementsByClassName("accordion-content");
-      for (var j = 0; j < allAccordionContent.length; j++) {
-        allAccordionContent[j].style.display = "none";
-      }
-
-      // Remove "active" class from all accordion headers
-      var allAccordionHeaders = document.getElementsByClassName("accordion-header");
-      for (var k = 0; k < allAccordionHeaders.length; k++) {
-        allAccordionHeaders[k].classList.remove("active");
-      }
-
-      // Toggle the display of the clicked accordion content
-      accordionContent.style.display = isActive ? "none" : "block";
-
-      // Add "active" class to the clicked accordion header
-      this.classList.toggle("active");
-    });
-  }
-
-  var subAccordionHeaders = document.getElementsByClassName("sub-accordion-header");
-
-  // Add click event listener to each sub-accordion header
-  for (var i = 0; i < subAccordionHeaders.length; i++) {
-    subAccordionHeaders[i].addEventListener("click", function() {
-      var subAccordionContent = this.nextElementSibling;
-      var isActive = subAccordionContent.style.display === "block";
-
-      // Toggle the display of the clicked sub-accordion content
-      subAccordionContent.style.display = isActive ? "none" : "block";
-
-      // Add "active" class to the clicked sub-accordion header
-      this.classList.toggle("active");
-    });
-  }
-});
-</script>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  var accordionHeaders = document.getElementsByClassName("accordion-header-b");
-
-  // Add click event listener to each accordion header
-  for (var i = 0; i < accordionHeaders.length; i++) {
-    accordionHeaders[i].addEventListener("click", function() {
-      var accordionContent = this.nextElementSibling;
-      var isActive = accordionContent.style.display === "block";
-
-      // Close all accordion content
-      var allAccordionContent = document.getElementsByClassName("accordion-content");
-      for (var j = 0; j < allAccordionContent.length; j++) {
-        allAccordionContent[j].style.display = "none";
-      }
-
-      // Remove "active" class from all accordion headers
-      var allAccordionHeaders = document.getElementsByClassName("accordion-header");
-      for (var k = 0; k < allAccordionHeaders.length; k++) {
-        allAccordionHeaders[k].classList.remove("active");
-      }
-
-      // Toggle the display of the clicked accordion content
-      accordionContent.style.display = isActive ? "none" : "block";
-
-      // Add "active" class to the clicked accordion header
-      this.classList.toggle("active");
-    });
-  }
-
-  var subAccordionHeaders = document.getElementsByClassName("sub-accordion-header");
-
-  // Add click event listener to each sub-accordion header
-  for (var i = 0; i < subAccordionHeaders.length; i++) {
-    subAccordionHeaders[i].addEventListener("click", function() {
-      var subAccordionContent = this.nextElementSibling;
-      var isActive = subAccordionContent.style.display === "block";
-
-      // Toggle the display of the clicked sub-accordion content
-      subAccordionContent.style.display = isActive ? "none" : "block";
-
-      // Add "active" class to the clicked sub-accordion header
-      this.classList.toggle("active");
-    });
-  }
-});
-</script>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  var accordionHeaders = document.getElementsByClassName("accordion-header-c");
-
-  // Add click event listener to each accordion header
-  for (var i = 0; i < accordionHeaders.length; i++) {
-    accordionHeaders[i].addEventListener("click", function() {
-      var accordionContent = this.nextElementSibling;
-      var isActive = accordionContent.style.display === "block";
-
-      // Close all accordion content
-      var allAccordionContent = document.getElementsByClassName("accordion-content");
-      for (var j = 0; j < allAccordionContent.length; j++) {
-        allAccordionContent[j].style.display = "none";
-      }
-
-      // Remove "active" class from all accordion headers
-      var allAccordionHeaders = document.getElementsByClassName("accordion-header");
-      for (var k = 0; k < allAccordionHeaders.length; k++) {
-        allAccordionHeaders[k].classList.remove("active");
-      }
-
-      // Toggle the display of the clicked accordion content
-      accordionContent.style.display = isActive ? "none" : "block";
-
-      // Add "active" class to the clicked accordion header
-      this.classList.toggle("active");
-    });
-  }
-
-  var subAccordionHeaders = document.getElementsByClassName("sub-accordion-header");
-
-  // Add click event listener to each sub-accordion header
-  for (var i = 0; i < subAccordionHeaders.length; i++) {
-    subAccordionHeaders[i].addEventListener("click", function() {
-      var subAccordionContent = this.nextElementSibling;
-      var isActive = subAccordionContent.style.display === "block";
-
-      // Toggle the display of the clicked sub-accordion content
-      subAccordionContent.style.display = isActive ? "none" : "block";
-
-      // Add "active" class to the clicked sub-accordion header
-      this.classList.toggle("active");
-    });
-  }
-});
-
-// Get the input field and dropdown container
-var input = document.getElementById("myInput");
-var dropdown = document.getElementById("myDropdown");
-
-// Add an event listener to detect user input
-input.addEventListener("input", function() {
-  // Clear previous dropdown items
-  dropdown.innerHTML = "";
-
-  // Get the user input
-  var inputValue = input.value.toLowerCase();
-
-  // Define the dropdown items and their corresponding URLs
-  var items = [
-    { name: 'Admin PPID (VPN)', url: 'https://ppid.bps.go.id/dashboard' },
-    { name: 'Admin Romantik (VPN)', url: 'https://romantik.bps.go.id/webadmin' },
-    { name: 'ARC BRS', url: 'https://jabar.bps.go.id/publication/arc#arcTab2.html' },
-    { name: 'ARC Publikasi', url: 'https://jabar.bps.go.id/publication/arc#arcTab1.html' },
-    { name: 'Backend Web (VPN)', url: 'https://jabar.bps.go.id/backend' },
-    { name: 'Backoffice BPS (VPN)', url: 'https://backoffice.bps.go.id/' },
-    { name: 'Berita Resmi Statistik', url: 'https://jabar.bps.go.id/pressrelease.html' },
-    { name: 'BPS Pusat', url: 'www.bps.go.id' },
-    { name: 'Cinta Statistik - Buku Saku', url: 'https://bps3273.top/cantik' },
-    { name: 'Community BPS (VPN)', url: 'https://community.bps.go.id/' },
-    { name: 'Data Spasial BPS (VPN)', url: 'https://dataspasial.bps.go.id/' },
-    { name: 'Drive BPS', url: 'https://drive.bps.go.id/' },
-    { name: 'E Monev Bappenas', url: 'https://e-monev.bappenas.go.id/fe/jumper' },
-    { name: 'Ekspor Impor', url: 'https://jabar.bps.go.id/subject/8/ekspor-impor.html#subjekViewTab3' },
-    { name: 'E-Learning BPS', url: 'https://elearning.bps.go.id/login/login_new.php' },
-    { name: 'Email BPS', url: 'https://mail.bps.go.id/' },
-    { name: 'Entri Metadata', url: 'https://indah.bps.go.id/' },
-    { name: 'Entri Online BPS (VPN)', url: 'https://pengolahan.bps.go.id/' },
-    { name: 'Entri SBH 2022', url: 'https://webapps.bps.go.id/olah/sbh2022/login' },
-    { name: 'EPSS / Simbatik', url: 'https://webapps.bps.go.id/simbatik/' },
-    { name: 'ESR MenPAN / e-SAKIP REVIU', url: 'https://esr.menpan.go.id/' },
-    { name: 'Facebook', url: 'https://facebook.com/bpsprovjabar?__tn__=C-R' },
-    { name: 'FASIH Management (VPN)', url: 'https://fasih-sm.bps.go.id' },
-    { name: 'Galeri Infografis', url: 'https://jabar.bps.go.id/galery.html' },
-    { name: 'Gender', url: 'https://jabar.bps.go.id/subject/40/gender.html#subjekViewTab3' },
-    { name: 'Git BPS (VPN)', url: 'https://git.bps.go.id' },
-    { name: 'Github', url: 'https://https://github.com/' },
-    { name: 'Google', url: 'https://www.google.com/' },
-    { name: 'Hortikultura', url: 'https://jabar.bps.go.id/subject/157/tanaman-hortikultura.html#subjekViewTab3' },
-    { name: 'Indikator Strategis', url: 'https://jabar.bps.go.id/QuickMap?id=0000000000' },
-    { name: 'Inflasi', url: 'https://jabar.bps.go.id/subject/3/inflasi.html#subjekViewTab3' },
-    { name: 'Input Output', url: 'https://jabar.bps.go.id/subject/105/input-output.html#subjekViewTab3' },
-    { name: 'Instagram', url: 'https://www.instagram.com/bpsjabar/?hl=en' },
-    { name: 'IPM', url: 'https://jabar.bps.go.id/subject/26/indeks-pembangunan-manusia.html#subjekViewTab3' },
-    { name: 'Istilah Statistik', url: 'https://jabar.bps.go.id/istilah.html' },
-    { name: 'Jabar Open Data', url: 'https://opendata.jabarprov.go.id/id' },
-    { name: 'Kamus Fungsional Statistisi', url: 'https://bps3273.top/kamfus32' },
-    { name: 'Katalog Datamikro', url: 'https://repository.bps.go.id/mikrodata/index.php/home' },
-    { name: 'KBLI/ KBJI/ KBKI', url: 'https://www.bps.go.id/klasifikasi' },
-    { name: 'Kegiatan Sensus', url: 'https://sensus.bps.go.id/' },
-    { name: 'Kehutanan', url: 'https://jabar.bps.go.id/subject/164/kehutanan.html#subjekViewTab3' },
-    { name: 'Kelurahan Cantik - Derwati', url: 'https://www.derwatirumasa.com/' },
-    { name: 'Kemenkeu Learning Center', url: 'https://klc2.kemenkeu.go.id/' },
-    { name: 'Kemiskinan', url: 'https://jabar.bps.go.id/subject/23/kemiskinan.html#subjekViewTab3' },
-    { name: 'Kependudukan', url: 'https://jabar.bps.go.id/subject/12/kependudukan.html#subjekViewTab3' },
-    { name: 'KipApp', url: 'https://webapps.bps.go.id/kipapp/' },
-    { name: 'Laci BPS', url: 'https://laci.bps.go.id/' },
-    { name: 'Live Chat Website', url: 'https://webapps.bps.go.id/chat/index.php/site_admin/user/login'},
-    { name: 'Manajemen Mitra BPS (VPN)', url: 'https://manajemen-mitra.bps.go.id/' },
-    { name: 'MFD', url: 'https://frs.bps.go.id/area/login' },
-    { name: 'Monitoring IPDS3200', url: 'https://s.id/asik32' },
-    { name: 'Monitoring Pengolahan BPS', url: 'https://webmonitoring.bps.go.id/' },
-    { name: 'Muda Berdasi', url: 'https://32net.id/jabar/tamuvirtual/index' },
-    { name: 'NTP', url: 'https://jabar.bps.go.id/subject/22/nilai-tukar-petani.html#subjekViewTab3' },
-    { name: 'OM-SPAN', url: 'https://spanint.kemenkeu.go.id/spanint/latest/app/' },
-    { name: 'Pariwisata', url: 'https://jabar.bps.go.id/subject/16/pariwisata.html#subjekViewTab3' },
-    { name: 'PDRB Kabupaten/Kota', url: 'https://jabar.bps.go.id/subject/155/pdrb-menurut-kabupaten-kota.html#subjekViewTab3' },
-    { name: 'PDRB Lapangan Usaha', url: 'https://jabar.bps.go.id/subject/52/pdrb-menurut-lapangan-usaha.html#subjekViewTab3' },
-    { name: 'PDRB Pengeluaran', url: 'https://jabar.bps.go.id/subject/166/pdrb-menurut-pengeluaran.html#subjekViewTab3' },
-    { name: 'Pengangguran', url: 'https://jabar.bps.go.id/subject/6/tenaga-kerja.html#subjekViewTab3' },
-    { name: 'Perikanan', url: 'https://jabar.bps.go.id/subject/160/perikanan.html#subjekViewTab3' },
-    { name: 'Perkebunan', url: 'https://jabar.bps.go.id/subject/163/perkebunan.html#subjekViewTab3' },
-    { name: 'Perpustakaan/ Digital Library', url: 'https://perpustakaan.bps.go.id/' },
-    { name: 'Peternakan', url: 'https://jabar.bps.go.id/subject/158/peternakan.html#subjekViewTab3' },
-    { name: 'Portal Publikasi BPS (VPN)', url: 'https://portalpublikasi.bps.go.id/' },
-    { name: 'Potensi Desa', url: 'https://jabar.bps.go.id/subject/154/potensi-desa.html#subjekViewTab3' },
-    { name: 'PPID BPS', url: 'https://ppid.bps.go.id/' },
-    { name: 'PPK / Pejabat Pembuat Komitmen', url: 'https://bps3273.top/ppk3200' },
-    { name: 'PST / Pelayanan Statistik Terpadu', url: 'https://pst.bps.go.id/' },
-    { name: 'Reformasi Birokrasi BPS', url: 'http://rb.bps.go.id/' },
-    { name: 'Romantik', url: 'https://romantik.bps.go.id/' },
-    { name: 'SAKIP - Tentang', url: 'https://bps3273.top/sakip' },
-    { name: 'Shortlink BPS', url: 'https://s.bps.go.id/' },
-    { name: 'SiImut BPS', url: 'https://sdm.bps.go.id/siimut/web/site/login' },
-    { name: 'SiJaFung BPS', url: 'https://jafung.bps.go.id/' },
-    { name: 'SiLastik', url: 'https://silastik.bps.go.id/v3/index.php/site/login/' },
-    { name: 'SIMDASI (VPN)', url: 'https://simdasi.bps.go.id/' },
-    { name: 'SIMonev BPS', url: 'https://monev.bps.go.id/monevnew/index.php?r=site/login' },
-    { name: 'Simpeg BPS (VPN)', url: 'https://simpeg.bps.go.id/' },
-    { name: 'SiPeCut BPS (VPN)', url: 'https://sipecut.bps.go.id/app/index.php/pegawai' },
-    { name: 'SIPPN MenPAN', url: 'https://sippn.menpan.go.id/' },
-    { name: 'SiRuSa (VPN)', url: 'https://sirusa.bps.go.id/' },
-    { name: 'Sistem Statistik Hayati Indonesia', url: 'https://indah.bps.go.id/sshi2023/dashboard' },
-    { name: 'SKD 2019', url: 'https://skd.bps.go.id/skd2019/web/' },
-    { name: 'SKD 2020', url: 'https://skd.bps.go.id/skd2020/web/' },
-    { name: 'SKD 2021', url: 'https://skd.bps.go.id/SKD2021/' },
-    { name: 'SKD 2022', url: 'https://skd.bps.go.id/SKD2022/' },
-    { name: 'SKD 2023', url: 'https://skd.bps.go.id/SKD2023/' },
-    { name: 'Smart', url: 'https://anggaran.kemenkeu.go.id/in/post/aplikasi-smart' },
-    { name: 'SmartKit', url: 'https://smartkit.32net.id/' },
-    { name: 'SOBAT BPS', url: 'https://mitra.bps.go.id/' },
-    { name: 'Standar Data', url: 'https://indah.bps.go.id/standar-data-statistik-nasional' },
-    { name: 'Statistik Website', url: 'https://ppid.bps.go.id/app/statistik_website/3200/2023' },
-    { name: 'Tabel Dinamis', url: 'https://jabar.bps.go.id/site/pilihdata.html' },
-    { name: 'Tanaman Pangan', url: 'https://jabar.bps.go.id/subject/53/tanaman-pangan.html#subjekViewTab3' },
-    { name: 'Tanya AI / Kecerdasan Buatan', url: 'https://chat.openai.com/' },
-    { name: 'Telegram Desktop', url: 'https://desktop.telegram.org/' },
-    { name: 'Telegram Web', url: 'https://web.telegram.org/k/' },
-    { name: 'Warkop BPS', url: 'https://pusdiklat.bps.go.id/warkop/' },
-    { name: 'Web Dashboard (VPN)', url: 'https://webdash.bps.go.id' },
-    { name: 'WhatsApp Desktop', url: 'https://www.whatsapp.com/download' },
-    { name: 'WhatsApp Web', url: 'https://web.whatsapp.com/' },
-    { name: 'Wilkerstat BPS', url: 'https://wilkerstat.bps.go.id/public/login' },
-    { name: 'Youtube', url: 'https://www.youtube.com/@bpsjabar32/featured' }
-    ];
-
-  // Filter the dropdown items based on the input
-  for (var i = 0; i < items.length; i++) {
-    var item = items[i].name.toLowerCase();
-    if (item.startsWith(inputValue)) {
-      // Create a new dropdown item as a link
-      var option = document.createElement("a");
-      option.href = items[i].url;
-      option.textContent = items[i].name;
-
-      // Add a click event listener to open the URL in a new tab
-      option.addEventListener("click", function(event) {
-        event.preventDefault();
-        window.open(this.href, "_blank");
-      });
-	  
-	  
-	  // Add the item to the dropdown
-      dropdown.appendChild(option);
-    }
-  }
-
-  // Display the dropdown
-  dropdown.style.display = "block";
-});
-
-// Close the dropdown when the user clicks outside of it
-document.addEventListener("click", function(event) {
-  if (!event.target.matches("#myInput")) {
-    dropdown.style.display = "none";
-  }
-});
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+										  Pengelolaan kinerja Pegawai dilaksanakan melalui aplikasi kinerja Pegawai yang 
+										  disiapkan oleh Badan Kepegawaian Negara dengan persetujuan Menteri dan 
+										  terintegrasi dengan platform tunggal pengelolaan Pegawai.
+										  </p>
+									</div>
+								</div>
+								<div class="sub-accordion-item">
+									  <div class="sub-accordion-header">Perencanaan Kinerja</div>
+									  <div class="sub-accordion-content">
+										<p  class="body">Perencanaan kinerja terdiri atas penyusunan dan penetapan SKP.
+										Dalam proses penyusunan SKP, Pimpinan dan Pegawai melakukan 
+										dialog kinerja untuk penetapan dan klarifikasi Ekspektasi.<br><br>
+										Penetapan dan klarifikasi Ekspektasi merupakan proses untuk menentukan:<br><br>
+										a. rencana kinerja yang terdiri atas: <br>
+										<ol type="1">
+											<li>rencana hasil kerja Pegawai beserta ukuran keberhasilan/ indikator 
+										kinerja individu dan target; dan </li>
+											<li>perilaku kerja Pegawai yang diharapkan; </li>
+										</ol>
+										<br>
+										b. sumber daya yang dibutuhkan untuk pencapaian kinerja Pegawai;<br>
+										c. skema pertanggungjawaban kinerja Pegawai; dan<br>
+										d. konsekuensi atas pencapaian kinerja Pegawai.<br>
+										<br><br>
+										Penetapan dan klarifikasi Ekspektasi untuk penyusunan SKP dilakukan sejak 
+										penyusunan rancangan perjanjian kinerja unit kerja.
+										Penetapan dan klarifikasi Ekspektasi dituangkan dalam dokumen SKP.<br><br>
+										Penetapan dan klarifikasi Ekspektasi dilakukan dengan mengacu pada:<br>
+										<ol type="a">
+											<li>perencanaan strategis (Renstra);</li>
+											<li>perjanjian kinerja unit kerja (PK);</li>
+											<li>organisasi dan tata kerja (Per BPS No. 8/2020);</li>
+											<li>rencana kinerja Pimpinan;</li>
+											<li>kompetensi, keahlian, dan/atau keterampilan Pegawai; dan</li>
+											<li>prioritas dalam rangka pencapaian kinerja organisasi/ unit kerja/ Pimpinan.</li>
+										</ol>
+										</p>
+									  </div>
+								</div>
+								<div class="sub-accordion-item">
+									  <div class="sub-accordion-header">Rencana Hasil Kerja</div>
+									  <div class="sub-accordion-content">
+										<p align="justify">
+										Rencana hasil kerja Pegawai merupakan <i>outcome</i>, <i>outcome</i> antara, <i>output</i>, 
+										dan/atau layanan yang akan dihasilkan Pegawai.<br><br>
+										Ukuran keberhasilan/ indikator kinerja individu dan target atas rencana 
+										hasil kerja Pegawai meliputi aspek: <br>
+										<ol type="a">
+											<li>kuantitas;</li>
+											<li>kualitas; </li>
+											<li>waktu atau kecepatan penyelesaian hasil kerja; dan/ atau</li>
+											<li>biaya.</li>
+										</ol>
+										<br>
+										Ukuran keberhasilan/ indikator kinerja individu dan target atas rencana 
+										hasil kerja Pegawai dapat dinyatakan dengan pendekatan kualitatif atau kuantitatif.
+	
+										<br><br>
+										Pimpinan dapat menetapkan Ekspektasi khusus atas perilaku kerja Pegawai 
+										didasarkan pada nilai dasar aparatur sipil negara.
+										<br><br>
+										Sumber daya yang dibutuhkan untuk pencapaian kinerja Pegawai paling sedikit meliputi dukungan:<br>
+										<ol type="a">
+											<li>sumber daya manusia;</li>
+											<li>anggaran;</li>
+											<li>peralatan kerja;</li>
+											<li>pendampingan Pimpinan; dan/ atau</li>
+											<li>sarana dan prasarana.</li>
+										</ol>
+										  <br><br>
+										Jika tidak mencapai kesepakatan atau mencapai kesepakatan namun tidak terealisasi, 
+										Pimpinan dapat melakukan penyesuaian Ekspektasi.
+										<br><br>
+										Skema pertanggungjawaban terdiri atas: <br>
+										<ol type="a">
+											<li>jadwal pelaporan perkembangan setiap rencana kinerja Pegawai;</li>
+											<li>bukti kinerja yang diharapkan.</li>
+										</ol>
+										  <br><br>
+										Konsekuensi dalam pencapaian kinerja Pegawai dapat berupa kesepakatan mengenai: <br>
+										<ol type="a">
+											<li>konsekuensi positif dalam hal capaian kinerja Pegawai memenuhi Ekspektasi Pimpinan; dan</li>
+											<li>konsekuensi negatif dalam hal capaian kinerja Pegawai tidak memenuhi Ekspektasi Pimpinan.</li>
+										</ol>
+									  </p>
+									  </div>
+								</div>
+								<div class="sub-accordion-item">
+									  <div class="sub-accordion-header">Perilaku Kerja</div>
+									  <div class="sub-accordion-content">
+										<p align="justify">
+											Perilaku kerja Pegawai meliputi aspek:<br>
+											<ol type="a">
+												<li>orientasi pelayanan;</li>
+												<li>komitmen;</li>
+												<li>inisiatif kerja;</li>
+												<li>kerja sama; dan</li>
+												<li>kepemimpinan.</li>
+											</ol>
+										  <br><br>
+											Perilaku kerja Pegawai diwujudkan dalam nilai dasar aparatur sipil negara 
+											yang menjadi standar perilaku kerja Pegawai.
+											<br><br>
+											Standar perilaku kerja Pegawai terdiri atas: <br>
+											<b>a. berorientasi pelayanan: </b><br>
+											<ol type="1">
+												<li>memahami dan memenuhi kebutuhan masyarakat;</li>
+												<li>ramah, cekatan, solutif, dan dapat diandalkan; dan</li>
+												<li>melakukan perbaikan tiada henti;</li>
+											</ol>
+										  <br><br>
+											<b>b. akuntabel:</b> <br>
+											<ol type="1">
+												<li>melaksanakan tugas dengan jujur, bertanggung jawab cermat, disiplin, 
+											dan berintegritas tinggi;</li>
+												<li>menggunakan kekayaan dan barang milik negara secara bertanggung jawab, 
+											efektif, dan efisien; dan</li>
+												<li>tidak menyalahgunakan kewenangan jabatan;</li>
+											</ol>
+										   <br><br>
+											<b>c. kompeten:</b> <br>
+											<ol type="1">
+												<li>meningkatkan kompetensi diri untuk menjawab tantangan yang selalu berubah;</li>
+												<li>membantu orang lain belajar; dan</li>
+												<li>melaksanakan tugas dengan kualitas terbaik;</li>
+											</ol>
+										  <br><br>
+											<b>d. harmonis:</b> <br>
+											<ol type="1">
+												<li>menghargai setiap orang apapun latar belakangnya;</li>
+												<li>suka menolong orang lain; dan</li>
+												<li>membangun lingkungan kerja yang kondusif;</li>
+											</ol>
+										  <br><br>
+											<b>e. loyal:</b> <br>
+											<ol type="1">
+												<li>memegang teguh ideologi Pancasila, Undang-Undang Dasar Negara Republik Indonesia 
+											Tahun 1945, setia kepada Negara Kesatuan Republik Indonesia serta pemerintahan yang sah;</li>
+												<li>menjaga nama baik sesama aparatur sipil negara, Pimpinan, instansi, dan negara; dan</li>
+												<li>menjaga rahasia jabatan dan negara;</li>
+											</ol>
+										  <br><br>
+											<b>f. adaptif:</b> <br>
+											<ol type="1">
+												<li>cepat menyesuaikan diri menghadapi perubahan;</li>
+												<li>terus berinovasi dan mengembangkan kreativitas; dan </li>
+												<li>bertindak proaktif; dan</li>
+											</ol>
+										  <br><br>
+											<b>g. kolaboratif:</b> <br>
+											<ol type="1">
+												<li>memberi kesempatan kepada berbagai pihak untuk berkontribusi;</li>
+												<li>terbuka dalam bekerja sama untuk menghasilkan nilai tambah; dan</li>
+												<li>menggerakkan pemanfaatan berbagai sumberdaya untuk tujuan bersama.</li>
+											</ol>
+										  </p>
+									  </div>
+								</div>
+								<div class="sub-accordion-item">
+									  <div class="sub-accordion-header">Evaluasi Kinerja</div>
+									  <div class="sub-accordion-content">
+										<p align="justify">
+										Evaluasi Kinerja Tahunan Pegawai dilakukan melalui tahapan sebagai berikut: <br>
+										<ol type="a">
+											<li>menetapkan capaian kinerja tahunan organisasi.</li>
+											<li>menetapkan pola distribusi predikat kinerja tahunan Pegawai berdasarkan capaian 
+										kinerja organisasi tahunan; dan</li>
+											<li>menetapkan predikat kinerja tahunan Pegawai 
+										dengan mempertimbangkan kontribusi kinerja Pegawai terhadap kinerja organisasi.</li>
+										</ol> 
+										  <br><br>
+										Penetapan capaian kinerja organisasi tahunan dilaksanakan sesuai dengan ketentuan 
+										perundang-undangan yang mengatur tentang kinerja organisasi.
+										<br><br>
+										Hasil Evaluasi Kinerja Tahunan Pegawai dituangkan dalam dokumen 
+										Evaluasi Kinerja Tahunan Pegawai.<br><br>
+										Evaluasi Kinerja Periodik Pegawai adalah proses dimana Pejabat Penilai Kinerja 
+										  mereviu keseluruhan hasil kerja dan perilaku kerja Pegawai selama bulanan atau 
+										  triwulanan dan menetapkan predikat kinerja periodik Pegawai berdasarkan kuadran 
+										  kinerja Pegawai.<br><br>
+										  Evaluasi Kinerja Tahunan Pegawai adalah proses dimana Pejabat Penilai Kinerja 
+										  mereviu keseluruhan hasil kerja dan perilaku kerja Pegawai selama satu tahun 
+										  kinerja dan menetapkan predikat kinerja tahunan Pegawai berdasarkan kuadran 
+										  kinerja Pegawai.<br><br>
+	
+									  </p>
+									  </div>
+								</div>
+								<div class="sub-accordion-item">
+									  <div class="sub-accordion-header">Prinsip Umum</div>
+									  <div class="sub-accordion-content">
+										<p class="content" align="justify">
+											<ol type="1">
+												<li>PENGELOLAAN KINERJA PEGAWAI TIDAK HANYA SEKEDAR MENILAI KINERJA PEGAWAI 
+													<i>(PERFORMANCE APPRAISAL)</i> TETAPI SEBAGAI INSTRUMEN UNTUK MENGEMBANGKAN KINERJA 
+													PEGAWAI <i>(PERFORMANCE DEVELOPMENT)</i>;</li>
+												<li>PENGELOLAAN KINERJA PEGAWAI TIDAK HANYA SEKEDAR MERENCANAKAN DI AWAL DAN 
+										MENGEVALUASI DI AKHIR TETAPI FOKUS PADA BAGAIMANA MEMENUHI EKSPEKTASI PIMPINAN 
+													<i>(HOW TO MEET EXPECTATIONS)</i>;</li>
+												<li>PENTINGNYA INTENSITAS DIALOG KINERJA PIMPINAN DAN PEGAWAI DALAM PENGELOLAAN KINERJA PEGAWAI;</li>
+												<li>KINERJA INDIVIDU HARUS MENDUKUNG KEBERHASILAN KINERJA ORGANISASI;</li>
+												<li>KINERJA PEGAWAI MENCERMINKAN HASIL KERJA BUKAN SEKEDAR URAIAN TUGAS SERTA PERILAKU YANG 
+										DITUNJUKKAN DALAM BEKERJA DAN BERINTERAKSI DENGAN ORANG LAIN.</li>
+											</ol>
+										  </p>
+									  </div>
+								</div>
+								<div class="sub-accordion-item">
+									  <div class="sub-accordion-header">Referensi</div>
+									  <div class="sub-accordion-content">
+										<ul>
+											<li><a href="https://www.bkn.go.id/unggahan/2022/09/MODUL-EVALUASI-KINERJA-PEGAWAI-SESUAI-PERMENPAN-RB-NOMOR-6-TAHUN-2022.pdf" target="_blank">Modul Evaluasi Kinerja</a>
+											</li><br>
+											<li><a href="https://peraturan.bpk.go.id/Home/Download/196198/Permen%20PANRB%20No.%206%20Tahun%202022.pdf" target="_blank">Pengelolaan Kinerja Pegawai ASN</a>
+											</li><br>
+											<li><a href="https://peraturan.bpk.go.id/Home/Download/196199/Permen%20PANRB%20No.%207%20Tahun%202022.pdf" target="_blank">Sistem Kerja pada Instansi Pemerintah untuk Penyederhanaan Birokrasi</a>
+											</li><br>
+											<li><a href="https://peraturan.bpk.go.id/Home/Download/295958/Permen%20PANRB%20Nomor%201%20Tahun%202023.pdf" target="_blank">Jabatan Fungsional</a>
+											</li><br>
+											<li><a href="https://ppid.bps.go.id/upload/doc/Peraturan_Badan_Pusat_Statistik_Nomor_8_Tahun_2020_1679371551.pdf" target="_blank">Organisasi dan Tata Kerja BPS Provinsi dan BPS Kabupaten/Kota</a>
+									  		</li>
+										</ul>
+									  </div>
+								</div>
+								<div class="sub-accordion-item">
+									  <div class="sub-accordion-header">Laporan Kinerja</div>
+									  <div class="sub-accordion-content">
+										<ul>
+											<li><a href="https://smartkit.32net.id" target="_blank">SmartKit</a>
+											</li><br>
+											<li><a href="https://webapps.bps.go.id/kipapp" target="_blank">KipApp</a>
+											</li><br>
+											<li><a href="https://public.flourish.studio/visualisation/14034204/" target="_blank">Tugas Jabatan</a>
+											</li>
+										</ul>
+									  </div>
+								</div>
+	
+				    	</div>
+				  </div>
+			</div> 
+		</div>
+	
+				<div class="col-md-3">		
+				<div class="accordion-item">
+					<div class="accordion-header">Predikat Kinerja</div>
+					<div class="accordion-content">
+					  <p>
+						<b>Predikat Kinerja</b> adalah predikat yang ditetapkan oleh
+						Pejabat Penilai Kinerja atas hasil evaluasi kinerja Pegawai
+						ASN baik secara periodik maupun tahunan.<br><br>
+						<b>Pejabat Penilai Kinerja</b> adalah atasan langsung Pejabat
+						Fungsional dengan ketentuan paling rendah pejabat
+						pengawas atau pejabat lain yang diberi pendelegasian
+						kewenangan.<br><br>
+						<b>Angka Kredit</b> adalah nilai kuantitatif dari hasil kerja
+						Pejabat Fungsional.<br><br>
+						<b>Angka Kredit Kumulatif</b> adalah akumulasi nilai Angka
+						Kredit yang harus dicapai oleh Pejabat Fungsional sebagai
+						salah satu syarat kenaikan pangkat dan jabatan.<br><br>
+						<b>Tim Penilai Kinerja PNS</b> adalah tim yang dibentuk oleh
+						pejabat yang berwenang untuk memberikan pertimbangan
+						kepada pejabat pembina kepegawaian atas usulan
+						pengangkatan, pemindahan, dan pemberhentian dalam
+						Jabatan, pengembangan kompetensi, serta pemberian
+						penghargaan bagi PNS.<br><br>
+						<b>Pejabat Fungsional</b> adalah Pegawai ASN yang menduduki
+						JF pada instansi pemerintah.<br><br>
+						<b>Tugas JF:</b>
+						<ol>
+							<li>JF memiliki tugas memberikan pelayanan fungsional yang
+						berdasarkan pada keahlian dan keterampilan tertentu.</li>
+							<li>Tugas tersebut memperhatikan ruang lingkup kegiatan.</li>
+							<li>Selain ruang lingkup kegiatan, JF dapat diberikan tugas lainnya.</li>
+							<li>Tugas lainnya tersebut dilaksanakan untuk memenuhi Ekspektasi pada Instansi
+						Pemerintah guna pencapaian target organisasi.</li>
+							<li>Ekspektasi tersebut ditetapkan berdasarkan prinsip pengelolaan kinerja
+						Pegawai ASN sesuai dengan ketentuan peraturan
+						perundang-undangan.</li>
+						</ol>
+						
+					  </p>
+					  <table class="table table-bordered">
+						<thead>
+							<tr>
+								<td><b>Penilaian</b></td>
+								<td><b>Hasil kerja</b></td>
+								<td><b>Perilaku kerja</b></td>
+								<td><center><b>Nilai Konversi</b></center></td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Sangat Baik</td>
+								<td> di atas ekspektasi</td>
+								<td> di atas ekspektasi</td>
+								<td><center><b>150% AK</b></center></td>
+							</tr>
+							<tr>
+								<td>Baik</td>
+								<td>di atas ekspektasi</td>
+								<td>sesuai ekspektasi</td>
+								<td><center><b>100% AK</b></center></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>sesuai ekspektasi</td>
+								<td>sesuai ekspektasi</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>sesuai ekspektasi</td>
+								<td>di atas ekspektasi</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Butuh Perbaikan</td>
+								<td>di bawah ekspektasi</td>
+								<td>di atas ekspektasi</td>
+								<td><center><b>75% AK</b></center></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>di bawah ekspektasi</td>
+								<td>sesuai ekspektasi</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Kurang/ <i>Misconduct</i></td>
+								<td>di atas ekspektasi</td>
+								<td>di bawah ekspektasi</td>
+								<td><center><b>50% AK</b></center></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>sesuai ekspektasi</td>
+								<td>di bawah ekspektasi</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Sangat Kurang</td>
+								<td>di bawah ekspektasi</td>
+								<td>di bawah ekspektasi</td>
+								<td><center><b>25% AK</b></center></td>
+							</tr>
+						</tbody>
+					  </table>
+					</div>
+				  </div>
+							</div>
+				
+				<div class="col-md-3">
+				  <div class="accordion-item">
+					<div class="accordion-header">Angka Kredit</div>
+					<div class="accordion-content">
+						<p>
+						Promosi untuk kenaikan jenjang jabatan harus memenuhi
+						persyaratan:
+						<ol>
+							<li>memenuhi Angka Kredit Kumulatif kenaikan jenjang
+							jabatan;</li>
+							<li>mengikuti dan lulus Uji Kompetensi kenaikan jenjang
+							jabatan; dan</li>
+							<li>memiliki Predikat Kinerja paling rendah baik dalam 1
+							(satu) tahun terakhir.</li>
+							<li>JF tertentu yang telah ditetapkan dalam ketentuan
+							peraturan perundang-undangan harus memenuhi syarat
+							yang telah ditetapkan pada JF tersebut.</li>
+							<li>Promosi untuk kenaikan jenjang jabatan dilaksanakan
+							berdasarkan pertimbangan rekomendasi Tim Penilai
+							Kinerja.</li>
+						</ol>
+						
+						<div class="flourish-embed flourish-table" data-src="visualisation/14170559"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+						<br><br>
+						<div class="flourish-embed flourish-table" data-src="visualisation/14170569"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+					</div>
+				  </div>
+				</div>
+				
+				<div class="col-md-3">
+				  <div class="accordion-item">
+					<div class="accordion-header">Hasil Kerja</div>
+					<div class="accordion-content">
+					  <div class="flourish-embed flourish-table" data-src="visualisation/14034204"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+					</div>
+				  </div>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-3">
+				  <div class="accordion-item">
+					<div class="accordion-header-b">Indikator Kinerja</div>
+					<div class="accordion-content">
+						<div class="sub-accordion">
+							<div class="sub-accordion-item">
+								<div class="sub-accordion-header">Indikator Kinerja Utama</div>
+									<div class="sub-accordion-content">
+										<div class="flourish-embed flourish-table" data-src="visualisation/14152017"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+									</div>
+							</div>
+							<div class="sub-accordion-item">
+								<div class="sub-accordion-header">Indikator Kinerja Kegiatan</div>
+									<div class="sub-accordion-content">
+										<div class="flourish-embed flourish-table" data-src="visualisation/14153791"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+									</div>
+							</div>
+						</div>
+					</div>
+				  </div>
+				</div>
+				<div class="col-md-3">
+				  <div class="accordion-item">
+					<div class="accordion-header-b">SAKIP</div>
+					<div class="accordion-content">
+						<div class="flourish-embed flourish-table" data-src="visualisation/14154543"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+					</div>
+				  </div>
+				</div>
+				
+				<div class="col-md-3">
+				  <div class="accordion-item">
+					<div class="accordion-header-b">S D I</div>
+					<div class="accordion-content">
+						<div class="sub-accordion">
+							<div class="sub-accordion-item">
+								<div class="sub-accordion-header">Standar Data</div>
+									<div class="sub-accordion-content">
+										<a href="https://indah.bps.go.id/standar-data-statistik-nasional" target="_blank">Standar Data Statistik Nasional</a>
+										<br><br>
+										<a href="https://ppid.bps.go.id/upload/doc/Peraturan_Badan_Pusat_Statistik_Nomor_4_Tahun_2021_tentang_Standar_Data_Statistik_Nasional_1658133163.pdf" target="_blank">Peraturan BPS tentang Standar Data Statistik Nasional</a>
+										<br><br>
+										<a href="https://ppid.bps.go.id/upload/doc/Peraturan_Badan_Pusat_Statistik_Nomor_4_Tahun_2020_tentang_Petunjuk_Teknis_Standar_Data_Statistik_1658133335.pdf" target="_blank">Peraturan BPS tentang Petunjuk Teknis Standar Data Statistik</a>
+									</div>
+								</div>
+								<div class="sub-accordion-item">
+								<div class="sub-accordion-header">Metadata</div>
+									<div class="sub-accordion-content">
+										<a href="https://indah.bps.go.id/login" target="_blank">Metadata Statistik</a>
+										<br><br>
+										<a href="https://ppid.bps.go.id/upload/doc/Peraturan_Badan_Pusat_Statistik_No__5_Tahun_2020_Petunjuk_Teknis_Metadata_Statistik_1658133466.pdf" target="_blank">Peraturan BPS tentang Petunjuk Teknis Metadata Statistik</a>
+									</div>
+								</div>
+								<div class="sub-accordion-item">
+								<div class="sub-accordion-header">EPSS</div>
+									<div class="sub-accordion-content">
+										<a href="https://webapps.bps.go.id/simbatik" target="_blank">Simbatik</a>
+										<br><br>
+										<a href="https://ppid.bps.go.id/upload/doc/Peraturan_Badan_Pusat_Statistik_Nomor_3_Tahun_2022_1679381490.pdf" target="_blank">Peraturan BPS tentang EPSS</a>
+										<br><br>
+										<a href="https://ppid.bps.go.id/upload/doc/Peraturan_Badan_Pusat_Statistik_No__4_Tahun_2019_tentang_Norma__Standar__Prosedur__dan_Kriteria_penyelenggaraan_Statistik_Sektoral_oleh_Pemerintah_Daerah_1658133777.pdf" target="_blank">NSPK Penyelenggaraan Statistik Sektoral oleh Pemerintah Daerah</a>
+										<br><br>
+										<a href="http://s.bps.go.id/youtubeEPSS" target="_blank">Materi Refreshing Tim Penilai Badan</a>
+										<br><br>
+										<a href="https://public.flourish.studio/visualisation/14210359/" target="_blank">Penjelasan Indikator EPSS</a>
+										<br><br>
+										<a href="https://public.flourish.studio/visualisation/14210445/" target="_blank">Skala Kematangan EPSS</a>
+										<br><br>
+										<a href="https://drive.google.com/file/d/1PxgHvDymNrQ6wTqYOFz_JJeAfopY5gQB/view" target="_blank">Sosialisasi EPSS</a>
+									</div>
+								</div>
+								<div class="sub-accordion-item">
+								<div class="sub-accordion-header">Open Data</div>
+									<div class="sub-accordion-content">
+										<ul>
+											<li><a href="https://opendata.jabarprov.go.id/id" target="_blank">Jabar</a></li>
+											<li><a href="https://opendata.bogorkab.go.id/datasets" target="_blank">Bogor</a></li>
+											<li><a href="https://opendata.sukabumikab.go.id/dataset" target="_blank">Sukabumi</a></li>
+											<li><a href="https://opendata.cianjurkab.go.id/" target="_blank">Cianjur</a></li>
+											<li><a href="https://satudata.bandungkab.go.id/" target="_blank">Bandung</a></li>
+											<li><a href="https://satudata.garutkab.go.id/" target="_blank">Garut</a></li>
+											<li><a href="https://opendata.sumedangkab.go.id/index.php/Dashboard" target="_blank">Tasikmalaya</a></li>
+											<li><a href="https://data.ciamiskab.go.id/" target="_blank">Ciamis</a></li>
+											<li><a href="https://satudata.kuningankab.go.id/index.php/Dataseet/" target="_blank">Kuningan</a></li>
+											<li><a href="https://cirebonkab.go.id/datasets" target="_blank">Cirebon</a></li>
+											<li><a href="https://opendata.majalengkakab.go.id/dataset" target="_blank">Majalengka</a></li>
+											<li><a href="https://opendata.sumedangkab.go.id/index.php/Dashboard/dataseet" target="_blank">Sumedang</a></li>
+											<li><a href="https://opendata.indramayukab.go.id/dataset" target="_blank">Indramayu</a></li>
+											<li><a href="https://opendata.subang.go.id/dataset/" target="_blank">Subang</a></li>
+											<li><a href="https://data.purwakartakab.go.id/dataset" target="_blank">Purwakarta</a></li>
+											<li><a href="https://opendata.karawangkab.go.id/dataset" target="_blank">Karawang</a></li>
+											<li><a href="https://opendata.bekasikab.go.id/" target="_blank">Bekasi</a></li>
+											<li><a href="https://opendata.bandungbaratkab.go.id/" target="_blank">Bandung Barat</a></li>
+											<li><a href="http://jigd.pangandarankab.go.id/" target="_blank">Pangandaran</a></li>
+											<li><a href="https://data.kotabogor.go.id/dataset/" target="_blank">Kota Bogor</a></li>
+											<li><a href="https://opendata.sukabumikota.go.id/dataset" target="_blank">Kota Sukabumi</a></li>
+											<li><a href="http://data.bandung.go.id/" target="_blank">Kota Bandung</a></li>
+											<li><a href="https://data.cirebonkota.go.id/dataset" target="_blank">Kota Cirebon</a></li>
+											<li><a href="https://danta.bekasikota.go.id/" target="_blank">Kota Bekasi</a></li>
+											<li><a href="https://satudata.depok.go.id/opendatadepok2022/" target="_blank">Kota Depok</a></li>
+											<li><a href="https://opendata.cimahikota.go.id/" target="_blank">Kota Cimahi</a></li>
+											<li><a href="https://opendata.tasikmalayakota.go.id/" target="_blank">Kota Tasikmalaya</a></li>
+											<li><a href="https://opendata.banjarkota.go.id/" target="_blank">Kota Banjar</a></li>
+										</ul>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+				  <div class="accordion-item">
+					<div class="accordion-header-b">Proses Bisnis Statistik</div>
+					<div class="accordion-content">
+						<div class="sub-accordion">
+							<div class="sub-accordion-item">
+								<div class="sub-accordion-header">Dasar-dasar Statistik</div>
+									<div class="sub-accordion-content">
+										<p class="content">
+										<iframe src="https://drive.google.com/file/d/1cmB7U6qWBQYrG_5sUiuKJyz4EDb20IL5/preview" width="100%" height="480" allow="autoplay"></iframe>
+										</p>
+									</div>
+								</div>
+							<div class="sub-accordion-item">
+								<div class="sub-accordion-header">Metadata Statistik</div>
+									<div class="sub-accordion-content">
+										<iframe src="https://drive.google.com/file/d/1fngDi4qmpwTMlX83AkqUk9PydQguFq-W/preview" width="100%" height="480" allow="autoplay"></iframe>
+														
+									</div>
+								</div>
+							<div class="sub-accordion-item">
+								<div class="sub-accordion-header">Aplikasi Statistik</div>
+									<div class="sub-accordion-content">
+										<iframe src="https://drive.google.com/file/d/18Em1hySNdkAoEt4YJysUblFd0eQGOIwX/preview" width="100%" height="480" allow="autoplay"></iframe>
+														
+									</div>
+								</div>
+							<div class="sub-accordion-item">
+								<div class="sub-accordion-header">Perencanaan Kegiatan</div>
+									<div class="sub-accordion-content">
+										<iframe src="https://drive.google.com/file/d/1Ocu8Kwz10WeQeRaS2FaAdLlKCGrWaQKo/preview" width="100%" height="480" allow="autoplay"></iframe>
+														
+									</div>
+								</div>
+							<div class="sub-accordion-item">
+								<div class="sub-accordion-header">Perancangan Kegiatan</div>
+									<div class="sub-accordion-content">
+										<iframe src="https://drive.google.com/file/d/1XT98Jg_G1jbAT3yNeTz1gTvQkMrjUwZA/preview" width="100%" height="480" allow="autoplay"></iframe>
+														
+									</div>
+								</div>
+							<div class="sub-accordion-item">
+								<div class="sub-accordion-header">Pengumpulan Data</div>
+									<div class="sub-accordion-content">
+										<iframe src="https://drive.google.com/file/d/1EqRNPp19xhPI7Njc_yEii2QQvBV2WPb1/preview" width="100%" height="480" allow="autoplay"></iframe>
+														
+									</div>
+								</div>
+							<div class="sub-accordion-item">
+								<div class="sub-accordion-header">Pengolahan Data</div>
+									<div class="sub-accordion-content">
+										<iframe src="https://drive.google.com/file/d/18TFFNbZaDUt9JJkMalDhlynYP4--7ZlE/preview" width="100%" height="480" allow="autoplay"></iframe>
+														
+									</div>
+								</div>
+							<div class="sub-accordion-item">
+								<div class="sub-accordion-header">Analisis Statistik</div>
+									<div class="sub-accordion-content">
+										<iframe src="https://drive.google.com/file/d/1Gakcm7etk2V-YQ-PFkC51Rbf3oO1kvXN/preview" width="100%" height="480" allow="autoplay"></iframe>
+														
+									</div>
+								</div>
+							<div class="sub-accordion-item">
+								<div class="sub-accordion-header">Diseminasi dan Evaluasi</div>
+									<div class="sub-accordion-content">
+										<iframe src="https://drive.google.com/file/d/1WLuE8fo5vu3QADpTPuYKJQUTQdY6Xs6P/preview" width="100%" height="480" allow="autoplay"></iframe>
+														
+									</div>
+								</div>
+						</div>
+					</div>
+					</div>
+				  </div>
+			</div>
+			<hr>
+			</div>
+			<!-- KAMUS -->
+			<div class="row">
+				<div class="col-md-4">
+				  <div class="accordion-item">
+					<div class="accordion-header-c">Kamus Statistisi</div>
+					<div class="accordion-content">
+						<div class="sub-accordion">
+							<div class="sub-accordion-item">
+								<div class="sub-accordion-header">Berdasarkan Kegiatan (PerMenPAN 2013)</div>
+									<div class="sub-accordion-content">
+										<div class="flourish-embed flourish-table" data-src="visualisation/14000765"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+														
+									</div>
+								</div>
+							</div>
+						<div class="sub-accordion">
+							<div class="sub-accordion-item">
+								<div class="sub-accordion-header">Keterampilan (PerMenPAN 2013)</div>
+									<div class="sub-accordion-content">
+										<div class="flourish-embed flourish-table" data-src="visualisation/13831417"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+														
+									</div>
+								</div>
+							</div>
+						<div class="sub-accordion">
+							<div class="sub-accordion-item">
+								<div class="sub-accordion-header">Keahlian (PerMenPAN 2013)</div>
+									<div class="sub-accordion-content">
+										<div class="flourish-embed flourish-table" data-src="visualisation/13831401"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+														
+									</div>
+								</div>
+							</div>
+						<div class="sub-accordion">
+							<div class="sub-accordion-item">
+								<div class="sub-accordion-header">Statistisi (PerMenPAN-RB 12/2022)</div>
+									<div class="sub-accordion-content">
+										<div class="flourish-embed flourish-table" data-src="visualisation/13668008"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+														
+									</div>
+								</div>
+							</div>
+						<div class="sub-accordion">
+							<div class="sub-accordion-item">
+								<div class="sub-accordion-header">Asisten Statistisi (PerMenPAN-RB 13/2022)</div>
+									<div class="sub-accordion-content">
+										<div class="flourish-embed flourish-table" data-src="visualisation/13996100"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+														
+									</div>
+								</div>
+							</div>
+					</div>
+				  </div>
+				</div>
+	
+				<div class="col-md-4">
+				  <div class="accordion-item">
+					<div class="accordion-header">Usefull Tools</div>
+					<div class="accordion-content">
+						<ul>
+							<li><a href="https://chat.openai.com/auth/login" target="_blank">Chat GPT</a></li>
+							<li><a href="https://www.perplexity.ai/" target="_blank">Perplexity</a></li>
+							<li><a href="https://bard.google.com/" target="_blank">Google Bard</a></li>
+							<li><a href="https://www.fotor.com/ai/illustration-generator/" target="_blank">Fotor AI Illustration Generator</a></li>
+							<li><a href="https://iconscout.com/illustrations/generator" target="_blank">IconScout Generator Illustrations</a></li>
+							<li><a href="https://www.appypie.com/illustration-maker" target="_blank">Appy Pie Illustration Maker</a></li>
+							<li><a href="https://stubborn.fun/" target="_blank">Stubborn Free Illustrations Generator</a></li>
+							<li><a href="https://www.canva.com/ai-image-generator/" target="_blank">Canva AI Image Generator</a></li>
+							<li><a href="https://www.decktopus.com/" target="_blank">Decktopus AI</a></li>
+							<li><a href="https://presentations.ai/" target="_blank">Presentations.AI</a></li>
+							<li><a href="https://designs.ai/design-types/presentations" target="_blank">Designs.ai Presentation Maker</a></li>
+							<li><a href="https://www.copy.ai/summarize" target="_blank">Copy.ai Summarize</a></li>
+							<li><a href="https://algorithmia.com/algorithms/nlp/Summarizer" target="_blank">Text Summarization API</a></li>
+							<li><a href="https://www.easel.ly/" target="_blank">Easel.ly</a></li>
+							<li><a href="https://www.canva.com/create/infographics/" target="_blank">Canva</a></li>
+							<li><a href="https://piktochart.com/infographic-maker/" target="_blank">Piktochart</a></li>
+							<li><a href="https://www.visme.co/make-infographics/" target="_blank">Visme</a></li>
+							<li><a href="https://public.tableau.com/en-us/s/" target="_blank">Tableau Public</a></li>
+							<li><a href="https://flourish.studio/" target="_blank">Flourish Studio</a></li>
+							<li><a href="https://rows.com/" target="_blank">rows</a></li>
+							<li><a href="https://www.steve.ai/" target="_blank">Steve AI Video Making Tool</a></li>
+						</ul>
+					</div>
+				  </div>
+				
+			  	</div>
+				
+				<div class="col-md-4">
+				  <div class="accordion-item">
+					<div class="accordion-header-c">Pranata Komputer</div>
+					<div class="accordion-content">
+						<div class="flourish-embed flourish-table" data-src="visualisation/14137704"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+					</div>
+				  </div>
+				
+			  </div>
+			</div>
+			<hr>
+			<!-- TIM BPS -->
+			<div class="row">
+				
+				<div class="col-md-4">
+				  <div class="accordion-item">
+					<div class="accordion-header-b">Statistik Sosial</div>
+					<div class="accordion-content">
+						<div class="sub-accordion">
+							<div class="sub-accordion-item">
+								<div class="sub-accordion-header">Rencana Kinerja</div>
+									<div class="sub-accordion-content">
+										<p>
+                                        <a style="background-color:yellow;">Rencana Kinerja 1</a>
+										<li>Tersedianya data statistik sosial untuk pemenuhan permintaan 
+										data dinas/instansi terkait yang akurat dan tepat waktu</li>
+										<li>Tersampaikannya materi terkait data dan indikator statistik 
+										sosial kepada dinas/ instansi/ stakeholders dan masyarakat umum 
+										yang akurat dan tepat waktu</li>
+										<br>
+										<a style="background-color:yellow;">Rencana Kinerja 2</a>
+										<li>Tersedianya Publikasi Penduduk Hasil Long Form Sensus Penduduk 2020 yang berkualitas dan tepat waktu</li>
+										<li>Tersedianya Publikasi Statistik Migrasi Hasil Long Form Sensus Penduduk 2020 yang berkualitas dan tepat waktu</li>
+										<li>Tersedianya Publikasi Keadaan Angkatan Kerja Provinsi Jawa Barat Agustus 2022 yang berkualitas dan tepat waktu</li>
+										<li>Tersedianya Publikasi Keadaan Angkatan Kerja Provinsi Jawa Barat Februari 2023 yang berkualitas dan tepat waktu</li>
+										<li>Tersedianya Publikasi Profil Mobilitas Tenaga Kerja Provinsi Jawa Barat Hasil Sakernas Agustus 2022 yang berkualitas dan tepat waktu</li>
+										<li>Tersedianya Publikasi Profil Lanjut Usia Provinsi Jawa Barat 2021 yang berkualitas dan tepat waktu</li>
+										<li>Tersedianya Publikasi Profil Pemuda Provinsi Jawa Barat 2022 yang berkualitas dan tepat waktu</li>
+										<li>Tersedianya Publikasi Pola Konsumsi Provinsi Jawa Barat 2022 yang berkualitas dan tepat waktu</li>
+										<li>Tersedianya Publikasi Statistik Perumahan Provinsi Jawa Barat 2022 yang berkualitas dan tepat waktu</li>
+										<li>Tersedianya Publikasi Statistik Kesehatan Provinsi Jawa Barat 2022 yang berkualitas dan tepat waktu</li>
+										<li>Tersedianya Publikasi Statistik Pendidikan Provinsi Jawa Barat 2022 yang berkualitas dan tepat waktu</li>
+										<li>Tersedianya Publikasi Profil Ibu dan Anak Provinsi Jawa Barat 2022 yang berkualitas dan tepat waktu</li>
+										<li>Tersedianya Publikasi Profil Migran Provinsi Jawa Barat Hasil Susenas 2022 yang berkualitas dan tepat waktu</li>
+										<li>Tersedianya Publikasi Statistik Kesejahteraan Rakyat Provinsi Jawa Barat 2023 yang berkualitas dan tepat waktu</li>
+										<li>Tersedianya Publikasi Statistik Lingkungan Hidup Tahun 2021 yang berkualitas dan tepat waktu</li>
+										<li>Tersedianya Publikasi Statistik Sumber Daya Laut dan Pesisir 2021 yang berkualitas dan tepat waktu</li>
+										<li>Tersedianya Publikasi Statistik Politik dan Keamanan 2022 yang berkualitas dan tepat waktu</li>
+										<li>Tersedianya Publikasi Potret Demokrasi Indonesia yang berkualitas dan tepat waktu</li>
+										<li>Tersedianya Publikasi Perkembangan Tingkat Kemiskinan September 2022 yang berkualitas dan tepat waktu</li>
+										<li>Tersedianya Publikasi Perkembangan Tingkat Kemiskinan Maret 2023 yang berkualitas dan tepat waktu</li>
+										<li>Tersedianya Publikasi Kemiskinan Kabupaten/Kota 2017-2022 yang berkualitas dan tepat waktu</li>
+										<br>
+										<a style="background-color:yellow;">Rencana Kinerja 5</a>
+										</p>
+									</div>
+							</div>
+							<div class="sub-accordion-item">
+								<div class="sub-accordion-header">Link Penting</div>
+									<div class="sub-accordion-content">
+									
+									</div>
+							</div>
+							</div>
+						</div>
+					</div>
+				  </div>
+				
+				<div class="col-md-4">
+				  <div class="accordion-item">
+					<div class="accordion-header-b">Statistik Produksi</div>
+					<div class="accordion-content">
+						<div class="sub-accordion">
+							<div class="sub-accordion-item">
+								<div class="sub-accordion-header">Rencana Kinerja</div>
+									<div class="sub-accordion-content">
+										<p>
+											<a style="background-color:yellow;">Rencana Kinerja 1</a>
+											
+										</p>
+										<br>
+										<p>
+											<a style="background-color:yellow;">Rencana Kinerja 2</a>
+											<li>Tersedianya Publikasi Statistik Tanaman Pangan yang 
+											berkualitas dan tepat waktu</li>
+											<li>Tersedianya Publikasi Statistik Hortikultura yang 
+											berkualitas dan tepat waktu</li>
+										</p>
+										<br>
+										<p>
+											<a style="background-color:yellow;">Rencana Kinerja 5</a>
+										</p>
+										<br>
+										
+									</div>
+							</div>
+							<div class="sub-accordion-item">
+								<div class="sub-accordion-header">Link Penting</div>
+									<div class="sub-accordion-content">
+									
+									</div>
+							</div>
+							</div>
+						</div>
+					</div>
+				  </div>
+				
+				<div class="col-md-4">
+				  <div class="accordion-item">
+					<div class="accordion-header-b">Statistik Distribusi</div>
+					<div class="accordion-content">
+						<div class="sub-accordion">
+							<div class="sub-accordion-item">
+								<div class="sub-accordion-header">Rencana Kinerja</div>
+									<div class="sub-accordion-content">
+										<p>
+											<a style="background-color:yellow;">Rencana Kinerja 1</a>
+											
+											<br>
+											<a style="background-color:yellow;">Rencana Kinerja 2</a>
+											<li>Tersedianya Data Statistik Harga Konsumen dan Harga Perdagangan Besar yang akurat dan mutakhir</li>
+											<li>Tersedianya Data Statistik Harga Produsen dan Harga Perdesaan yang akurat dan mutakhir</li>
+											<li>Tersedianya Data Statistik Perdagangan yang akurat dan mutakhir</li>
+											<li>Tersedianya Data Hasil Survei Biaya Hidup yang akurat dan mutakhir</li>
+											<li>Tersedianya Data Statistik Transportasi yang akurat dan mutakhir</li>
+											<li>Tersedianya Data Statistik Pariwisata dan Teknologi Informasi yang akurat dan mutakhir</li>
+											<li>Tersedianya Data Statistik Keuangan yang akurat dan mutakhir</li>
+											<br>
+											<a style="background-color:yellow;">Rencana Kinerja 5</a>
+										</p>
+									</div>
+							</div>
+							<div class="sub-accordion-item">
+								<div class="sub-accordion-header">Link Penting</div>
+									<div class="sub-accordion-content">
+										
+									</div>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+				  <div class="accordion-item">
+					<div class="accordion-header-b">Umum</div>
+					<div class="accordion-content">
+						<div class="sub-accordion">
+							<div class="sub-accordion-item">
+								<div class="sub-accordion-header">Rencana Kinerja</div>
+									<div class="sub-accordion-content">
+										<p>
+											<a style="background-color:yellow;"><b>Rencana Kinerja 6:</b></a>
+											<li>Melaksanakan kegiatan penataan administrasi pengelolaan dan 
+											pelayanan kepegawaian Aparatur Sipil Negara</li>
+											<li>Tercapainya penilaian implementasi SAKIP</li>
+											<li>Melakukan kegiatan pengelolaan arsip dinamis, pengelolaan arsip statis, 
+											pembinaan kearsipan dan pengolahan dan penyajian arsip menjadi informasi.</li>
+											<li>Melakukan kegiatan pengelolaan BMN</li>
+											<li>Melakukan kegiatan pengelolaan Keuangan APBN</li>
+											<li>Melakukan kegiatan di bidang penganggaran dalam pengelolaan APBN</li>
+											<br>
+											<a style="background-color:yellow;"><b>Rencana Kinerja 7:</b></a>
+											<li>Melaksanakan kegiatan pelayanan informasi dan kehumasan</li>
+											<li>Melakukan kegiatan pengadaan barang/jasa pemerintah</li>
+											<li>Melaksanakan kegiatan urusan rumah tangga dan perlengkapan</li>
+										</p>
+									</div>
+							</div>
+							<div class="sub-accordion-item">
+								<div class="sub-accordion-header">Link Penting</div>
+									<div class="sub-accordion-content">
+										<p style="text-decoration: none;">
+											<a href="https://ppid.bps.go.id/dashboard" target="_blank">Admin PPID (VPN)</a><br>
+											<a href="https://backoffice.bps.go.id/" target="_blank">Backoffice Selindo (VPN)</a><br>
+											<a href="https://community.bps.go.id/" target="_blank">Community (VPN)</a><br>
+											<a href="https://drive.bps.go.id/" target="_blank">Drive BPS</a><br>
+											<a href="https://elearning.bps.go.id/login/login_new.php" target="_blank">E-Learning BPS</a><br>
+											<a href="https://e-monev.bappenas.go.id/fe/jumper" target="_blank">E Monev Bappenas</a><br>
+											<a href="https://esr.menpan.go.id/" target="_blank">ESR MenPAN/ e-SAKIP REVIU</a><br>
+											<a href="https://jdih.bps.go.id" target="_blank">JDIH (VPN)</a><br>
+											<a href="https://webapps.bps.go.id/kipapp/" target="_blank">KipApp</a><br>
+											<a href="https://klc2.kemenkeu.go.id/" target="_blank">KeMenKeu Learning Center</a><br>
+											<a href="https://sensus.bps.go.id" target="_blank">Kegiatan Sensus</a><br>
+											<a href="https://laci.bps.go.id/" target="_blank">Laci BPS</a><br>
+											<a href="https://spanint.kemenkeu.go.id/spanint/latest/app/" target="_blank">OM-SPAN</a><br>
+											<a href="https://ppid.bps.go.id/" target="_blank">PPID BPS</a><br>
+											<a href="http://rb.bps.go.id/" target="_blank">Reformasi Birokrasi</a><br>
+											<a href="https://s.bps.go.id/" target="_blank">Shortlink BPS</a><br>
+											<a href="https://sdm.bps.go.id/siimut/web/site/login" target="_blank">SiImut BPS</a><br>
+											<a href="https://jafung.bps.go.id/" target="_blank">SiJaFung BPS</a><br>
+											<a href="https://monev.bps.go.id/monevnew/index.php?r=site/login" target="_blank">SIMonev BPS</a><br>
+											<a href="https://simpeg.bps.go.id/" target="_blank">Simpeg BPS (VPN)</a><br>
+											<a href="https://sipecut.bps.go.id/app/index.php/pegawai" target="_blank">SiPeCut BPS (VPN)</a><br>
+											<a href="https://anggaran.kemenkeu.go.id/in/post/aplikasi-smart" target="_blank">Smart</a><br>
+											<a href="https://pusdiklat.bps.go.id/warkop/" target="_blank">Warkop BPS</a><br>
+											<a href="http://s.bps.go.id/jabar-wbk-wbbm" target="_blank">ZI - WBK/WBBM</a>
+										</p>
+									</div>
+							</div>
+						</div>
+						</div>
+					</div>
+				  </div>
+				
+				<div class="col-md-4">
+				  <div class="accordion-item">
+					<div class="accordion-header-b">Nerwilis</div>
+					<div class="accordion-content">
+						<div class="sub-accordion">
+							<div class="sub-accordion-item">
+								<div class="sub-accordion-header">Rencana Kinerja</div>
+									<div class="sub-accordion-content">
+										<p>
+											<a style="background-color:yellow;">Rencana Kinerja 1</a>
+												<li>Tersedianya data Produk Domestik Regional Bruto (PDRB) triwulanan/tahunan menurut pengeluaran</li>
+												<li>Tersedianya data Produk Domestik Regional Bruto (PDRB) triwulanan/tahunan menurut lapangan usaha</li>
+												<li>Terlaksananya survei neraca produksi tepat waktu</li>
+												<li>Terlaksananya Survei Neraca Pengeluaran tepat waktu</li>
+												<li>Tersedianya data hasil studi penghitungan PDRB triwulanan Kabupaten/Kota menurut lapangan usaha</li>
+												<li>Tersedianya data hasil studi penghitungan PDRB triwulanan Kabupaten/Kota menurut pengeluaran</li>
+												<li>Terlaksananya Penjaminan Kualitas Pendataan</li>
+												<li>Tersedianya Supply and Use Table (SUT) Provinsi Jawa Barat Tahun 2020 - 2022 sebagai Kerangka Kerja</li>
+											<br>
+											<a style="background-color:yellow;">Rencana Kinerja 2</a>
+											<li>Tersedianya publikasi analisis sosial dan ekonomi</li>
+											<li>Tersedianya Publikasi Neraca Pengeluaran Tahunan yang berkualitas</li>
+											<li>Tersedianya Publikasi Neraca Produksi Tahunan yang berkualitas</li>
+											<br>
+											<a style="background-color:yellow;">Rencana Kinerja 5</a>
+										</p>
+									</div>
+							</div>
+							<div class="sub-accordion-item">
+								<div class="sub-accordion-header">Link Penting</div>
+									<div class="sub-accordion-content">
+										
+									</div>
+							</div>
+							</div>
+						</div>
+					</div>
+				  </div>
+				
+				<div class="col-md-4">
+				  <div class="accordion-item">
+					<div class="accordion-header-b">IPDS</div>
+					<div class="accordion-content">
+						<div class="sub-accordion">
+							<div class="sub-accordion-item">
+								<div class="sub-accordion-header">Rencana Kinerja</div>
+									<div class="sub-accordion-content">
+										<p>
+										<a style="background-color:yellow;">Rencana Kinerja 1</a>
+										<li>Tersedianya Laporan Hasil Survei Kebutuhan Data (SKD) Yang Akurat dan Tepat Waktu</li>
+										<li>Tersedianya Publikasi Statistik Yang Berkualitas dan Terbit Tepat Waktu</li>
+										<li>Tersedianya Master Wilayah Kerja Statistik yang Akurat dan Mutakhir</li>
+										<li>Terselenggaranya Pelaksanaan Sensus/Survei yang tepat waktu</li>
+										<br>
+										<a style="background-color:yellow;">Rencana Kinerja 3</a>
+										<li>Terselenggaranya Pengolahan Data Hasil Sensus/Survei yang tepat waktu</li>
+										<br>
+										<a style="background-color:yellow;">Rencana Kinerja 4</a>
+										<br>
+										<a style="background-color:yellow;">Rencana Kinerja 5</a>
+										<br>
+										<a style="background-color:yellow;">Rencana Kinerja 7</a>
+										<li>Meningkatkan Kepuasan Pengguna Layanan Teknologi Informasi</li>
+										</p>
+									</div>
+							</div>
+							<div class="sub-accordion-item">
+								<div class="sub-accordion-header">Link Penting</div>
+									<div class="sub-accordion-content">
+										<a href="https://s.id/olahpeta" target="_blank">Materi Pengolahan Peta ST2023</a>
+									</div>
+							</div>
+							</div>
+						</div>
+					</div>
+				  </div>
+			  
+			  </div>
+			<hr>
+		</div>
+	</div>
+		
+	<div class="footer">
+		<center><h6>---  BPS3200  ---</h6></center>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+	<script src="skrip.js"></script>
 </body>
 </html>
