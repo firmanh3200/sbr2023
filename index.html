@@ -1,442 +1,1108 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
+      name="viewport"
+    />
+    <title>BerKiBaR</title>
+    <link
+      href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    />
+    <style>
+      /* Style the header */
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        background-color: #063970;
+        text-decoration: none;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+      }
+      .content {
+        margin-top: 20px;
+        margin-left: 15px;
+        margin-right: 15px;
+        text-decoration: none;
+      }
+      /* Style the header image */
+      .header img {
+        height: 50px;
+        margin-right: 10px;
+      }
 
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
-	<title>BPS Jabar - BerKiBaR</title>
-	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
-	<style>
-	
-	/* Style the header */
-	.header {
-	  position: fixed;
-	  top: 0;
-	  left: 0;
-	  width: 100%;
-	  display: flex;
-	  align-items: center;
-	  padding: 5px;
-	  background-color: #063970;
-	  text-decoration: none;
-	}
-	.container {
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;
-	  text-decoration: none;
-	}
-	.content {
-		margin-top: 20px;
-		margin-left: 15px;
-		margin-right: 15px;
-		text-decoration: none;
-	}
-	/* Style the header image */
-	.header img {
-	  height: 50px;
-	  margin-right: 10px;
-	}
-	
-	.accordion-item {
-	  border: 1px solid #ddd;
-	  margin-bottom: 10px;
-	  text-decoration: none;
-	}
-	
-	.accordion-header {
-	  background-color: #92C7F7;
-	  padding: 10px;
-	  cursor: pointer;
-	  align-items: center;
-	  padding: 5px 12px;
-	  display: flex;
-	  justify-content: center;
-	  text-decoration: none;
-	  
-	}
-	
-	.accordion-header-b {
-	  background-color: #85FC05;
-	  padding: 10px;
-	  cursor: pointer;
-	  align-items: center;
-	  padding: 5px 12px;
-	  display: flex;
-	  justify-content: center;
-	  text-decoration: none;
-	  
-	}
-	
-	.accordion-header-c {
-	  background-color: #FEE650;
-	  padding: 10px;
-	  cursor: pointer;
-	  align-items: center;
-	  padding: 5px 12px;
-	  display: flex;
-	  justify-content: center;
-	  text-decoration: none;
-	  
-	}
-	
-	.accordion-content {
-	  display: none;
-	  padding: 10px;
-	  font-size: 12px;
-	  text-decoration: none;
-	}
-	
-	.accordion-content h5 {
-	  text-decoration: none;
-	}
-	
-	.accordion-content a {
-	  text-decoration: none;
-	}
-	
-	.accordion-content ul li a {
-	  text-decoration: none;
-	}
-	.sub-accordion-item {
-	  margin-bottom: 5px;
-	  text-decoration: none;
-	}
-	
-	.sub-accordion-header {
-	  background-color: #8FFFF0;
-	  padding: 5px;
-	  cursor: pointer;
-	  text-decoration: none;
-	}
-	
-	.sub-accordion-content {
-	  display: none;
-	  padding: 5px;
-	  font-size: 11px;
-	  text-decoration: none;
-	}
-	
-	.sub-accordion-content a {
-	  text-decoration: none;
-	}
-	.sub-accordion-content ul li a {
-	  text-decoration: none;
-	}
-	
-	.nav-tabs {
-	  margin-top: 10px;
-	  text-decoration: none;
-	}
-	
-	.tab-content {
-	  padding-top: 10px;
-	  text-decoration: none;
-	}
-	
-	td {
-		vertical-align: top;
-		border: 1px;
-		text-decoration: none;
-	}
-	
-	body {
-	  font-family: 'CustomFont', sans-serif;
-	  /* Add more styling as needed */
-	}
-	/* Style the input field */
-	#myInput {
-	  width: 75%;
-	  padding: 12px 20px;
-	  border: 7px solid #063970;
-	  margin-top: 8px;
-	  text-align: center;
-	}
-	
-	/* Style the dropdown container */
-	
-	.dropdown-content {
-	  display: none; 
-	  position: absolute;
-	  left: 50%;
-	  transform: translate(-50%, -50%);
-	  background-color: #33F6FF;
-	  width: 50%;
-	  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	  z-index: 1;
-	  font-size: 12px;
-	}
-	
-	/* Style the dropdown items (optional) */
-	.dropdown-content a {
-	  color: black;
-	  padding: 12px 20px;
-	  text-decoration: none;
-	  display: block;
-	  border: 1;
-	}
-	
-	/* Change color of dropdown items on hover (optional) */
-	.dropdown-content a:hover {
-	  background-color: #ddd;
-	}
-	</style>
-</head>
+      .accordion-item {
+        border: 1px solid #ddd;
+        margin-bottom: 10px;
+        text-decoration: none;
+      }
 
-<body class=" ">
-	<div class="header">
-	  <center><img src="https://sukabumikota.bps.go.id/backend/images/Header-Frontend-Besar-ind.png" /></center>
-	</div>
-	<br><br>
-	<div class="content">
-		<center>
-			<marquee behavior="scroll" width="75%" direction="left" scrollamount="15" height="50px">
-				<p>
-					Bersama Kita Bisa <i>Reform</i> | Berpikir Kreatif | Berkarya Inovatif | Bekerja Kolaboratif
-				</p>
-			</marquee>
-		</center>
-	</div>
-	
-	<div class="content">
-		<div class="accordion">
-			
-			<div class="row">
-				<!-- TABEL PENCARIAN ID WILKERSTAT -->
-				<div class="col-md-6">
-					<div class="accordion-item">
-						<div class="accordion-header-b"><strong>Tabel WID ST2023</strong></div>
-						<div class="accordion-content">
-							<div class="flourish-embed flourish-table" data-src="visualisation/14652319"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="accordion-item">
-						<div class="accordion-header-b"><strong>Jumlah Geotagging ST2023</strong></div>
-						<div class="accordion-content">
-							<div class="flourish-embed" data-src="story/1995615"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-12">
-					<div class="accordion-item">
-						<div class="accordion-header-b"><strong>progress Upload Geotagging</strong></div>
-						<div class="accordion-content">
-							<div class="flourish-embed" data-src="story/1995616"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
-						</div>
-					</div>
-				</div>
-				
-			</div>
-			<hr>
-			<div class="row">
-				<div class="col-md-6">
-                    <div class="accordion-item">
-                        <div class="accordion-header">Website BPS Kota Sukabumi</div>
-                            <div class="accordion-content">
-                                <div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-                                        <h5 align="center"><a href="https://sukabumikota.bps.go.id" target="_blank">BPS3272</a></h5>
-                                        <iframe src="https://sukabumikota.bps.go.id" width="100%" height="720" border="1"></iframe>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                <div class="col-md-6">
-                    <div class="accordion-item">
-                        <div class="accordion-header">Indikator Makro Kota Sukabumi</div>
-                            <div class="accordion-content">
-                                <div class="block" style="background-color:Orange;color:white;text-decoration: none;">
-                                    <h5 align="center"><a href="https://sukabumikota.bps.go.id/site/pilihdata.html" target="_blank">unduh data</a></h5>
-                                </div>
-                            </div>
-                    </div>
+      .accordion-header {
+        background-color: #92c7f7;
+        padding: 10px;
+        cursor: pointer;
+        align-items: center;
+        padding: 5px 12px;
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+      }
+
+      .accordion-header-b {
+        background-color: #85fc05;
+        padding: 10px;
+        cursor: pointer;
+        align-items: center;
+        padding: 5px 12px;
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+      }
+
+      .accordion-header-c {
+        background-color: #fee650;
+        padding: 10px;
+        cursor: pointer;
+        align-items: center;
+        padding: 5px 12px;
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+      }
+
+      .accordion-content {
+        display: none;
+        padding: 10px;
+        font-size: 12px;
+        text-decoration: none;
+      }
+
+      .accordion-content h5 {
+        text-decoration: none;
+      }
+
+      .accordion-content a {
+        text-decoration: none;
+      }
+
+      .accordion-content ul li a {
+        text-decoration: none;
+      }
+      .sub-accordion-item {
+        margin-bottom: 5px;
+        text-decoration: none;
+      }
+
+      .sub-accordion-header {
+        background-color: #8ffff0;
+        padding: 5px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      .sub-accordion-content {
+        display: none;
+        padding: 5px;
+        font-size: 11px;
+        text-decoration: none;
+      }
+
+      .sub-accordion-content a {
+        text-decoration: none;
+      }
+      .sub-accordion-content ul li a {
+        text-decoration: none;
+      }
+
+      .nav-tabs {
+        margin-top: 10px;
+        text-decoration: none;
+      }
+
+      .tab-content {
+        padding-top: 10px;
+        text-decoration: none;
+      }
+
+      td {
+        vertical-align: top;
+        border: 1px;
+        text-decoration: none;
+      }
+
+      body {
+        font-family: "CustomFont", sans-serif;
+        /* Add more styling as needed */
+      }
+
+      marquee{
+        behavior: scroll;
+        direction: left;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body class=" ">
+    <div class="header">
+      <center>
+        <img
+          src="https://jabar.bps.go.id/backend/images/Header-Frontend-Besar-ind.png"
+        />
+      </center>
+      <div class="content">
+        <marquee>
+              Bersama Kita Bisa <i>Reform</i> | Berpikir Kreatif | Berkarya
+              Inovatif | Bekerja Kolaboratif
+            </marquee>
+      </div>
+    </div>
+    <br /><br /><br />
+
+    <div class="content text-center">
+      <h1>Monitoring Kegiatan SBR 2023</h1>
+      <h2>Provinsi Jawa Barat</h2>
+    </div>
+    
+    <hr />
+    <div class="content">
+      <div class="accordion">
+        <!-- YOUTUBE BPS -->
+        <div class="row">
+          <div class="col-md-6">
+            <div class="accordion-item">
+              <div class="accordion-header-b"><strong>Rekrutmen</strong></div>
+              <div class="accordion-content">
+                <div class="flourish-embed" data-src="story/1996319">
+                  <script src="https://public.flourish.studio/resources/embed.js"></script>
                 </div>
-            </div>	  
-			<hr>
-			<div class="row">
-				<div class="col-md-6">
-				  <div class="accordion-item">
-					<div class="accordion-header-c">SOBAT BPS</div>
-					<div class="accordion-content">
-						<a href="https://mitra.bps.go.id" target="_blank">Buka SOBAT BPS</a>
-					</div>
-				  </div>
-				</div>
-				<div class="col-md-6">
-				  <div class="accordion-item">
-					<div class="accordion-header-c">Kegiatan BPS</div>
-					<div class="accordion-content">
-						<a href="https://s.id/olahpeta" target="_blank">Pengolahan Peta Wilkerstat ST2023</a>
-					</div>
-				  </div>
-			  </div>
-			<hr>
-				<!-- WEB BPS 3200 -->
-			<div class="row">
-				<div class="col-md-12">
-				  <iframe src="https://sukabumikota.bps.go.id/news.html" width="100%" height="720" border="1"></iframe>
-				</div>
-			</div>
-            <hr>
-				<!-- WEB BPS 3200 -->
-			<div class="row">
-				<div class="col-md-12">
-				  <iframe src="https://jabar.bps.go.id/pressrelease.html" width="100%" height="360" border="1"></iframe>
-				</div>
-			</div>
-            <hr>
-		</div>
-	</div>
-		
-	<div class="footer">
-		<center><h6>---  BPS3200  ---</h6></center>
-	</div>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
-	<script>
-	document.addEventListener("DOMContentLoaded", function() {
-	  var accordionHeaders = document.getElementsByClassName("accordion-header");
-	
-	  // Add click event listener to each accordion header
-	  for (var i = 0; i < accordionHeaders.length; i++) {
-	    accordionHeaders[i].addEventListener("click", function() {
-	      var accordionContent = this.nextElementSibling;
-	      var isActive = accordionContent.style.display === "block";
-	
-	      // Close all accordion content
-	      var allAccordionContent = document.getElementsByClassName("accordion-content");
-	      for (var j = 0; j < allAccordionContent.length; j++) {
-	        allAccordionContent[j].style.display = "none";
-	      }
-	
-	      // Remove "active" class from all accordion headers
-	      var allAccordionHeaders = document.getElementsByClassName("accordion-header");
-	      for (var k = 0; k < allAccordionHeaders.length; k++) {
-	        allAccordionHeaders[k].classList.remove("active");
-	      }
-	
-	      // Toggle the display of the clicked accordion content
-	      accordionContent.style.display = isActive ? "none" : "block";
-	
-	      // Add "active" class to the clicked accordion header
-	      this.classList.toggle("active");
-	    });
-	  }
-	
-	  var subAccordionHeaders = document.getElementsByClassName("sub-accordion-header");
-	
-	  // Add click event listener to each sub-accordion header
-	  for (var i = 0; i < subAccordionHeaders.length; i++) {
-	    subAccordionHeaders[i].addEventListener("click", function() {
-	      var subAccordionContent = this.nextElementSibling;
-	      var isActive = subAccordionContent.style.display === "block";
-	
-	      // Toggle the display of the clicked sub-accordion content
-	      subAccordionContent.style.display = isActive ? "none" : "block";
-	
-	      // Add "active" class to the clicked sub-accordion header
-	      this.classList.toggle("active");
-	    });
-	  }
-	});
-	</script>
-	
-	<script>
-	document.addEventListener("DOMContentLoaded", function() {
-	  var accordionHeaders = document.getElementsByClassName("accordion-header-b");
-	
-	  // Add click event listener to each accordion header
-	  for (var i = 0; i < accordionHeaders.length; i++) {
-	    accordionHeaders[i].addEventListener("click", function() {
-	      var accordionContent = this.nextElementSibling;
-	      var isActive = accordionContent.style.display === "block";
-	
-	      // Close all accordion content
-	      var allAccordionContent = document.getElementsByClassName("accordion-content");
-	      for (var j = 0; j < allAccordionContent.length; j++) {
-	        allAccordionContent[j].style.display = "none";
-	      }
-	
-	      // Remove "active" class from all accordion headers
-	      var allAccordionHeaders = document.getElementsByClassName("accordion-header");
-	      for (var k = 0; k < allAccordionHeaders.length; k++) {
-	        allAccordionHeaders[k].classList.remove("active");
-	      }
-	
-	      // Toggle the display of the clicked accordion content
-	      accordionContent.style.display = isActive ? "none" : "block";
-	
-	      // Add "active" class to the clicked accordion header
-	      this.classList.toggle("active");
-	    });
-	  }
-	
-	  var subAccordionHeaders = document.getElementsByClassName("sub-accordion-header");
-	
-	  // Add click event listener to each sub-accordion header
-	  for (var i = 0; i < subAccordionHeaders.length; i++) {
-	    subAccordionHeaders[i].addEventListener("click", function() {
-	      var subAccordionContent = this.nextElementSibling;
-	      var isActive = subAccordionContent.style.display === "block";
-	
-	      // Toggle the display of the clicked sub-accordion content
-	      subAccordionContent.style.display = isActive ? "none" : "block";
-	
-	      // Add "active" class to the clicked sub-accordion header
-	      this.classList.toggle("active");
-	    });
-	  }
-	});
-	</script>
-	
-	<script>
-	document.addEventListener("DOMContentLoaded", function() {
-	  var accordionHeaders = document.getElementsByClassName("accordion-header-c");
-	
-	  // Add click event listener to each accordion header
-	  for (var i = 0; i < accordionHeaders.length; i++) {
-	    accordionHeaders[i].addEventListener("click", function() {
-	      var accordionContent = this.nextElementSibling;
-	      var isActive = accordionContent.style.display === "block";
-	
-	      // Close all accordion content
-	      var allAccordionContent = document.getElementsByClassName("accordion-content");
-	      for (var j = 0; j < allAccordionContent.length; j++) {
-	        allAccordionContent[j].style.display = "none";
-	      }
-	
-	      // Remove "active" class from all accordion headers
-	      var allAccordionHeaders = document.getElementsByClassName("accordion-header");
-	      for (var k = 0; k < allAccordionHeaders.length; k++) {
-	        allAccordionHeaders[k].classList.remove("active");
-	      }
-	
-	      // Toggle the display of the clicked accordion content
-	      accordionContent.style.display = isActive ? "none" : "block";
-	
-	      // Add "active" class to the clicked accordion header
-	      this.classList.toggle("active");
-	    });
-	  }
-	
-	  var subAccordionHeaders = document.getElementsByClassName("sub-accordion-header");
-	
-	  // Add click event listener to each sub-accordion header
-	  for (var i = 0; i < subAccordionHeaders.length; i++) {
-	    subAccordionHeaders[i].addEventListener("click", function() {
-	      var subAccordionContent = this.nextElementSibling;
-	      var isActive = subAccordionContent.style.display === "block";
-	
-	      // Toggle the display of the clicked sub-accordion content
-	      subAccordionContent.style.display = isActive ? "none" : "block";
-	
-	      // Add "active" class to the clicked sub-accordion header
-	      this.classList.toggle("active");
-	    });
-	  }
-	});
-	</script>
-</body>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="accordion-item">
+              <div class="accordion-header-b"><strong>Pelatihan</strong></div>
+              <div class="accordion-content">
+                <a href="https://s.id/sbr2023jabar" target="_blank">Unduh Bahan-bahan Materi Pelatihan</a>
+                <div
+                  class="flourish-embed flourish-table"
+                  data-src="visualisation/14656226"
+                >
+                  <script src="https://public.flourish.studio/resources/embed.js"></script>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        
+        <!-- PROGRESS LAPANGAN -->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="accordion-item">
+              <div class="accordion-header-c"><strong>Progress Pelaksanaan Lapangan</strong></div>
+              <div class="accordion-content">
+                <div class="flourish-embed" data-src="story/1996359"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-md-12">
+              <div class="accordion-item">
+                <div class="accordion-header">
+                  Media Resmi BPS Se-Jabar
+                </div>
+                <div class="accordion-content">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <div
+                        class="block"
+                        style="
+                          background-color: Orange;
+                          color: white;
+                          text-decoration: none;
+                        "
+                      >
+                        <h5 align="center">Youtube</h5>
+                      </div>
+                      <div>
+                        <center>
+                          <a
+                            href="https://www.youtube.com/@bpsjabar32"
+                            target="_blank"
+                            >BPS3200</a
+                          ><br />
+                          <a
+                            href="https://www.youtube.com/@bpskabupatenbogor4243"
+                            target="_blank"
+                            >BPS3201</a
+                          ><br />
+                          <a
+                            href="https://www.youtube.com/@bpskab.sukabumi3698"
+                            target="_blank"
+                            >BPS3202</a
+                          ><br />
+                          <a
+                            href="https://www.youtube.com/@bpskabupatencianjur8601"
+                            target="_blank"
+                            >BPS3203</a
+                          ><br />
+                          <a
+                            href="https://www.youtube.com/@BPSKabupatenbandung3204"
+                            target="_blank"
+                            >BPS3204</a
+                          ><br />
+                          <a
+                            href="https://www.youtube.com/@bpsgarut6951"
+                            target="_blank"
+                            >BPS3205</a
+                          ><br />
+                          <a
+                            href="https://www.youtube.com/@bpskabtasikmalaya8455"
+                            target="_blank"
+                            >BPS3206</a
+                          ><br />
+                          <a
+                            href="https://www.youtube.com/@bpskabciamis4808"
+                            target="_blank"
+                            >BPS3207</a
+                          ><br />
+                          <a
+                            href="https://www.youtube.com/@bpskuningan"
+                            target="_blank"
+                            >BPS3208</a
+                          ><br />
+                          <a
+                            href="https://www.youtube.com/@bpskabupatencirebon5278"
+                            target="_blank"
+                            >BPS3209</a
+                          ><br />
+                          <a
+                            href="https://www.youtube.com/@bpskabupatenmajalengka6492"
+                            target="_blank"
+                            >BPS3210</a
+                          ><br />
+                          <a
+                            href="https://www.youtube.com/@bpskabsumedang279"
+                            target="_blank"
+                            >BPS3211</a
+                          ><br />
+                          <a
+                            href="https://www.youtube.com/@bpskabupatenindramayu3212"
+                            target="_blank"
+                            >BPS3212</a
+                          ><br />
+                          <a
+                            href="https://www.youtube.com/@bpskabupatensubang4000"
+                            target="_blank"
+                            >BPS3213</a
+                          ><br />
+                          <a
+                            href="https://www.youtube.com/@bpspurwakarta6191"
+                            target="_blank"
+                            >BPS3214</a
+                          ><br />
+                          <a
+                            href="https://www.youtube.com/@bpskabupatenkarawang8135"
+                            target="_blank"
+                            >BPS3215</a
+                          ><br />
+                          <a
+                            href="https://www.youtube.com/@bpskabupatenbekasi4506"
+                            target="_blank"
+                            >BPS3216</a
+                          ><br />
+                          <a
+                            href="https://www.youtube.com/@bpskabupatenbandungbarat6827"
+                            target="_blank"
+                            >BPS3217</a
+                          ><br />
+                          <a
+                            href="https://www.youtube.com/@bpskotabogor3271"
+                            target="_blank"
+                            >BPS3271</a
+                          ><br />
+                          <a
+                            href="https://www.youtube.com/@bps3272"
+                            target="_blank"
+                            >BPS3272</a
+                          ><br />
+                          <a
+                            href="https://www.youtube.com/@BPSKotaBandungg"
+                            target="_blank"
+                            >BPS3273</a
+                          ><br />
+                          <a
+                            href="https://www.youtube.com/@bpskotacirebon6909"
+                            target="_blank"
+                            >BPS3274</a
+                          ><br />
+                          <a
+                            href="https://www.youtube.com/@bpskotabekasi530"
+                            target="_blank"
+                            >BPS3275</a
+                          ><br />
+                          <a
+                            href="https://www.youtube.com/@bpskotadepok7072"
+                            target="_blank"
+                            >BPS3276</a
+                          ><br />
+                          <a
+                            href="https://www.youtube.com/@bpscimahi1136"
+                            target="_blank"
+                            >BPS3277</a
+                          ><br />
+                          <a
+                            href="https://www.youtube.com/@bpskotatasikmalaya227"
+                            target="_blank"
+                            >BPS3278</a
+                          ><br />
+                          <a
+                            href="https://www.youtube.com/@bpskotabanjar1515"
+                            target="_blank"
+                            >BPS3279</a
+                          >
+                        </center>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div
+                        class="block"
+                        style="
+                          background-color: Orange;
+                          color: white;
+                          text-decoration: none;
+                        "
+                      >
+                        <h5 align="center">Facebook</h5>
+                      </div>
+                      <div>
+                        <center>
+                          <a
+                            href="https://www.facebook.com/bpsprovjabar/?locale=id_ID"
+                            target="_blank"
+                            >BPS3200</a
+                          ><br />
+                          <a
+                            href="https://www.facebook.com/bpskabbogor/"
+                            target="_blank"
+                            >BPS3201</a
+                          ><br />
+                          <a
+                            href="https://www.facebook.com/bps3202/"
+                            target="_blank"
+                            >BPS3202</a
+                          ><br />
+                          <a
+                            href="https://www.facebook.com/bps3203/"
+                            target="_blank"
+                            >BPS3203</a
+                          ><br />
+                          <a
+                            href="https://www.facebook.com/bpskabupatenbandung/"
+                            target="_blank"
+                            >BPS3204</a
+                          ><br />
+                          <a
+                            href="https://www.facebook.com/bps3205/?locale=id_ID"
+                            target="_blank"
+                            >BPS3205</a
+                          ><br />
+                          <a
+                            href="https://www.facebook.com/infoBPSkab.tasik/?locale=id_ID"
+                            target="_blank"
+                            >BPS3206</a
+                          ><br />
+                          <a
+                            href="https://www.facebook.com/p/BPS-Kabupaten-Ciamis-100064855714348/"
+                            target="_blank"
+                            >BPS3207</a
+                          ><br />
+                          <a
+                            href="https://www.facebook.com/bps.kabupatenkuningan/"
+                            target="_blank"
+                            >BPS3208</a
+                          ><br />
+                          <a
+                            href="https://www.facebook.com/bpskabcirebon/?locale=id_ID"
+                            target="_blank"
+                            >BPS3209</a
+                          ><br />
+                          <a
+                            href="https://www.facebook.com/bps.majalengka/"
+                            target="_blank"
+                            >BPS3210</a
+                          ><br />
+                          <a
+                            href="https://www.facebook.com/people/Badan-Pusat-Statistik-Kabupaten-Sumedang/100066441437727/"
+                            target="_blank"
+                            >BPS3211</a
+                          ><br />
+                          <a
+                            href="https://www.facebook.com/bpskabupatenindramayu/"
+                            target="_blank"
+                            >BPS3212</a
+                          ><br />
+                          <a
+                            href="https://www.facebook.com/bpssubang/"
+                            target="_blank"
+                            >BPS3213</a
+                          ><br />
+                          <a
+                            href="https://www.facebook.com/bps.purwakarta.1/"
+                            target="_blank"
+                            >BPS3214</a
+                          ><br />
+                          <a
+                            href="https://www.facebook.com/bps3215/?locale=id_ID"
+                            target="_blank"
+                            >BPS3215</a
+                          ><br />
+                          <a
+                            href="https://www.facebook.com/p/Badan-Pusat-Statistik-Kabupaten-Bekasi-100068308332439/"
+                            target="_blank"
+                            >BPS3216</a
+                          ><br />
+                          <a
+                            href="https://www.facebook.com/bpsbandungbarat/"
+                            target="_blank"
+                            >BPS3217</a
+                          ><br />
+                          <a
+                            href="https://www.facebook.com/bps3271/"
+                            target="_blank"
+                            >BPS3271</a
+                          ><br />
+                          <a
+                            href="https://id-id.facebook.com/bps3272/"
+                            target="_blank"
+                            >BPS3272</a
+                          ><br />
+                          <a
+                            href="https://www.facebook.com/bpskotabandung/?locale=id_ID"
+                            target="_blank"
+                            >BPS3273</a
+                          ><br />
+                          <a href="" target="_blank">BPS3274</a><br />
+                          <a
+                            href="https://www.facebook.com/bpsbekasikota/?locale=id_ID"
+                            target="_blank"
+                            >BPS3275</a
+                          ><br />
+                          <a
+                            href="https://www.facebook.com/people/BPS-Kota-Depok/100066657806015/"
+                            target="_blank"
+                            >BPS3276</a
+                          ><br />
+                          <a
+                            href="https://www.facebook.com/pages/category/product-service/BPS-KOTA-CIMAHI-142906589928025/"
+                            target="_blank"
+                            >BPS3277</a
+                          ><br />
+                          <a
+                            href="https://www.facebook.com/tasikmalayakota.bps/"
+                            target="_blank"
+                            >BPS3278</a
+                          ><br />
+                          <a href="https://banjarkota.bps.go.id/" target="_blank"
+                            >BPS3279</a
+                          >
+                        </center>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div
+                        class="block"
+                        style="
+                          background-color: Orange;
+                          color: white;
+                          text-decoration: none;
+                        "
+                      >
+                        <h5 align="center">Instagram</h5>
+                      </div>
+                      <div>
+                        <center>
+                          <a
+                            href="https://www.instagram.com/bpsjabar/?hl=en"
+                            target="_blank"
+                            >BPS3200</a
+                          ><br />
+                          <a
+                            href="https://www.instagram.com/p/Cnq5zekv3QA/"
+                            target="_blank"
+                            >BPS3201</a
+                          ><br />
+                          <a
+                            href="https://www.instagram.com/explore/locations/852002908300164/bps-kabupaten-sukabumi/"
+                            target="_blank"
+                            >BPS3202</a
+                          ><br />
+                          <a
+                            href="https://www.instagram.com/bpscianjur/?hl=en"
+                            target="_blank"
+                            >BPS3203</a
+                          ><br />
+                          <a
+                            href="https://www.instagram.com/p/CWFZOGNheSc/"
+                            target="_blank"
+                            >BPS3204</a
+                          ><br />
+                          <a
+                            href="https://www.instagram.com/bps_garut/reels/"
+                            target="_blank"
+                            >BPS3205</a
+                          ><br />
+                          <a
+                            href="https://www.instagram.com/p/B-viytqAETu/"
+                            target="_blank"
+                            >BPS3206</a
+                          ><br />
+                          <a
+                            href="https://www.instagram.com/bps_ciamis/?hl=en"
+                            target="_blank"
+                            >BPS3207</a
+                          ><br />
+                          <a
+                            href="https://www.instagram.com/p/Ch_cbZZOJna/"
+                            target="_blank"
+                            >BPS3208</a
+                          ><br />
+                          <a
+                            href="https://www.instagram.com/p/CqN3ea4vdYj/"
+                            target="_blank"
+                            >BPS3209</a
+                          ><br />
+                          <a
+                            href="https://www.instagram.com/bps.majalengka/?hl=en"
+                            target="_blank"
+                            >BPS3210</a
+                          ><br />
+                          <a
+                            href="https://www.instagram.com/bps.kab.sumedang/?hl=en"
+                            target="_blank"
+                            >BPS3211</a
+                          ><br />
+                          <a
+                            href="https://www.instagram.com/p/Civ0BEcBWA9/"
+                            target="_blank"
+                            >BPS3212</a
+                          ><br />
+                          <a
+                            href="https://www.instagram.com/bps_subang/?hl=en#:~:text=Bps%20Kabupaten%20Subang%20(%40bps_subang)%20on%20Instagram"
+                            target="_blank"
+                            >BPS3213</a
+                          ><br />
+                          <a
+                            href="https://www.instagram.com/explore/locations/909460775/bps-purwakarta/"
+                            target="_blank"
+                            >BPS3214</a
+                          ><br />
+                          <a
+                            href="https://www.instagram.com/explore/locations/909514857/bps-kabupaten-karawang/"
+                            target="_blank"
+                            >BPS3215</a
+                          ><br />
+                          <a
+                            href="https://www.instagram.com/bpskabupatenbekasi/"
+                            target="_blank"
+                            >BPS3216</a
+                          ><br />
+                          <a
+                            href="https://www.instagram.com/bps_bandungbarat/?hl=en"
+                            target="_blank"
+                            >BPS3217</a
+                          ><br />
+                          <a
+                            href="https://www.instagram.com/bps3271/?hl=en"
+                            target="_blank"
+                            >BPS3271</a
+                          ><br />
+                          <a href="" target="_blank">BPS3272</a><br />
+                          <a
+                            href="https://www.instagram.com/p/CXwlpn4haaL/"
+                            target="_blank"
+                            >BPS3273</a
+                          ><br />
+                          <a
+                            href="https://www.instagram.com/bps_kotacirebon/?hl=en"
+                            target="_blank"
+                            >BPS3274</a
+                          ><br />
+                          <a
+                            href="https://www.instagram.com/p/CWHxUqAh0Iv/"
+                            target="_blank"
+                            >BPS3275</a
+                          ><br />
+                          <a
+                            href="https://www.instagram.com/bpskotadepok/?hl=en"
+                            target="_blank"
+                            >BPS3276</a
+                          ><br />
+                          <a
+                            href="https://www.instagram.com/bps.kota.cimahi/?hl=en"
+                            target="_blank"
+                            >BPS3277</a
+                          ><br />
+                          <a
+                            href="https://www.instagram.com/tasikmalayakota_bps/?hl=en"
+                            target="_blank"
+                            >BPS3278</a
+                          ><br />
+                          <a href="" target="_blank">BPS3279</a>
+                        </center>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div
+                        class="block"
+                        style="
+                          background-color: Orange;
+                          color: white;
+                          text-decoration: none;
+                        "
+                      >
+                        <h5 align="center">Website</h5>
+                      </div>
+                      <div>
+                        <center>
+                          <a href="https://jabar.bps.go.id" target="_blank"
+                            >BPS3200</a
+                          ><br />
+                          <a href="https://bogorkab.bps.go.id" target="_blank"
+                            >BPS3201</a
+                          ><br />
+                          <a href="https://sukabumikab.bps.go.id" target="_blank"
+                            >BPS3202</a
+                          ><br />
+                          <a href="https://cianjurkab.bps.go.id" target="_blank"
+                            >BPS3203</a
+                          ><br />
+                          <a href="https://bandungkab.bps.go.id" target="_blank"
+                            >BPS3204</a
+                          ><br />
+                          <a href="https://garutkab.bps.go.id" target="_blank"
+                            >BPS3205</a
+                          ><br />
+                          <a
+                            href="https://tasikmalayakab.bps.go.id"
+                            target="_blank"
+                            >BPS3206</a
+                          ><br />
+                          <a href="https://ciamiskab.bps.go.id" target="_blank"
+                            >BPS3207</a
+                          ><br />
+                          <a href="https://kuningankab.bps.go.id" target="_blank"
+                            >BPS3208</a
+                          ><br />
+                          <a href="https://cirebonkab.bps.go.id" target="_blank"
+                            >BPS3209</a
+                          ><br />
+                          <a
+                            href="https://majalengkakab.bps.go.id"
+                            target="_blank"
+                            >BPS3210</a
+                          ><br />
+                          <a href="https://sumedangkab.bps.go.id" target="_blank"
+                            >BPS3211</a
+                          ><br />
+                          <a href="https://indramayukab.bps.go.id" target="_blank"
+                            >BPS3212</a
+                          ><br />
+                          <a href="https://subangkab.bps.go.id" target="_blank"
+                            >BPS3213</a
+                          ><br />
+                          <a
+                            href="https://purwakartakab.bps.go.id"
+                            target="_blank"
+                            >BPS3214</a
+                          ><br />
+                          <a href="https://karawangkab.bps.go.id" target="_blank"
+                            >BPS3215</a
+                          ><br />
+                          <a href="https://bekasikab.bps.go.id" target="_blank"
+                            >BPS3216</a
+                          ><br />
+                          <a
+                            href="https://bandungbaratkab.bps.go.id"
+                            target="_blank"
+                            >BPS3217</a
+                          ><br />
+                          <a href="https://bogorkota.bps.go.id" target="_blank"
+                            >BPS3271</a
+                          ><br />
+                          <a href="https://sukabumikota.bps.go.id" target="_blank"
+                            >BPS3272</a
+                          ><br />
+                          <a href="https://bandungkota.bps.go.id" target="_blank"
+                            >BPS3273</a
+                          ><br />
+                          <a href="https://cirebonkota.bps.go.id" target="_blank"
+                            >BPS3274</a
+                          ><br />
+                          <a href="https://bekasikota.bps.go.id" target="_blank"
+                            >BPS3275</a
+                          ><br />
+                          <a href="https://depokkota.bps.go.id" target="_blank"
+                            >BPS3276</a
+                          ><br />
+                          <a href="https://cimahikota.bps.go.id" target="_blank"
+                            >BPS3277</a
+                          ><br />
+                          <a
+                            href="https://tasikmalayakota.bps.go.id"
+                            target="_blank"
+                            >BPS3278</a
+                          ><br />
+                          <a href="https://banjarkota.bps.go.id" target="_blank"
+                            >BPS3279</a
+                          >
+                        </center>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+        <!-- KAMUS -->
+        <div class="row">
+          <div class="col-md-4">
+            <div class="accordion-item">
+              <div class="accordion-header-c">SOBAT BPS</div>
+              <div class="accordion-content">
+                <a href="https://mitra.bps.go.id" target="_blank">Buka SOBAT BPS</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="accordion-item">
+              <div class="accordion-header">Usefull Tools</div>
+              <div class="accordion-content">
+                <ul>
+                  <li>
+                    <a href="https://chat.openai.com/auth/login" target="_blank"
+                      >Chat GPT</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.perplexity.ai/" target="_blank"
+                      >Perplexity</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://bard.google.com/" target="_blank"
+                      >Google Bard</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.fotor.com/ai/illustration-generator/"
+                      target="_blank"
+                      >Fotor AI Illustration Generator</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://iconscout.com/illustrations/generator"
+                      target="_blank"
+                      >IconScout Generator Illustrations</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.appypie.com/illustration-maker"
+                      target="_blank"
+                      >Appy Pie Illustration Maker</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://stubborn.fun/" target="_blank"
+                      >Stubborn Free Illustrations Generator</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.canva.com/ai-image-generator/"
+                      target="_blank"
+                      >Canva AI Image Generator</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.decktopus.com/" target="_blank"
+                      >Decktopus AI</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://presentations.ai/" target="_blank"
+                      >Presentations.AI</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://designs.ai/design-types/presentations"
+                      target="_blank"
+                      >Designs.ai Presentation Maker</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.copy.ai/summarize" target="_blank"
+                      >Copy.ai Summarize</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://algorithmia.com/algorithms/nlp/Summarizer"
+                      target="_blank"
+                      >Text Summarization API</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.easel.ly/" target="_blank">Easel.ly</a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.canva.com/create/infographics/"
+                      target="_blank"
+                      >Canva</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://piktochart.com/infographic-maker/"
+                      target="_blank"
+                      >Piktochart</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.visme.co/make-infographics/"
+                      target="_blank"
+                      >Visme</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://public.tableau.com/en-us/s/"
+                      target="_blank"
+                      >Tableau Public</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://flourish.studio/" target="_blank"
+                      >Flourish Studio</a
+                    >
+                  </li>
+                  <li><a href="https://rows.com/" target="_blank">rows</a></li>
+                  <li>
+                    <a href="https://www.steve.ai/" target="_blank"
+                      >Steve AI Video Making Tool</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="accordion-item">
+              <div class="accordion-header-b">Kegiatan BPS</div>
+              <div class="accordion-content">
+                <iframe src="https://jabar.bps.go.id/news.html" width="100%" height="720px"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="col-md-12">
+            <iframe src="https://jabar.bps.go.id/pressrelease.html" width="100%" height="360px"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <center><h6>--- BPS3200 ---</h6></center>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var accordionHeaders =
+          document.getElementsByClassName("accordion-header");
+
+        // Add click event listener to each accordion header
+        for (var i = 0; i < accordionHeaders.length; i++) {
+          accordionHeaders[i].addEventListener("click", function () {
+            var accordionContent = this.nextElementSibling;
+            var isActive = accordionContent.style.display === "block";
+
+            // Close all accordion content
+            var allAccordionContent =
+              document.getElementsByClassName("accordion-content");
+            for (var j = 0; j < allAccordionContent.length; j++) {
+              allAccordionContent[j].style.display = "none";
+            }
+
+            // Remove "active" class from all accordion headers
+            var allAccordionHeaders =
+              document.getElementsByClassName("accordion-header");
+            for (var k = 0; k < allAccordionHeaders.length; k++) {
+              allAccordionHeaders[k].classList.remove("active");
+            }
+
+            // Toggle the display of the clicked accordion content
+            accordionContent.style.display = isActive ? "none" : "block";
+
+            // Add "active" class to the clicked accordion header
+            this.classList.toggle("active");
+          });
+        }
+
+        var subAccordionHeaders = document.getElementsByClassName(
+          "sub-accordion-header"
+        );
+
+        // Add click event listener to each sub-accordion header
+        for (var i = 0; i < subAccordionHeaders.length; i++) {
+          subAccordionHeaders[i].addEventListener("click", function () {
+            var subAccordionContent = this.nextElementSibling;
+            var isActive = subAccordionContent.style.display === "block";
+
+            // Toggle the display of the clicked sub-accordion content
+            subAccordionContent.style.display = isActive ? "none" : "block";
+
+            // Add "active" class to the clicked sub-accordion header
+            this.classList.toggle("active");
+          });
+        }
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var accordionHeaders =
+          document.getElementsByClassName("accordion-header-b");
+
+        // Add click event listener to each accordion header
+        for (var i = 0; i < accordionHeaders.length; i++) {
+          accordionHeaders[i].addEventListener("click", function () {
+            var accordionContent = this.nextElementSibling;
+            var isActive = accordionContent.style.display === "block";
+
+            // Close all accordion content
+            var allAccordionContent =
+              document.getElementsByClassName("accordion-content");
+            for (var j = 0; j < allAccordionContent.length; j++) {
+              allAccordionContent[j].style.display = "none";
+            }
+
+            // Remove "active" class from all accordion headers
+            var allAccordionHeaders =
+              document.getElementsByClassName("accordion-header");
+            for (var k = 0; k < allAccordionHeaders.length; k++) {
+              allAccordionHeaders[k].classList.remove("active");
+            }
+
+            // Toggle the display of the clicked accordion content
+            accordionContent.style.display = isActive ? "none" : "block";
+
+            // Add "active" class to the clicked accordion header
+            this.classList.toggle("active");
+          });
+        }
+
+        var subAccordionHeaders = document.getElementsByClassName(
+          "sub-accordion-header"
+        );
+
+        // Add click event listener to each sub-accordion header
+        for (var i = 0; i < subAccordionHeaders.length; i++) {
+          subAccordionHeaders[i].addEventListener("click", function () {
+            var subAccordionContent = this.nextElementSibling;
+            var isActive = subAccordionContent.style.display === "block";
+
+            // Toggle the display of the clicked sub-accordion content
+            subAccordionContent.style.display = isActive ? "none" : "block";
+
+            // Add "active" class to the clicked sub-accordion header
+            this.classList.toggle("active");
+          });
+        }
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var accordionHeaders =
+          document.getElementsByClassName("accordion-header-c");
+
+        // Add click event listener to each accordion header
+        for (var i = 0; i < accordionHeaders.length; i++) {
+          accordionHeaders[i].addEventListener("click", function () {
+            var accordionContent = this.nextElementSibling;
+            var isActive = accordionContent.style.display === "block";
+
+            // Close all accordion content
+            var allAccordionContent =
+              document.getElementsByClassName("accordion-content");
+            for (var j = 0; j < allAccordionContent.length; j++) {
+              allAccordionContent[j].style.display = "none";
+            }
+
+            // Remove "active" class from all accordion headers
+            var allAccordionHeaders =
+              document.getElementsByClassName("accordion-header");
+            for (var k = 0; k < allAccordionHeaders.length; k++) {
+              allAccordionHeaders[k].classList.remove("active");
+            }
+
+            // Toggle the display of the clicked accordion content
+            accordionContent.style.display = isActive ? "none" : "block";
+
+            // Add "active" class to the clicked accordion header
+            this.classList.toggle("active");
+          });
+        }
+
+        var subAccordionHeaders = document.getElementsByClassName(
+          "sub-accordion-header"
+        );
+
+        // Add click event listener to each sub-accordion header
+        for (var i = 0; i < subAccordionHeaders.length; i++) {
+          subAccordionHeaders[i].addEventListener("click", function () {
+            var subAccordionContent = this.nextElementSibling;
+            var isActive = subAccordionContent.style.display === "block";
+
+            // Toggle the display of the clicked sub-accordion content
+            subAccordionContent.style.display = isActive ? "none" : "block";
+
+            // Add "active" class to the clicked sub-accordion header
+            this.classList.toggle("active");
+          });
+        }
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+  </body>
 </html>
